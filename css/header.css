@@ -8,6 +8,7 @@
     align-items: center;
     
     width: 100%; height: auto;
+
 }
 
 header{
@@ -19,6 +20,8 @@ header{
 
     
     height: 50px; width: 100%;
+
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
 }
 
 .header-content{
@@ -30,7 +33,9 @@ header{
     margin-top: 13px;
     padding-bottom: 10px;
 
-    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+
+
+ 
 }
 
 
@@ -48,17 +53,8 @@ header{
     justify-content: space-between;
 }
 
-.blue{
-    color:rgb(0, 162, 255);
-}
 
-.medium{
-    font-weight: bolder;
-}
 
-.inline{
-    display: inline-block;
-}
 
 .menu-elem{
     height: 20px;
@@ -80,6 +76,3 @@ header{
     padding-left: 30px;
 }
 
-.f-14{
-    font-size:14px;
-}

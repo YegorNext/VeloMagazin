@@ -1,0 +1,27 @@
+.white{
+    color: white;
+}
+
+.blue{
+    color:rgb(0, 162, 255) !important;
+}
+
+.f-14{
+    font-size:14px;
+}
+
+.medium{
+    font-weight: bolder;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.gray{
+    color: gray;
+}
+
+.f-12{
+    font-size: 12px;
+}

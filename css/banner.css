@@ -6,3 +6,26 @@
 .carousel-inner{
     height: 720px;
 }
+
+.carousel-item{
+    position: relative;
+}
+
+.banner__add{
+    position: absolute;
+    z-index: 0;
+
+    justify-content: end;
+    width: 95vw; height: 50vw;
+}
+
+.banner__text{
+    align-self: center;
+    
+    font-size: 96px;
+    color: white;
+
+    text-align: right;
+    
+    width: 80%; 
+}
