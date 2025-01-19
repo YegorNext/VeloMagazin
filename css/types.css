@@ -1,0 +1,136 @@
+#types{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.types__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.types__img-container{
+    display: flex;   
+    width: 100%; height: 530px;
+    
+    flex-wrap: nowrap;
+    position: relative;
+
+    margin-top: 70px;
+}
+
+.types__img-container div{
+    flex-shrink: 1;
+}
+
+.types__img-container >  div > div{
+    position: relative;
+    background-image: url('/images/velo.jpg');
+    max-width: 100%; height: 100%;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.types__img-container >  div:nth-child(2) > div{
+    background-image: url('/images/velo2.jpg');
+    height: calc(50% - 8px);
+}
+
+.types__img-container >  div:nth-child(2) > div:nth-child(2){
+    background-image: url('/images/velo3.jpg');
+    height: calc(50% - 8px);
+}
+
+
+.types__img-container >  div:nth-child(3) > div{
+    background-image: url('/images/velo4.jpg');
+    height: calc(50% - 8px);
+}
+
+.types__img-container >  div:nth-child(3) > div:nth-child(2){
+    background-image: url('/images/velo5.jpg');
+    height: calc(50% - 8px);
+}
+
+
+
+.types__img-container >  div:nth-child(4) > div{
+    background-image: url('/images/velo6.jpg');
+}
+
+.types__img-container > div > div::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: 1; 
+}
+
+.types__img_pos-90{
+    background-position: 90%;
+}
+
+.types__img-txt{
+    position: relative;
+    z-index: 2;
+
+
+    display: inline-block;
+    max-width: 70%;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+
+    font-size: 26px;
+    color: white;
+
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.types__img-btn{
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    
+    outline: none; border: none;
+    background-color: white !important;
+
+    width: 75%; height: 50px;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.types__img-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.types__img-btn_txt{
+
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: rgba(0, 0, 0, 0.788);
+}
+/*.types__img-container > div::after{
+    content: '';
+    position: absolute;
+    
+    z-index: 1;
+
+    width: auto; height: 100%;
+
+    top: 0; left: 0;  
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.types__img-container > div:hover::after{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
+}/*

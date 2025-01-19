@@ -25,3 +25,11 @@
 .f-12{
     font-size: 12px;
 }
+
+.txt-decoration-none{
+    text-decoration: none;
+}
+
+.black{
+    color: black !important;
+}
