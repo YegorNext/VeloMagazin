@@ -1,0 +1,21 @@
+#brend{
+    display: flex;
+    justify-content: space-around;    
+
+    background-color: #f3f3f3;
+    margin-top: 70px;
+}
+
+.brend__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.brend__info{
+    display: flex;
+    
+    padding: 15px 30px 15px 30px; 
+
+    box-sizing: border-box;
+    height: auto;
+}

@@ -16,10 +16,12 @@
     position: relative;
 
     margin-top: 70px;
+
+    margin-left: 10px;
 }
 
 .types__img-container div{
-    flex-shrink: 1;
+    box-sizing: border-box;
 }
 
 .types__img-container >  div > div{
