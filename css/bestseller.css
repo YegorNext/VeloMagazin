@@ -47,7 +47,7 @@
     padding: 0; margin: 0;
     width: 100%; height: 60%;
     
-    background-image: url('/images/nophoto.jpg');
+    background-image: url('../images/nophoto.jpg');
     background-size: cover;
 }
 

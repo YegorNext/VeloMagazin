@@ -71,7 +71,7 @@
 
     box-shadow: none;
 
-    background-image: url('/images/check.png'); 
+    background-image: url('../images/check.png'); 
     background-repeat: no-repeat; 
     background-position: center; 
     background-size: 16px 16px; 
