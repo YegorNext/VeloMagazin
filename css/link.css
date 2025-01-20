@@ -71,10 +71,10 @@
 
     box-shadow: none;
 
-    background-image: url('/images/check.png'); /* Укажите путь к вашему изображению */
-    background-repeat: no-repeat; /* Избегаем повторения картинки */
-    background-position: center; /* Размещаем картинку по центру */
-    background-size: 16px 16px; /* Подгоняем размер картинки, чтобы она полностью вписалась */
+    background-image: url('/images/check.png'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 16px 16px; 
 }
 
 .link__container form:hover::after{

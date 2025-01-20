@@ -11,11 +11,10 @@
     width: 100%; height: auto;
 }
 
-.brend__info{
-    display: flex;
-    
-    padding: 15px 30px 15px 30px; 
+.brend__info{    
+    padding: 40px 30px 40px 30px; 
 
     box-sizing: border-box;
     height: auto;
 }
+
