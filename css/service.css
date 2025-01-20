@@ -1,0 +1,47 @@
+#service{
+    display: flex;
+    justify-content: space-around;    
+
+    background-color: #0090d4;
+    margin-top: 70px;
+}
+
+.service__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.service__info{    
+    padding: 40px 30px 40px 30px; 
+
+    box-sizing: border-box;
+    height: auto;
+}
+
+.service__img-text_visual{
+    font-size: 18px;
+    font-weight: 600;
+
+    color: white;
+}
+
+.service__info div, .service__info span{
+    padding: 0;
+    text-align: center;
+}
+
+.service__container img{
+    width: 110px; height: 110px;
+}
+
+
+.service__info .col-3::before{
+    content: "";
+    position: absolute;
+    
+    left: 0; top: 0;
+    width: 35px; height: 1px; 
+
+    background-color: rgba(255, 0, 0, 0.233); 
+    transform: translateY(-50%) rotate(120deg); 
+}

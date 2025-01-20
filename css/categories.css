@@ -18,7 +18,7 @@
     height: 60px;
 }
 
-.categories__container ul{
+.categories__container ul:first-child{
     display: flex;
     justify-content: space-between;
 
@@ -28,7 +28,7 @@
 
 .categories__menu{
     display: inline-block;
-    max-width: 600px; width: 100%;
+    max-width: 740px; width: 100%;
 
     margin-left: 30px;
 
@@ -38,7 +38,7 @@
 .categories__search{
     display: inline-block;
 
-    margin-left: 200px;
+    margin-left: 75px;
 }
 
 .categories__search img{
@@ -53,4 +53,8 @@
     text-indent: 5px;
 
     border: solid 1px rgba(0, 0, 0, 0.15);
+}
+
+.categories__menu li{
+    cursor: pointer;
 }

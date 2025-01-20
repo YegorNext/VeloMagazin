@@ -23,7 +23,7 @@
 }
 
 .bestseller__list-container{
-    height: 380px; width: 100%;
+    height: auto; width: 100%;
 
     padding: 15px;
 }
@@ -31,7 +31,8 @@
 .bestseller__list-elem{
     border-right: 1px solid rgba(128, 128, 128, 0.164);
 
-    margin-right: 15px;
+
+    margin-right: 15px; height: 370px;
 }
 
 .bestseller__list-elem:last-child{
