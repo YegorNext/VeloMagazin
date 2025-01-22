@@ -35,7 +35,7 @@
 }
 
 
-.service__info .col-3::before{
+/*.service__info .col-3::before{
     content: "";
     position: absolute;
     
@@ -44,4 +44,4 @@
 
     background-color: rgba(255, 0, 0, 0.233); 
     transform: translateY(-50%) rotate(120deg); 
-}
+}*/ 
