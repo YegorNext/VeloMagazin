@@ -32,7 +32,7 @@
     border-right: 1px solid rgba(128, 128, 128, 0.164);
 
 
-    margin-right: 15px; height: 370px;
+    margin-right: 15px; height: auto;
 }
 
 .bestseller__list-elem:last-child{
@@ -45,7 +45,9 @@
 
 .bestseller__img-container{
     padding: 0; margin: 0;
-    width: 100%; height: 60%;
+    width: 100%; height: 13vw;
+
+    max-height: 170px;
     
     background-image: url('../images/nophoto.jpg');
     background-size: cover;
