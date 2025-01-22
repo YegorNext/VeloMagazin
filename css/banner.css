@@ -4,7 +4,7 @@
 }
 
 .carousel-inner{
-    height: 720px;
+    height: 620px;
 }
 
 .carousel-item{
@@ -15,17 +15,42 @@
     position: absolute;
     z-index: 0;
 
-    justify-content: end;
-    width: 95vw; height: 50vw;
+    height: 100%; width: 100%;
+    
+    padding-bottom: 4%; padding-top: 7%; 
+
+    box-sizing: border-box;
+
+
+    justify-content: center;
 }
 
 .banner__text{
-    align-self: center;
+    align-self: end;
     
     font-size: 96px;
     color: white;
 
     text-align: right;
-    
-    width: 80%; 
+    max-width: 1240px;
 }
+
+.banner-image{
+    width: 100%; height: 620px;
+    
+    background-size: cover;    
+    background-repeat: no-repeat;
+}
+
+.carousel-inner div:first-child .banner-image{
+    background-image: url('../images/bikes-7681871_1920.png') !important;
+}
+.carousel-inner div:nth-child(2) .banner-image{
+    background-image: url('../images/bikes-8298829_1920.png');
+}
+
+.carousel-inner div:nth-child(3) .banner-image{
+    background-image: url('../images/hybrid-1833921_1920.png');
+}
+
+
