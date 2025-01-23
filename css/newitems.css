@@ -109,9 +109,9 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(255, 178, 35, 0.651);
+    background-color: #d6ff7e;
 
-    height: 25px; width: 45px;
+    height: 25px; width: 80px;
     clip-path: polygon(5% 1%, 100% 0, 100% 100%, 19% 100%, 18% 30%);
 
     font-weight: 700;

@@ -18,3 +18,12 @@
     height: auto;
 }
 
+.brend-toggle{
+    cursor: pointer;
+}
+
+#collapseBrend h4{
+    text-align: left;
+
+    font-weight: 700;
+}
