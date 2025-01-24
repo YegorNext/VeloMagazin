@@ -17,10 +17,15 @@
 
 .bestseller__header{
     padding-left: 15px;
-    padding-top: 15px;
+    padding-top: 20px;
 
     margin-bottom: 25px;
 }
+
+.bestseller__header > h4{
+ font-weight: 600;
+}
+
 
 .bestseller__list-container{
     height: auto; width: 100%;
@@ -131,6 +136,7 @@
     list-style-type: none;
 
     font-size: 14px;
+    padding-left: 25%;
 
     display: flex;
     align-self: center;

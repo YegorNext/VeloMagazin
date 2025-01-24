@@ -17,7 +17,7 @@
 
 .newitems__header{
     padding-left: 15px;
-    padding-top: 15px;
+    padding-top: 25px;
 
     margin-bottom: 25px;
 }
@@ -163,3 +163,7 @@
 .newitems__header ul li:first-child::before{
     content: none;
 }
+
+.newitems__header > h4{
+    font-weight: 600;
+   }

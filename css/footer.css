@@ -21,7 +21,7 @@ footer{
 
 .footer__content h6{
     color: white;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .footer__content ul{
@@ -30,7 +30,16 @@ footer{
 }
 
 .footer__content li{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.footer__content li:hover{
+    cursor: pointer;
+}
+
+.footer__email-box, .footer__location-box{
+    font-weight: 300;
 }
 
 .footer__email-box img, .footer__location-box img{
