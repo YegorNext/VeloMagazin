@@ -62,17 +62,27 @@
         <section id = "categories"> 
             <div class = "categories__container">
                 <div class="row align-items-center">
-                    <div class="col-2">
+                    <div class="col-2 categories__logo-container">
                         <img class = "logo" src="images/logo.png">
                     </div>
                     <div class = "col-7">
                         <nav>
                             <ul>
-                                <li>Велосипеди</li>
-                                <li>Аксесуари</li>
-                                <li>Запчастини</li>
-                                <li>Електро</li>
-                                <li>Спорядження</li>
+                                <li>
+                                    <span>Велосипеди</span>
+                                </li>
+                                <li id = "accessories">
+                                    <span>Аксесуари</span>
+                                </li>
+                                <li>
+                                    <span>Запчастини</span>
+                                </li>
+                                <li>
+                                    <span>Електро</span>
+                                </li>
+                                <li>
+                                    <span>Спорядження</span>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -84,60 +94,67 @@
                     </div>
                 </div>
             </div>
-            <div class = "categories__list-module">
-                <div class="categories__module-container">
-                    <div class="d-flex">
-                        <div> 
-                            <ul> 
-                                <li>Багажники</li>
-                                <li>Велокомп'ютери</li>
-                                <li>Велосумки</li>
-                                <li>Герметики та антипрокольна рідина</li>
-                                <li>Тримачі для смартфона</li>
-                                <li>Дитячі велокрісла</li>
-                            </ul>
-                        </div>
-                        <div> 
-                            <ul> 
-                                <li>Замки</li>
-                                <li>Захист</li>
-                                <li>Дзеркала</li>
-                                <li>Дзвінки</li>
-                                <li>Інструменти</li>
-                                <li>Колеса для дитячих велосипедів</li>
-                            </ul>
-                        </div>
-                        <div> 
-                            <ul> 
-                                <li>Корзини</li>
-                                <li>Крила</li>
-                                <li>Насоси</li>
-                                <li>Окуляри</li>
-                                <li>Перчатки</li>
-                                <li>Підніжки</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul> 
-                                <li>Різне</li>
-                                <li>Рюкзаки</li>
-                                <li>Світло</li>
-                                <li>Мастила, рідини</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul> 
-                                <li>Фляги</li>
-                                <li>Флягоутримувачі</li>
-                                <li>Шоломи</li>
-                                <li>Тримачі та стійки під велосипед</li>
-                            </ul>
+            <div class = "categories__list-module list-accessories">
+                <div class="d-flex w-100 justify-content-around">
+                    <div class="categories__module-container">
+                        <div class="d-flex">
+                            <div> 
+                                <ul> 
+                                    <li>Багажники</li>
+                                    <li>Велокомп'ютери</li>
+                                    <li>Велосумки</li>
+                                    <li>Герметики та антипрокольна рідина</li>
+                                    <li>Тримачі для смартфона</li>
+                                    <li>Дитячі велокрісла</li>
+                                </ul>
+                            </div>
+                            <div> 
+                                <ul> 
+                                    <li>Замки</li>
+                                    <li>Захист</li>
+                                    <li>Дзеркала</li>
+                                    <li>Дзвінки</li>
+                                    <li>Інструменти</li>
+                                    <li>Колеса для дитячих велосипедів</li>
+                                </ul>
+                            </div>
+                            <div> 
+                                <ul> 
+                                    <li>Корзини</li>
+                                    <li>Крила</li>
+                                    <li>Насоси</li>
+                                    <li>Окуляри</li>
+                                    <li>Перчатки</li>
+                                    <li>Підніжки</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul> 
+                                    <li>Різне</li>
+                                    <li>Рюкзаки</li>
+                                    <li>Світло
+                                        <ul>
+                                            <li>Габаритні ліхтарі</li>
+                                            <li>Переднє світло</li>
+                                        </ul>
+                                    </li>
+                                    <li>Мастила, рідини</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul> 
+                                    <li>Фляги</li>
+                                    <li>Флягоутримувачі</li>
+                                    <li>Шоломи</li>
+                                    <li>Тримачі та стійки під велосипед</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <section id = "banner">
             <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -782,8 +799,8 @@
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-         <script src="js/scrollTracking.js"></script>
-
+        <script src="js/scrollTracking.js"></script>
+        <script src="js/menuShow.js"></script> 
 
     </body>
 </html>

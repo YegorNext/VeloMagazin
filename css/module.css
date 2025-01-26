@@ -1,6 +1,5 @@
 .categories__list-module{
-    display: flex; 
-    justify-content: space-around;
+    display: block; 
 
     position: absolute;
     top: 100%; left: 0;
@@ -9,9 +8,9 @@
     width: 100%; height: auto;
     
     background-color: white;
-
-
 }
+
+
 
 .categories__list-module::after{
     content: '';
@@ -66,4 +65,33 @@
 .categories__module-container > div:first-child div ul{
     padding-left: 15px;
     padding-bottom: 1px;
+}
+
+
+
+.categories__list-module ul li ul li{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.categories__list-module ul li ul{
+    padding-left: 10px !important;
+}
+
+.categories__list-module ul li ul li::before{
+    content: '▸';
+    color: var(--text-color-blue);
+
+    margin-right: 10px;
+}
+
+
+.categories__list-module ul li ul li:first-child{
+    margin-top: 15px;
+}
+
+
+
+.categories__list-module{
+    display: none;
 }

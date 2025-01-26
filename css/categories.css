@@ -5,9 +5,6 @@
     justify-content: space-around;
 
     padding-top: 70px;
-    padding-bottom: 20px;
-
-    
 }
 
 .categories__container{
@@ -61,7 +58,19 @@ nav{
 }
 
 nav li{
+    padding-bottom: 50px;
+}
+
+nav li span{
+    position: relative;
+    top: 50%;
+
+    transition: color 0.3s ease;
+}
+
+nav li span:hover{
     cursor: pointer;
+    color: rgba(0, 135, 214, 0.767) !important;
 }
 
 nav ul{
@@ -90,4 +99,8 @@ nav ul{
 
     background-color: rgba(65, 65, 65, 0.130); 
     transform: translateY(-50%) rotate(130deg); 
+}
+
+.categories__logo-container{
+    padding-bottom: 15px;
 }
