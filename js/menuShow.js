@@ -3,6 +3,8 @@ $(document).ready(function () {
     // variables 
     let isHovered = false;
     
+    var categoryList = [ $('#accessories'), $('#sparepart'), $('#bicycle'), $('#electro'), $('#equipment') ];
+
     // functions
     function enableMenuVisibility(){
         $('.categories__list-module').stop(true, true).fadeIn(200);
