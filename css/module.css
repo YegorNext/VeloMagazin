@@ -79,7 +79,8 @@
 }
 
 .categories__list-module ul li ul li::before, 
-.categories-bicycle li::before{
+.categories-bicycle li::before,
+.categories-sparepart li::before{
     content: '▸';
     color: var(--text-color-blue);
 
@@ -97,7 +98,8 @@
     display: none;
 }
 
-.categories-bicycle li{
+.categories-bicycle li,
+.categories-sparepart li{
     font-weight: 300;
     font-size: 14px;
 }
@@ -106,7 +108,8 @@
     border: none !important;
 }
 
-.categories-bicycle h4{
+.categories-bicycle h4,
+.categories-sparepart  h4{
     font-weight: bold;
     font-size: 16px;
 
@@ -178,3 +181,107 @@
 .categories__brend img{
     height: 44px; width: 70px;
 }
+
+.fork-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/fork.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.wheel-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/wheel.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.pedal-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/pedals.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.tire-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/tire.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.streeting-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/steering.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.saddle-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/saddle.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.breaksys-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/break-sys.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.transmission-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/transmission.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.cable-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/cable.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.categories-sparepart h4{
+    display: flex;
+    align-items: start;
+    height: 100%;
+
+    margin-bottom: 7%;
+    padding-top: 1%;
+}
+
+.categories-sparepart > div div{
+    border-right: none !important;
+}
+
