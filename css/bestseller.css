@@ -52,11 +52,25 @@
     padding: 0; margin: 0;
     width: 100%; height: 13vw;
 
-    max-height: 170px;
+    max-height: 180px;
     
-    background-image: url('../images/nophoto.jpg');
-    background-size: cover;
+    background-image: url('../images/index/c_prairie_disc_27_black.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
+.bestseller__list-elem:nth-child(2) .bestseller__img-container{
+    background-image: url('../images/index/c_tomahawk_27_new_white.jpg');
+}
+
+.bestseller__list-elem:nth-child(3) .bestseller__img-container{
+    background-image: url('../images/index/c_vector_27_gray.jpg');
+}
+
+.bestseller__list-elem:nth-child(4) .bestseller__img-container{
+    background-image: url('../images/index/c_hurricane_27_new_gray.jpg');
+}
+
 
 .bestseller__title{
     box-sizing: border-box;

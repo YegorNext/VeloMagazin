@@ -47,11 +47,31 @@
     padding: 0; margin: 0;
     width: 100%; height: 13vw;
 
-    max-height: 170px;
+    max-height: 180px;
     
-    background-image: url('../images/nophoto.jpg');
-    background-size: cover;
+    background-image: url('../images/index/c_lago_s3_white.jpg');
+    
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
+.newitems__list-elem:nth-child(2) .newitems__img-container{
+    background-image: url('../images/index/c_strada_pro_grey.jpg');
+}
+
+.newitems__list-elem:nth-child(3) .newitems__img-container{
+    background-image: url('../images/index/c_r_one_yellow_blue.jpg');
+}
+
+.newitems__list-elem:nth-child(4) .newitems__img-container{
+    background-image: url('../images/index/o-b1.jpg');
+}
+
+
+
+
+
+
 
 .newitems__title{
     box-sizing: border-box;
