@@ -194,7 +194,7 @@ footer{
 .cart-icon{
     width: 20px; height: 18px;
 
-    background-image: url('/images/products/shopping-cart.png');
+    background-image: url('../../images/products/shopping-cart.png');
     background-size: contain;
     background-repeat: no-repeat;
 
