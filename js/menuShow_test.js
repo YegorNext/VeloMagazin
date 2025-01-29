@@ -37,5 +37,5 @@ $(document).ready(function () {
 
     // Action
     categoryList.forEach(makeEvents);
-    $("a").attr("href", "../product.html");
+    $("a").attr("href", "./product.html");
 });
