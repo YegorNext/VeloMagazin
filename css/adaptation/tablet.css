@@ -67,6 +67,9 @@ header{
     margin-left: 7%;
 }
 
+.header__menu-tablet .categories__search{
+    margin-top: 5%;
+}
 
 /* banner */
 
