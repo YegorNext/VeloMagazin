@@ -26,13 +26,17 @@
         <link rel = "stylesheet" type="text/css" href = "css/about.css">
         <link rel = "stylesheet" type="text/css" href = "css/module.css">
         <link rel = "stylesheet" type="text/css" href = "css/footer.css">
+
+        <link rel = "stylesheet" type="text/css" href="css/adaptation/tablet.css">
     </head>
 
     <body>
         <header>
             <div class = "header-container"> 
                 <div class = "header-content"> 
-                    <div class = "header__menu">
+
+                    <!--  Widescreen  -->
+                    <div class = "header__menu d-none d-xl-flex">
                         <div class = "header__menu-divider"> 
                             <div><span class = "blue">UA</span></div>
                             <div>Оплата</div>
@@ -55,11 +59,31 @@
                             <div class = "blue menu-exit">Вхід</div>
                         </div>
                     </div>
+
+                    <!-- Tablet screen 1200 -->
+                    <div class = "header__menu-tablet">
+                        <div class = "col-2">
+                            <div class="d-flex">
+                                <div class="header__burger-btn">
+                                    <div>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class = "header__tablet-logo-container">
+                                    <img class = "logo" src="images/logo.svg">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                 </div>
             </div>
         </header>
 
-        <section id = "categories"> 
+        <section id = "categories" class="d-none d-xl-flex"> 
             <div class = "categories__container">
                 <div class="row align-items-center">
                     <div class="col-2 categories__logo-container">
