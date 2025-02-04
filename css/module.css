@@ -285,7 +285,7 @@
     border-right: none !important;
 }
 
-a {
+.categories__container a, .categories__list-module a{
     color: black; 
     text-decoration: none;
 
