@@ -1,4 +1,59 @@
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
+/* Vertical tablet  */
+.types__vtablet-img-container{
+    margin-top: 50px;
+
+    display: block;
+    width: 100%; height: auto;
+}
+
+.types__vtablet-img-box{
+    display: flex;
+    width: 100%; height: auto;
+}
+
+.types__vtablet-img-container table{
+    width: 100%; height: 1325px;
     
+}
+
+.types__vtablet-img-container td, .types__vtablet-img-container tr{
+    border: none;
+    padding: 3px;
+}
+
+.types__vtablet-img-elem{
+    width: 100%; height: 100%;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: 90%;
+}
+
+.types__vtablet-img-elem_electro{
+    background-image: url('../../images/velo.jpg');
+}
+
+.types__vtablet-img-elem_spare{
+    background-image: url('../../images/velo2.jpg');
+}
+
+.types__vtablet-img-elem_accessories{
+    background-image: url('../../images/index/banner-1.png');
+}
+
+.types__vtablet-img-elem_land{
+    background-image: url('../../images/index/banner-31.png');
+}
+
+.types__vtablet-img-elem_part{
+    background-image: url('../../images/index/banner-2.png');
+}
+
+.types__vtablet-img-elem_bicycle{
+    background-image: url('../../images/velo6.jpg');
+}
+
 }

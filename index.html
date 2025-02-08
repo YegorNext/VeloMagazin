@@ -477,7 +477,9 @@
 
         <section id = "types">
             <div class = "types__container"> 
-                <div class = "types__img-container row gap-1">
+
+                <!-- Widescreen -->
+                <div class = "types__img-container row gap-1 d-none d-md-flex">
                     <div class="col-3 types__img-item-container">
                         <div class="row align-items-end types__img_aligned-right types__img-item"> 
                             <div class="col h-25 types__img-txt-container"> 
@@ -523,8 +525,54 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
+
+                <!-- V-tablet -->
+                <div class = "types__vtablet-img-container d-block d-md-none">
+                    <table>
+                        <tr> 
+                            <td rowspan="2">
+                                <div class = "types__vtablet-img-elem types__vtablet-img-elem_electro"> </div>
+                            </td>
+                            <td> 
+                                <div class = "types__vtablet-img-elem types__vtablet-img-elem_spare">
+
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr> 
+                            <td> 
+                                <div class = "types__vtablet-img-elem types__vtablet-img-elem_accessories">
+
+                                </div>    
+                            </td>
+                        </tr>
+
+                        <tr> 
+                            <td>
+                                <div class = "types__vtablet-img-elem types__vtablet-img-elem_land">
+
+                                </div>    
+                            </td>
+                            <td rowspan="2">
+                                <div class = "types__vtablet-img-elem types__vtablet-img-elem_bicycle">
+
+                                </div>    
+                            </td>
+                        </tr>
+
+                        <tr> 
+                            <td>
+                                <div class = "types__vtablet-img-elem types__vtablet-img-elem_part">
+
+                                </div>    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
             </div>
         </section>
 
