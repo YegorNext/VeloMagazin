@@ -14,7 +14,7 @@
 }
 
 .types__vtablet-img-container table{
-    width: 100%; height: 1325px;
+    width: 100%; height: 170vw;
     
 }
 
@@ -24,6 +24,8 @@
 }
 
 .types__vtablet-img-elem{
+    position: relative;
+
     width: 100%; height: 100%;
     
     background-size: cover;
@@ -54,6 +56,55 @@
 
 .types__vtablet-img-elem_bicycle{
     background-image: url('../../images/velo6.jpg');
+}
+
+
+.types__vtablet-img-elem-inner{
+    display: flex;
+    height: 100%; width: 100%;
+
+    position: relative;
+
+    padding: 7%;
+
+    align-items: end;
+}
+
+.types__vtablet-img-txt{
+    display: inline-block;
+    height: fit-content;
+    
+    overflow-wrap: break-word;
+
+    font-weight: 600;
+    font-size: 4vw;
+    color: white;
+    
+}
+
+.types__img-btn{
+    width: 100%; height: 6vw;
+}
+
+.types__img-btn_txt{
+    font-size: 2.5vw;
+}
+
+.types__img-btn-container{
+    width: 100%;
+}
+
+
+
+.types__vtablet-img-elem::before{
+    content: '';
+    background-color: black;
+
+    width: 100%; height: 100%;
+    position: absolute;
+    z-index: 0;
+
+    opacity: 0.2;
 }
 
 }
