@@ -598,9 +598,21 @@
         <section id = "bestseller">
             <div class = "bestseller__container">
                 <div class = "bestseller__square">
-                    <div class="bestseller__header d-flex">
+                    <div class="bestseller__header d-block d-md-flex">
                         <h4>Лідер продажу</h4>
-                        <div class="col-6 d-flex justify-content-center"> 
+
+                        <div class="col-6 d-none d-md-flex justify-content-center"> 
+                            <ul class = "d-flex" >
+                                <li>Складні</li>
+                                <li>Міські</li>
+                                <li>Дитячі</li>
+                                <li>Гірські</li>
+                                <li>Підлітковий</li>
+                                <li>Жіночі</li>
+                            </ul>
+                        </div>
+
+                        <div class = "d-flex d-md-none">
                             <ul class = "d-flex" >
                                 <li>Складні</li>
                                 <li>Міські</li>
@@ -614,7 +626,10 @@
 
                     <div class="horizontal-line"> </div>
 
-                    <div class = "bestseller__list-container d-flex">
+                    <!-- Widescreen -->
+                    <div class = "bestseller__list-container d-none d-md-flex">
+
+                        
                         <div class = "bestseller__list-elem col-3">
 
                             <div class = "bestseller__discount">
@@ -732,18 +747,176 @@
                         </div>
                     </div>
 
+                    <!-- Vertical Tablet Screen -->
+                    <div class = "bestseller__list-container d-block d-md-none">
+                        
+                        <!-- Carousel  -->
+                        <div id="carouselProd" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselProd" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselProd" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselProd" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            
+                              <!-- First Element -->
+                              <div class="carousel-item active">
+                                <div class = "d-flex">
+                                    <div class = "bestseller__list-elem col-6">
+
+                                        <div class = "bestseller__discount">
+                                            <span class="bestseller__discount_value">-12%</span>
+                                        </div>
+            
+                                        <div class = "bestseller__img-container"></div>
+            
+                                        <div class = "bestseller__title">
+                                            <span>Велосипед Comanche PRAIRE DISC 27, колір: чорний-жовтий, рама 16"</span>
+                                        </div>
+            
+                                        <div class = "bestseller__elem-footer d-flex">
+                                            <div class = "bestseller__elem-price">
+                                                <div> 
+                                                    <span class="besteller__elem-price_old">14 245</span>
+                                                </div>
+                                                <div>
+                                                    <span class="besteller__elem-price_new">14 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "bestesller__elem-icart"> 
+                                                <div class = "bestseller__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class = "bestseller__list-elem col-6">
+
+                                        <div class = "bestseller__discount">
+                                            <span class="bestseller__discount_value">-12%</span>
+                                        </div>
+            
+                                        <div class = "bestseller__img-container"></div>
+            
+                                        <div class = "bestseller__title">
+                                            <span>Велосипед Comanche TOMAHAWK 27 NEW, колір білий, 19”</span>
+                                        </div>
+            
+                                        <div class = "bestseller__elem-footer d-flex">
+                                            <div class = "bestseller__elem-price">
+                                                <div> 
+                                                    <span class="besteller__elem-price_old">15 245</span>
+                                                </div>
+                                                <div>
+                                                    <span class="besteller__elem-price_new">12 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "bestesller__elem-icart"> 
+                                                <div class = "bestseller__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                              </div>
+                              <!-- First Element End-->
+
+
+                              <!-- Second Element -->
+                              <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class = "bestseller__list-elem col-6">
+
+                                        <div class = "bestseller__discount">
+                                            <span class="bestseller__discount_value">-12%</span>
+                                        </div>
+            
+                                        <div class = "bestseller__img-container bestseller__img-container_vector-comanche"></div>
+            
+                                        <div class = "bestseller__title">
+                                            <span>Велосипед Comanche VECTOR 27, колір сірий, 17,5”</span>
+                                        </div>
+            
+                                        <div class = "bestseller__elem-footer d-flex">
+                                            <div class = "bestseller__elem-price">
+                                                <div> 
+                                                    <span class="besteller__elem-price_old">11 245</span>
+                                                </div>
+                                                <div>
+                                                    <span class="besteller__elem-price_new">10 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "bestesller__elem-icart"> 
+                                                <div class = "bestseller__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+
+                                    <div class = "bestseller__list-elem col-6">
+
+                                        <div class = "bestseller__discount">
+                                            <span class="bestseller__discount_value">-12%</span>
+                                        </div>
+            
+                                        <div class = "bestseller__img-container bestseller__img-container_hurricane-grey"></div>
+            
+                                        <div class = "bestseller__title">
+                                            <span>Велосипед Comanche HURRICANE 27, колір сірий, 27,5”</span>
+                                        </div>
+            
+                                        <div class = "bestseller__elem-footer d-flex">
+                                            <div class = "bestseller__elem-price">
+                                                <div> 
+                                                    <span class="besteller__elem-price_old">18 245</span>
+                                                </div>
+                                                <div>
+                                                    <span class="besteller__elem-price_new">16 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "bestesller__elem-icart"> 
+                                                <div class = "bestseller__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+
+                              </div>
+                              <!-- Second Element End -->
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProd" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Попередній</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProd" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Наступний</span>
+                            </button>
+                          </div>
+
+                        <!-- Carousel End -->
+
+ 
+                    </div>
+
+                    <!-- Vertical Tablet Screen END -->
                     
                 </div>
             </div>
         </section>
 
-
         <section id = "brend">
             <div class="brend__container">
-                <div class="brend__info row"> 
-                    <div class="col-3">
+                <div class="brend__info d-block d-md-flex"> 
+                    <div class="col-12 col-md-3">
                         <div class="row">
-                            <div class="w-50 p-0">
+                            <div class="w-50 p-0 vtablet-width-100">
                                 <span class="f-18 medium">Ми офіційний виробник</span>
                             </div>
                         </div>
@@ -753,7 +926,7 @@
                                   aria-controls="collapseBrend">Детальніше про бренди</span>
                         </div>
                     </div>
-                    <div class="col-9">
+                    <div class="col-12 col-md-9  mt-3 mt-md-0">
                         <div class="row mb-5">
                             <div class="col-3"> 
                                 <img src="images/comanche-logo.png" class="size-fix"> 
@@ -831,7 +1004,8 @@
 
                     <div class="horizontal-line"> </div>
 
-                    <div class = "newitems__list-container d-flex">
+                    <!-- Widescreen -->
+                    <div class = "newitems__list-container d-none d-md-flex">
                         <div class = "newitems__list-elem col-3">
 
                             <div class = "newitems__discount latest__value">
@@ -937,7 +1111,149 @@
                         </div>
                     </div>
 
-                    
+                    <!-- Vertical tablet -->
+                    <div class = "newitems__list-container d-block d-md-none">
+                        
+                        <!-- Carousel  -->
+                        <div id="carouselNewItems" class="carousel slide" data-bs-ride="false">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselNewItems" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselNewItems" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselNewItems" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                            
+                              <!-- First Element -->
+                              <div class="carousel-item active">
+                                <div class = "d-flex">
+                                    <div class = "newitems__list-elem col-6">
+
+                                        <div class = "newitems__discount latest__value">
+                                            <span class="newitems__discount_value">Новинка</span>
+                                        </div>
+            
+                                        <div class = "newitems__img-container"></div>
+            
+                                        <div class = "newitems__title">
+                                            <span>Велосипед Comanche LAGO S3, колір чорний, 11"</span>
+                                        </div>
+            
+                                        <div class = "newitems__elem-footer d-flex">
+                                            <div class = "newitems__elem-price align-self-center">
+                                                <div>
+                                                    <span class="newitems__elem-price_new">14 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "newitems__elem-icart"> 
+                                                <div class = "newitems__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class = "newitems__list-elem col-6">
+            
+                                        <div class = "newitems__discount latest__value">
+                                            <span class="newitems__discount_value">Новинка</span>
+                                        </div>
+            
+                                        <div class = "newitems__img-container"></div>
+            
+                                        <div class = "newitems__title">
+                                            <span>Велосипед Comanche STRADA PRO, колір сірий, 54СМ.</span>
+                                        </div>
+            
+                                        <div class = "newitems__elem-footer d-flex">
+                                            <div class = "newitems__elem-price align-self-center">
+                                                <div>
+                                                    <span class="newitems__elem-price_new">12 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "newitems__elem-icart"> 
+                                                <div class = "newitems__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                              </div>
+                              <!-- First Element End-->
+
+
+                              <!-- Second Element -->
+                              <div class="carousel-item">
+                                <div class="d-flex">
+                                    <div class = "newitems__list-elem col-6">
+
+                                        <div class = "newitems__discount latest__value">
+                                            <span class="newitems__discount_value">Новинка</span>
+                                        </div>
+            
+                                        <div class = "newitems__img-container newitems__img-container_r-one"></div>
+            
+                                        <div class = "newitems__title">
+                                            <span>Велосипед Comanche R-ONE, колір жовто-синій, CARBONE, 7.5 KG</span>
+                                        </div>
+            
+                                        <div class = "newitems__elem-footer d-flex ">
+                                            <div class = "newitems__elem-price align-self-center">
+                                                <div>
+                                                    <span class="newitems__elem-price_new">10 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "newitems__elem-icart"> 
+                                                <div class = "newitems__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+            
+                                    <div class = "newitems__list-elem col-6">
+                                        <div class = "newitems__discount latest__value">
+                                            <span class="newitems__discount_value">Новинка</span>
+                                        </div>
+            
+                                        <div class = "newitems__img-container newitems__img-container_saga-s3"></div>
+            
+                                        <div class = "newitems__title">
+                                            <span>Велосипед Comanche SAGA S3, колір помаранчево-чорний, 14"</span>
+                                        </div>
+            
+                                        <div class = "newitems__elem-footer d-flex">
+                                            <div class = "newitems__elem-price align-self-center">
+                                                <div>
+                                                    <span class="newitems__elem-price_new">16 245 грн</span>
+                                                </div>
+                                            </div>
+                                            <div class = "newitems__elem-icart"> 
+                                                <div class = "newitems__cart-icon">
+                                                    <img src = "images/shopping-cart.svg">
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+
+                              </div>
+                              <!-- Second Element End -->
+
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNewItems" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Попередній</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselNewItems" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Наступний</span>
+                            </button>
+                          </div>
+
+                        <!-- Carousel End -->
+                    </div>
+                    <!-- Vertical tablet END -->
                 </div>
             </div>
         </section>
@@ -1083,7 +1399,7 @@
         <footer>
             <div class = "footer__container">
                 <div class = "footer__content"> 
-                    <div>
+                    <div class="col-6 col-md">
                         <h6 >Каталог товарів</h6>
                         <ul class = "white">
                             <li>Самокати</li>
@@ -1093,7 +1409,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="col-6 col-md">
                         <h6>Покупцеві</h6>
                         <ul class = "white">
                             <li>Гарантія</li>
@@ -1104,7 +1420,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="col-6 col-md mt-3 mt-md-0">
                         <h6>Компанія</h6>
                         <ul class = "white">
                             <li>Вакансії</li>
@@ -1114,7 +1430,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="col-6 col-md mt-3 mt-md-0">
                         <div class = "footer__email-box d-flex">
                             <div class="footer__image-box"> <img src="images/email.png"> </div>
                             <span class="footer__info-text">velomagazininua@gmail.com</span>
@@ -1135,7 +1451,7 @@
                 </div>
 
                 <span class = "footer__line"></span>
-                <span class = "f-12 gray"> @ 2025 / Velomagazin велосипедний інтернет магазин, роздрібна та оптова торгівля</span>
+                <span class = "f-12 gray footer__vertical-adaptation-authors"> @ 2025 / Velomagazin велосипедний інтернет магазин, роздрібна та оптова торгівля</span>
             </div>
         </footer>
 
