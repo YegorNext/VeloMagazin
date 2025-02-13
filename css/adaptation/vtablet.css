@@ -252,6 +252,7 @@
 .footer__content{
     flex-wrap: wrap;
     padding-left: 10px; 
+    padding-right: 25px;
 }
 
 .footer__content li{
