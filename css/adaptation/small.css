@@ -12,3 +12,8 @@
     min-height: 60px !important; 
     min-width: 60px !important;
 }
+
+.footer__content{
+    flex-wrap: wrap;
+    padding-right: 35px;
+}
