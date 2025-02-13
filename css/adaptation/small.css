@@ -3,3 +3,12 @@
     max-width: 50px;
     width: 100%;
 }
+
+.service__img-text_visual{
+    font-size: 8px
+}
+
+.service__container img{
+    min-height: 60px !important; 
+    min-width: 60px !important;
+}
