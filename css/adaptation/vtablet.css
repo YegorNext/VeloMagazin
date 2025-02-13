@@ -6,6 +6,10 @@
     height: 48vw;
 }
 
+.banner__text{
+    padding-bottom: 3%;
+}
+
 .types__vtablet-img-container{
     margin-top: 30px;
 
