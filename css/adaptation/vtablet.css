@@ -142,6 +142,16 @@
     margin-top: 40px;
 }
 
+.bestseller__header h4{
+    font-size: 16px;
+}
+
+.bestseller__header li{
+    font-size: 12px;
+}
+
+/* margins */
+
 #brend, #link, .newitems__square{
     margin-top: 40px;
 }
@@ -174,6 +184,10 @@
 
 .newitems__header h4{
     font-size: 16px;
+}
+
+.newitems__header li{
+    font-size: 12px;
 }
 
 
@@ -266,6 +280,11 @@ footer ul li{
 .about__container{
     padding: 15px;
     padding-top: 0;
+}
+
+
+.fs-5.about__truck_txt{
+    font-size: 14px !important;
 }
 
 }
