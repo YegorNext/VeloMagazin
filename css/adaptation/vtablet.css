@@ -7,7 +7,7 @@
 }
 
 .types__vtablet-img-container{
-    margin-top: 50px;
+    margin-top: 30px;
 
     display: block;
     width: 100%; height: auto;
@@ -138,6 +138,14 @@
     background-image: url('../../images/index/c_hurricane_27_new_gray.jpg') !important;
 }
 
+.bestseller__square{
+    margin-top: 40px;
+}
+
+#brend, #link, .newitems__square{
+    margin-top: 40px;
+}
+
 /* NewItems */
 .newitems__header ul{ 
     padding-left: 0;
@@ -162,6 +170,10 @@
 
 .newitems__img-container_saga-s3{
     background-image: url('../../images/index/o-b1.jpg');
+}
+
+.newitems__header h4{
+    font-size: 16px;
 }
 
 
@@ -214,7 +226,7 @@
     display: flex;
     align-items: center;
     
-    font-size: 1.7vw;
+    font-size: 12px;
 }
 
 .footer__social img{
@@ -230,6 +242,14 @@
     padding-left: 10px;
 }
 
+footer ul li{ 
+    font-size: 10px !important;
+}
+
+.footer__content h6{
+    font-size: 12px !important; 
+}
+
 .about__container h4{
     font-size: 16px !important;
 }
@@ -242,5 +262,10 @@
     width: 100%;
 }
 
+/* About */
+.about__container{
+    padding: 15px;
+    padding-top: 0;
+}
 
 }
