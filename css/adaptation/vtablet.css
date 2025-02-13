@@ -1,6 +1,11 @@
 @media (max-width: 767px) {
 
 /* Vertical tablet  */
+
+.banner-image, .carousel-inner {
+    height: 48vw;
+}
+
 .types__vtablet-img-container{
     margin-top: 50px;
 
@@ -165,6 +170,34 @@
     width: 100% !important;
 }
 
+
+.brend__container img{
+    width: 70px; height: 50px;
+}
+
+
+
+/* Link */
+
+.link__container input{
+    width: 90%;
+}
+
+#link h4{
+    font-size: 14px;
+}
+
+.link__container span.white{
+    font-size: 10px;
+}
+
+.service__img-text_visual{
+    font-size: 10px;
+}
+
+.footer__vertical-adaptation-authors{
+    display: block;
+}
 
 /* Footer */
 
