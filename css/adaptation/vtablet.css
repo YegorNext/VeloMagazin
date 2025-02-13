@@ -154,6 +154,15 @@
     font-size: 12px;
 }
 
+.bestseller__cart-icon{
+    width: 35px;
+    height: 35px;
+}
+
+.bestseller__cart-icon img{
+    width: 20px; height: 20px;
+}
+
 /* margins */
 
 #brend, #link, .newitems__square{
@@ -192,6 +201,15 @@
 
 .newitems__header li{
     font-size: 12px;
+}
+
+.newitems__cart-icon{
+    width: 35px;
+    height: 35px;
+}
+
+.newitems__cart-icon img{
+    width: 20px; height: 20px;
 }
 
 
