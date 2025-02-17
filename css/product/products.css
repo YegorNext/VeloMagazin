@@ -23,7 +23,7 @@ footer{
 
 .products__list, .products__panel{
 
-   height: auto; width: 100%;
+   height: auto; 
    border: 1px solid rgba(128, 128, 128, 0.322); 
 }
 

@@ -1,6 +1,12 @@
 body div{
 }
 
+div, section{
+    flex-shrink: 1;
+    max-width: 100%;
+}
+
+
 @media (max-width: 1199px){
     #products{
         padding-top: 80px;
@@ -69,7 +75,7 @@ body div{
     
 
     .products__elem{
-        width: 91%;
+        width: 96%;
     }
 
     .products__elem-title span{
