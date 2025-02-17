@@ -19,13 +19,22 @@
         <link rel = "stylesheet" type="text/css" href = "css/product/products.css">
 
         <link rel = "stylesheet" type="text/css" href = "css/footer.css">
+
+
+
+        <link rel = "stylesheet" type="text/css" href="css/adaptation/tablet.css">
+        <link rel = "stylesheet" type="text/css" href="css/adaptation/vtablet.css">
+        <link rel = "stylesheet" type="text/css" href="css/adaptation/small.css">
+        <link rel = "stylesheet" type="text/css" href="css/adaptation/screen-products.css">
+    
     </head>
 
     <body>
         <header>
             <div class = "header-container"> 
                 <div class = "header-content"> 
-                    <div class = "header__menu">
+                    <!--  Widescreen  -->
+                    <div class = "header__menu d-none d-xl-flex">
                         <div class = "header__menu-divider"> 
                             <div><span class = "blue">UA</span></div>
                             <div>Оплата</div>
@@ -48,11 +57,52 @@
                             <div class = "blue menu-exit">Вхід</div>
                         </div>
                     </div>
+
+                    <!-- Tablet screen 1200 -->
+                    <div class = "header__menu-tablet">
+                        <div class = "col-7 col-sm-8 col-md-4">
+                            <div class="d-flex">
+                                <div class="header__burger-btn d-flex">
+                                    <div class="align-self-center">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class = "header__tablet-logo-container align-self-end">
+                                    <a href="index.html">
+                                        <span class = "logo"> </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+                            <div class = "header__menu-tablet-icontainer">
+                                
+                                <div class = "categories__search burger align-self-center"> 
+                                    <input placeholder="Знайти..">
+
+                                    <span class = "search-icon"></span>
+                                </div>
+
+                                <div class = "ms-2 me-2 ms-md-3 me-md-3">
+                                    <span class = "menu-burger-heart"> </span>
+
+                                </div>
+                                <div class="d-flex">
+                                    <span class = "menu-burger-cart"> </span> 
+                                    <span class="menu-elem-value blue">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </header>
 
-        <section id = "categories"> 
+        <section id = "categories" class="d-none d-xl-flex"> 
             <div class = "categories__container">
                 <div class="row align-items-center">
                     <div class="col-2 categories__logo-container">
@@ -168,29 +218,31 @@
                                             <span>Велосипед Comanche Backfire 29 S Pro</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 33 594</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 33 594</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -204,29 +256,31 @@
                                             <span>Велосипед Comanche Ontario Fly Tourney</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 14 781</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 14 781</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -240,29 +294,31 @@
                                             <span>Велосипед Comanche Tomahawk 29 S-PRO</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 26 870</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 26 870</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -276,29 +332,31 @@
                                             <span>Велосипед Comanche Hurricane 29 S Pro</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 28 215</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 28 215</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -316,29 +374,31 @@
                                             <span>Велосипед Comanche Hurricane 27.5 S Pro</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 28 215</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 28 215</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -352,29 +412,31 @@
                                             <span>Велосипед Comanche Ontario Comp Disc</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 18 694</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 18 694</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -388,29 +450,31 @@
                                             <span>Велосипед Comanche Orinoco 27.5 Disc L</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 21 491</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 21 491</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -424,29 +488,31 @@
                                             <span>Велосипед Comanche Prairie Comp 27.5</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 20 982</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 20 982</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -464,29 +530,31 @@
                                             <span>Велосипед Comanche Strada</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 15 567</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 15 567</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -500,29 +568,31 @@
                                             <span>Велосипед Comanche Strada Comp</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 18 291</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 18 291</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -536,29 +606,31 @@
                                             <span>Велосипед Comanche Lago S3</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>22 269</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>22 269</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -572,29 +644,31 @@
                                             <span>Велосипед COMANCHE ONTARIO SPORT COMP 15" BLU-BLK</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>20 966</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>20 966</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -611,29 +685,31 @@
                                             <span>Велосипед COMANCHE ONTARIO SPORT L 13" LIL-WHT</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>170 66</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>170 66</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -647,29 +723,31 @@
                                             <span>Велосипед COMANCHE HURRICANE 27 S-PRO 17.5" BLK-GRY</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 28 215</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 28 215</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -683,29 +761,31 @@
                                             <span>Велосипед COMANCHE ORINOCO 27 L COMP 16" GRY-TRQ</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>24 866</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>24 866</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -719,29 +799,31 @@
                                             <span>Велосипед Comanche Lago S3</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>24 866</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>24 866</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -758,29 +840,31 @@
                                             <span>Велосипед COMANCHE ORINOCO 27 L DISC 16" BLU-YEL</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 21 490</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 21 490</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -794,29 +878,31 @@
                                             <span>Велосипед Comanche Strada Comp</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>21 490</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>21 490</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -830,29 +916,31 @@
                                             <span>Велосипед COMANCHE PRAIRIE 27 COMP 16" GRY-BLU</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>20 982</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>20 982</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -866,30 +954,32 @@
                                             <span>Велосипед COMANCHE PRAIRIE 27 DISC 16" BLK-YEL</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>18 993</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>18 993</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
-                                        </div>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>  
                                     </div>
                                 </div>
 
@@ -905,29 +995,31 @@
                                             <span>Велосипед COMANCHE TOMAHAWK 27 16" GRY-YEL</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 23 291</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 23 291</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -941,29 +1033,31 @@
                                             <span>Велосипед COMANCHE TOMAHAWK 27 S-PRO 16" GRY-BLU</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 26 870</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 26 870</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -977,29 +1071,31 @@
                                             <span>Велосипед RANGER MAGNUM 27 DISC 16" BLK-BLU</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>15 444</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>15 444</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -1013,29 +1109,31 @@
                                             <span>Велосипед COMANCHE BACKFIRE 29 S-PRO 19" BLK-GRY</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>33 594</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>33 594</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1053,29 +1151,31 @@
                                             <span>Велосипед COMANCHE HURRICANE 29 S-PRO 19" BLK-GRY</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 28 215</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 28 215</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1089,29 +1189,31 @@
                                             <span>Велосипед COMANCHE MAXIMA 29 S-PRO 21" BLK-ORG</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 38 961</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 38 961</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1125,29 +1227,31 @@
                                             <span>Велосипед COMANCHE PRAIRIE 29 COMP 17.5" GRY-GRN</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>20 982</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>20 982</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -1161,29 +1265,31 @@
                                             <span>Велосипед COMANCHE PRAIRIE 29 COMP 19" GRY-GRN</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>20 982</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>20 982</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1201,29 +1307,31 @@
                                             <span>Велосипед COMANCHE PRAIRIE 29 DISC 17.5" GRY-ORG</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>18 993</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>18 993</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1237,29 +1345,31 @@
                                             <span>Велосипед COMANCHE TOMAHAWK 29 17.5" GRY-GRN</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>23 291</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>23 291</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1273,29 +1383,31 @@
                                             <span>Велосипед COMANCHE TOMAHAWK 29 S-PRO 17.5" BLK-BLU</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>26 870</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>26 870</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -1309,29 +1421,31 @@
                                             <span>Велосипед RANGER MAGNUM 29 DISC 17.5" GRY-BLK</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>15 795</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>15 795</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1349,29 +1463,31 @@
                                             <span>Велосипед COMANCHE HOLIDAY L 1.0 14" TRQ-WHT (20Г)</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>15 500</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>15 500</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1385,29 +1501,31 @@
                                             <span>Велосипед COMANCHE HOLIDAY L 1.0 18" WHT-TRQ</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>20 124</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>20 124</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1421,29 +1539,31 @@
                                             <span>Велосипед COMANCHE LAGO S3 11" BLK-RED</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>22 269</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>22 269</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -1457,29 +1577,31 @@
                                             <span>Велосипед COMANCHE PONY COMP L 12.5" PNK-WHT</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>16 528</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>16 528</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1496,29 +1618,31 @@
                                             <span>Велосипед COMANCHE PONY COMP M 12.5" BLU-BLK</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 16 528</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 16 528</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1532,29 +1656,31 @@
                                             <span>Велосипед COMANCHE PONY L 14" GRN-SIL</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 14 390</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 14 390</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1568,29 +1694,31 @@
                                             <span>Велосипед COMANCHE PONY M 12.5" BLU-ORG</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>14 390</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>14 390</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -1604,29 +1732,31 @@
                                             <span>Велосипед COMANCHE SAGA S3 W24 13" BLU-WHT</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>16 393</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>16 393</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1643,29 +1773,31 @@
                                             <span>Велосипед COMANCHE SAGA S3 W24 13" GRN-BLK</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 16 393</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 16 393</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1679,29 +1811,31 @@
                                             <span>Велосипед COMANCHE BUTTERFLY W16 8" ORG-WHT</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span> 9 804</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 9 804</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1715,29 +1849,31 @@
                                             <span>Велосипед COMANCHE BUTTERFLY W20 9" PNK-WHT</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>10 543</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>10 543</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div> 
                                     
@@ -1751,29 +1887,31 @@
                                             <span>Велосипед COMANCHE FLORIDA FLY W16 8" PNK-WHT</span>
                                         </div>
 
-                                        <div class = "products__elem-price">
-                                            <div class="d-flex">
-                                                <div class="pt-1">
-                                                    <span>9 804</span>
-                                                </div>
-                                                
-                                                <div class="d-flex ps-1">
-                                                    <span class="align-self-start"> грн </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class = "products__elem-line"> </div>
-
-                                        <div class = "products__btn-container"> 
-                                            <button> 
-                                                <div class = "products__btn-content"> 
-                                                    <div class = "cart-icon"></div>
-                                                    <div>
-                                                        <span>В кошик</span>
+                                        <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>9 804</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
+
+                                            <div class = "products__elem-line"> </div>
+
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1790,30 +1928,32 @@
                                              <span>Беговел COMANCHE PIXEL 7" BLU-YEL</span>
                                          </div>
  
-                                         <div class = "products__elem-price">
-                                             <div class="d-flex">
-                                                 <div class="pt-1">
-                                                     <span> 4 485</span>
-                                                 </div>
-                                                 
-                                                 <div class="d-flex ps-1">
-                                                     <span class="align-self-start"> грн </span>
-                                                 </div>
-                                             </div>
-                                         </div>
- 
-                                         <div class = "products__elem-line"> </div>
- 
-                                         <div class = "products__btn-container"> 
-                                             <button> 
-                                                 <div class = "products__btn-content"> 
-                                                     <div class = "cart-icon"></div>
-                                                     <div>
-                                                         <span>В кошик</span>
-                                                     </div>
-                                                 </div>
-                                             </button>
-                                         </div>
+                                         <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 4 485</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class = "products__elem-line"> </div>
+    
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
                                      </div>
  
                                      <!-- second elem --> 
@@ -1826,30 +1966,32 @@
                                              <span>Велосипед COMANCHE SHERIFF W16 8" BLK-BLU</span>
                                          </div>
  
-                                         <div class = "products__elem-price">
-                                             <div class="d-flex">
-                                                 <div class="pt-1">
-                                                     <span> 9 804</span>
-                                                 </div>
-                                                 
-                                                 <div class="d-flex ps-1">
-                                                     <span class="align-self-start"> грн </span>
-                                                 </div>
-                                             </div>
-                                         </div>
- 
-                                         <div class = "products__elem-line"> </div>
- 
-                                         <div class = "products__btn-container"> 
-                                             <button> 
-                                                 <div class = "products__btn-content"> 
-                                                     <div class = "cart-icon"></div>
-                                                     <div>
-                                                         <span>В кошик</span>
-                                                     </div>
-                                                 </div>
-                                             </button>
-                                         </div>
+                                         <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span> 9 804</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class = "products__elem-line"> </div>
+    
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
                                      </div>
  
                                      <!-- third elem -->
@@ -1862,30 +2004,32 @@
                                              <span>Велосипед COMANCHE SHERIFF W16 8" BLK-GRN</span>
                                          </div>
  
-                                         <div class = "products__elem-price">
-                                             <div class="d-flex">
-                                                 <div class="pt-1">
-                                                     <span>9 804</span>
-                                                 </div>
-                                                 
-                                                 <div class="d-flex ps-1">
-                                                     <span class="align-self-start"> грн </span>
-                                                 </div>
-                                             </div>
-                                         </div>
- 
-                                         <div class = "products__elem-line"> </div>
- 
-                                         <div class = "products__btn-container"> 
-                                             <button> 
-                                                 <div class = "products__btn-content"> 
-                                                     <div class = "cart-icon"></div>
-                                                     <div>
-                                                         <span>В кошик</span>
-                                                     </div>
-                                                 </div>
-                                             </button>
-                                         </div>
+                                         <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>9 804</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class = "products__elem-line"> </div>
+    
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
                                      </div> 
                                      
                                      <!-- fourth elem -->
@@ -1898,30 +2042,32 @@
                                              <span>Велосипед COMANCHE SHERIFF W16 8" BLK-RED</span>
                                          </div>
  
-                                         <div class = "products__elem-price">
-                                             <div class="d-flex">
-                                                 <div class="pt-1">
-                                                     <span>9 804</span>
-                                                 </div>
-                                                 
-                                                 <div class="d-flex ps-1">
-                                                     <span class="align-self-start"> грн </span>
-                                                 </div>
-                                             </div>
-                                         </div>
- 
-                                         <div class = "products__elem-line"> </div>
- 
-                                         <div class = "products__btn-container"> 
-                                             <button> 
-                                                 <div class = "products__btn-content"> 
-                                                     <div class = "cart-icon"></div>
-                                                     <div>
-                                                         <span>В кошик</span>
-                                                     </div>
-                                                 </div>
-                                             </button>
-                                         </div>
+                                         <div>
+                                            <div class = "products__elem-price">
+                                                <div class="d-flex">
+                                                    <div class="pt-1">
+                                                        <span>9 804</span>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex ps-1">
+                                                        <span class="align-self-start"> грн </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class = "products__elem-line"> </div>
+    
+                                            <div class = "products__btn-container"> 
+                                                <button> 
+                                                    <div class = "products__btn-content"> 
+                                                        <div class = "cart-icon"></div>
+                                                        <div>
+                                                            <span>В кошик</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
                                      </div>
                                  </div>
                             </div>

@@ -109,8 +109,16 @@ footer{
     height: auto;
 }
 
+/* !--COMMENTED--!
+
 .products__elem-img{
     min-height: 115px;
+} 
+
+*/
+
+.products__elem-title{
+    margin-top: 5%;
 }
 
 
@@ -159,6 +167,14 @@ footer{
     margin-top: 5%; margin-bottom: 4%;
     border-top: 1px solid rgba(128, 128, 128, 0.322); 
 }
+
+
+/* TEST */
+
+
+
+/* TEST END */
+
 
 .products__btn-container{
     width: 100%; height: auto;
