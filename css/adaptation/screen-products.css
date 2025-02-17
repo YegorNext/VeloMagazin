@@ -1,5 +1,4 @@
 body div{
-    overflow: hidden;
 }
 
 @media (max-width: 1199px){
@@ -46,6 +45,11 @@ body div{
     .cart-icon{
         width: 15px; height: 13px;
     }
+
+
+
+
+    
 }
 
 @media (max-width: 767px) {
@@ -57,4 +61,51 @@ body div{
         display: block;
         padding-left: 10px;
     }
+
+    .products__list-row{
+        display: flex; flex: 1;
+        flex-wrap: wrap;
+    }
+    
+
+    .products__elem{
+        width: 95%;
+    }
+
+    .products__elem-title span{
+        font-size: 3vw;
+    }
+
+    .products__img-container{
+        height: 17vw;
+    }
+
+    .products__elem-price span{
+        font-size: 3.5vw;
+    }
+
+    .products__elem-line{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .products__elem-title{
+        margin-top: 2%;
+    }
+
+    .products__btn-content span{
+        font-size: 10px;
+    }
+
+    .cart-icon{
+        height: 2.5vw; width: 2.5vw;
+    }
+
+    .products__elem-title{
+        min-height: 25px;
+    }
+
+    .products__panel li{
+        font-size: 12px;   
+     }
 }
