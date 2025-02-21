@@ -1,4 +1,4 @@
-package com.velomagaz.app.Entity;
+package com.velomagaz.app.entity;
 
 import java.sql.Clob;
 import java.util.List;
