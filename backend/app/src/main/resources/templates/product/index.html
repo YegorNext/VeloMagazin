@@ -214,22 +214,26 @@
                                             <img th:src="@{/product/{id}/image(id=${element.id})}" class = "products__img-container"> 
                                         </div>
                                         
-                                        <div class = "products__elem-title">
-                                            <span th:text="${element.productName}"></span>
-                                        </div>
+                                        <a th:href="@{/product/{id}/image(id=${element.id})}" class="decoration-none-pointer">
+                                            <div class = "products__elem-title">
+                                                <span th:text="${element.productName}"></span> 
+                                            </div>
+                                        </a>
 
                                         <div>
-                                            <div class = "products__elem-price">
-                                                <div class="d-flex">
-                                                    <div class="pt-1">
-                                                        <span th:text="${element.price}"></span>
-                                                    </div>
-                                                    
-                                                    <div class="d-flex ps-1">
-                                                        <span class="align-self-start"> грн </span>
+                                            <a th:href="@{/product/{id}/image(id=${element.id})}" class="decoration-none-pointer">
+                                                <div class = "products__elem-price">
+                                                    <div class="d-flex">
+                                                        <div class="pt-1">
+                                                            <span th:text="${element.price}"></span>
+                                                        </div>
+                                                        
+                                                        <div class="d-flex ps-1">
+                                                            <span class="align-self-start"> грн </span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
 
                                             <div class = "products__elem-line"> </div>
 

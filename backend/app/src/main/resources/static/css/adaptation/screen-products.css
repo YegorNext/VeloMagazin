@@ -7,6 +7,10 @@ div, section{
 }
 
 
+.products__elem > div:last-child {
+    margin-top: auto !important;
+}
+
 @media (max-width: 1199px){
     #products{
         padding-top: 80px;

@@ -83,6 +83,10 @@ footer{
 }
 
 .products__elem{
+    display: flex;
+    flex-direction: column;
+
+
     border: 1px solid rgba(128, 128, 128, 0.322); 
     
     padding: 1%;
@@ -91,6 +95,13 @@ footer{
 
 
     width: 23%;
+}
+
+.decoration-none-pointer{
+    text-decoration: none !important;
+    color: black !important;
+
+    cursor: pointer;
 }
 
 
@@ -117,11 +128,6 @@ footer{
 
 */
 
-.products__elem-title{
-    margin-top: 5%;
-}
-
-
 .products__img-container{
     display: block;
 
@@ -138,9 +144,8 @@ footer{
 }
 
 .products__elem-title{
+    margin-top: 5%;
     line-height: 1.2;
-
-    min-height: 60px;
 }
 
 .products__elem-price{
