@@ -1,0 +1,8 @@
+.latest__value{
+    background-color: #d6ff7e; 
+    width: 90px;
+}
+
+.latest__value span{
+    margin-left: 15px;
+}

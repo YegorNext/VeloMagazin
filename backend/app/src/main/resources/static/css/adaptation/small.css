@@ -1,0 +1,30 @@
+@media (max-width: 566px) {
+
+    .header__menu-tablet input{
+        font-size: 10px;
+        max-width: 50px;
+        width: 100%;
+    }
+
+    .service__img-text_visual{
+        font-size: 8px
+    }
+
+    .service__container img{
+        min-height: 60px !important; 
+        min-width: 60px !important;
+    }
+
+    .footer__content{
+        flex-wrap: wrap;
+        padding-right: 35px;
+    }
+
+    .types__img-btn{
+        height: 8.5vw;
+    }
+
+    .types__img-btn_txt {
+        font-size: 3.5vw;
+    }
+}

@@ -1,0 +1,315 @@
+@media (max-width: 767px) {
+
+/* Vertical tablet  */
+
+.banner-image, .carousel-inner {
+    height: 48vw;
+}
+
+.banner__text{
+    padding-bottom: 3%;
+}
+
+.types__vtablet-img-container{
+    margin-top: 30px;
+
+    display: block;
+    width: 100%; height: auto;
+}
+
+.types__vtablet-img-box{
+    display: flex;
+    width: 100%; height: auto;
+}
+
+.types__vtablet-img-container table{
+    width: 100%; height: 170vw;
+    
+}
+
+.types__vtablet-img-container td, .types__vtablet-img-container tr{
+    border: none;
+    padding: 3px;
+}
+
+.types__vtablet-img-elem{
+    position: relative;
+
+    width: 100%; height: 100%;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-position: 90%;
+}
+
+.types__vtablet-img-elem_electro{
+    background-image: url('../../images/velo.jpg');
+}
+
+.types__vtablet-img-elem_spare{
+    background-image: url('../../images/velo2.jpg');
+}
+
+.types__vtablet-img-elem_accessories{
+    background-image: url('../../images/index/banner-1.png');
+}
+
+.types__vtablet-img-elem_land{
+    background-image: url('../../images/index/banner-31.png');
+}
+
+.types__vtablet-img-elem_part{
+    background-image: url('../../images/index/banner-2.png');
+}
+
+.types__vtablet-img-elem_bicycle{
+    background-image: url('../../images/velo6.jpg');
+}
+
+
+.types__vtablet-img-elem-inner{
+    display: flex;
+    height: 100%; width: 100%;
+
+    position: relative;
+
+    padding: 7%;
+
+    align-items: end;
+}
+
+.types__vtablet-img-txt{
+    display: inline-block;
+    height: fit-content;
+    
+    overflow-wrap: break-word;
+
+    font-weight: 600;
+    font-size: 4vw;
+    color: white;
+    
+}
+
+.types__img-btn{
+    width: 100%; height: 6vw;
+}
+
+.types__img-btn_txt{
+    font-size: 2.5vw;
+}
+
+.types__img-btn-container{
+    width: 100%;
+}
+
+
+
+.types__vtablet-img-elem::before{
+    content: '';
+    background-color: black;
+
+    width: 100%; height: 100%;
+    position: absolute;
+    z-index: 0;
+
+    opacity: 0.2;
+}
+
+
+
+.bestseller__header ul{ 
+    margin-top: 1.5%;
+    padding-left: 0;
+}
+
+.bestseller__header ul li::before{
+    width: 25px;
+}
+
+.bestseller__img-container{
+    height: 25vw;
+    max-height: 250px;
+}
+
+.bestseller__list-container .carousel-inner{
+    height: auto;
+}
+
+.bestseller__img-container_vector-comanche{
+    background-image: url('../../images/index/c_vector_27_gray.jpg');
+}
+
+.bestseller__img-container_hurricane-grey{
+    background-image: url('../../images/index/c_hurricane_27_new_gray.jpg') !important;
+}
+
+.bestseller__square{
+    margin-top: 40px;
+}
+
+.bestseller__header h4{
+    font-size: 16px;
+}
+
+.bestseller__header li{
+    font-size: 12px;
+}
+
+.bestseller__cart-icon{
+    width: 35px;
+    height: 35px;
+}
+
+.bestseller__cart-icon img{
+    width: 20px; height: 20px;
+}
+
+/* margins */
+
+#brend, #link, .newitems__square{
+    margin-top: 40px;
+}
+
+/* NewItems */
+.newitems__header ul{ 
+    padding-left: 0;
+}
+
+.newitems__header ul li::before{
+    width: 25px;
+}
+
+.newitems__img-container{
+    height: 25vw;
+    max-height: 250px;
+}
+
+.newitems__list-container .carousel-inner{
+    height: auto;
+}
+
+.newitems__img-container_r-one{
+    background-image: url('../../images/index/c_r_one_yellow_blue.jpg');
+}
+
+.newitems__img-container_saga-s3{
+    background-image: url('../../images/index/o-b1.jpg');
+}
+
+.newitems__header h4{
+    font-size: 16px;
+}
+
+.newitems__header li{
+    font-size: 12px;
+}
+
+.newitems__cart-icon{
+    width: 35px;
+    height: 35px;
+}
+
+.newitems__cart-icon img{
+    width: 20px; height: 20px;
+}
+
+
+/* brend */
+.vtablet-width-100{
+    width: 100% !important;
+}
+
+
+.brend__container img{
+    width: 70px; height: 50px;
+}
+
+
+
+/* Link */
+
+.link__container input{
+    width: 90%;
+}
+
+#link h4{
+    font-size: 14px;
+}
+
+.link__container span.white{
+    font-size: 10px;
+}
+
+.service__img-text_visual{
+    font-size: 10px;
+}
+
+.footer__vertical-adaptation-authors{
+    display: block;
+}
+
+/* Footer */
+
+.footer__content{
+    flex-wrap: wrap;
+    padding-left: 10px; 
+    padding-right: 25px;
+}
+
+.footer__content li{
+    margin-bottom: 5px;
+}
+
+.footer__info-text, .footer__info-text{
+    display: flex;
+    align-items: center;
+    
+    font-size: 12px;
+}
+
+.footer__social img{
+    width: 24px; height: 24px;
+}
+
+.footer__social{
+    width: 90px;
+}
+
+.footer__vertical-adaptation-authors{
+    font-size: 10px !important;
+    padding-left: 10px;
+}
+
+footer ul li{ 
+    font-size: 10px !important;
+}
+
+.footer__content h6{
+    font-size: 12px !important; 
+}
+
+.about__container h4{
+    font-size: 16px !important;
+}
+
+/* Header */
+.header__menu-tablet input {
+    font-size: 12px;
+
+    max-width: 60px;
+    width: 100%;
+}
+
+/* About */
+.about__container{
+    padding: 15px;
+    padding-top: 0;
+}
+
+
+.fs-5.about__truck_txt{
+    font-size: 14px !important;
+}
+
+}

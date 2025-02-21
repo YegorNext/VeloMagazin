@@ -1,0 +1,60 @@
+#about{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.about__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.about__header{
+    margin-top: 50px;
+
+    height: auto;
+}
+
+.about__news{
+    display: flex;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    height: auto;
+}
+
+.about__news img{
+    width: 300px;   
+    margin-right: 35px;
+}
+
+.about__city{
+    margin-top: 20px;
+}
+
+.about__city img{
+    width: 35px; 
+    opacity: 1;
+}
+
+.about__truck_txt{
+    display: block;
+    align-self: center;
+
+    padding-left: 10px;
+}
+
+.about__content{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.about__content p{
+    font-size: 14px;
+    color:grey;
+}
+
+.about__content li{
+    font-size: 14px;
+    line-height: 25px;
+}

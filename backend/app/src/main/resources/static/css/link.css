@@ -1,0 +1,82 @@
+#link{
+    display: flex;
+    justify-content: space-around;    
+
+    margin-top: 70px;
+}
+
+.link__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+
+    background-color: #0090d4;
+
+    padding: 35px;
+}
+
+
+.link__container input{
+    background-color: white;
+    outline: none; border: none;
+
+    width: 290px; height: 55px;
+    margin-left: 7%;
+    
+    text-indent: 10px;
+    font-size: 14px;
+
+    color:grey;
+
+    
+}
+
+
+.link__container button{
+    background-color: white;
+    outline: none; border: none;
+    
+    height: 55px; width: 50px;
+
+    margin: 0; padding: 0;
+    margin-left: -10px;
+    box-sizing: border-box;
+
+    border-left: 1px solid grey;
+
+    box-shadow: none;
+}
+
+
+.link__container img{
+    width: 16px;
+    height: 16px;
+}
+
+
+.link__container form::after{
+    content: '';
+    position: absolute;
+
+    background-color: white;
+    outline: none; border: none;
+    
+
+    height: 55px; width: 50px;
+
+    margin: 0; padding: 0;
+    margin-left: -10px;
+    box-sizing: border-box;
+
+    border-left: 1px solid grey;
+
+    box-shadow: none;
+
+    background-image: url('../images/check.png'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: 16px 16px; 
+}
+
+.link__container form:hover::after{
+    cursor: pointer;
+}

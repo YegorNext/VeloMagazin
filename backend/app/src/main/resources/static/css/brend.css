@@ -1,0 +1,33 @@
+#brend{
+    display: flex;
+    justify-content: space-around;    
+
+    background-color: #f3f3f3;
+    margin-top: 70px;
+}
+
+.brend__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.brend__info{    
+    padding: 40px 30px 40px 30px; 
+
+    box-sizing: border-box;
+    height: auto;
+}
+
+.brend-toggle{
+    cursor: pointer;
+}
+
+#collapseBrend h4{
+    text-align: left;
+
+    font-weight: 700;
+}
+
+.size-fix{
+    width: 120px; height: 74px;
+}

@@ -1,0 +1,295 @@
+.categories__list-module{
+    display: block; 
+
+    position: absolute;
+    top: 100%; left: 0;
+
+    z-index: 10;
+    width: 100%; height: auto;
+    
+    background-color: white;
+}
+
+
+
+.categories__list-module::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+
+    top: 100%; left: 0;
+
+    height: var(--dynamic-height, calc(99vh - 100%)); width: 100%;
+
+    background-color: black;
+    opacity: 0.4;
+}
+
+.categories__list-module li{
+    cursor: pointer;
+}
+
+
+.categories__module-container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+
+
+    border-top: 1px solid rgba(65, 65, 65, 0.130);
+    padding: 15px;
+}
+
+.categories__module-container > div:first-child div{
+    border-right: 1px solid rgba(65, 65, 65, 0.130);
+    font-size: 16px;
+
+    flex: 1;
+}
+
+.categories__module-container > div:first-child div:last-child{
+    border-right: none;
+}
+
+.categories__module-container > div:first-child div ul{
+    list-style: none;
+    font-weight: 700;
+
+    font-weight: bold;
+}
+
+.categories__module-container > div:first-child div ul li{
+    margin-bottom: 18px;
+    line-height: 19px;
+}
+
+.categories__module-container > div:first-child div ul{
+    padding-left: 15px;
+    padding-bottom: 1px;
+}
+
+
+
+.categories__list-module ul li ul li{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.categories__list-module ul li ul{
+    padding-left: 10px !important;
+}
+
+.categories__list-module ul li ul li::before, 
+.categories-bicycle li::before,
+.categories-sparepart li::before{
+    content: '▸';
+    color: var(--text-color-blue);
+
+    margin-right: 10px;
+}
+
+
+.categories__list-module ul li ul li:first-child{
+    margin-top: 15px;
+}
+
+
+
+.categories__list-module{
+    display: none;
+}
+
+.categories-bicycle li,
+.categories-sparepart li{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.categories-bicycle .row div{
+    border: none !important;
+}
+
+.categories-bicycle h4,
+.categories-sparepart  h4{
+    font-weight: bold;
+    font-size: 16px;
+
+    margin-bottom: 5%;
+}
+
+.categories-bicycle ul{
+    padding-left: 10px !important;
+}
+
+.categories-bicycle-container div{
+    border: none !important;
+
+    padding-right: 15px;
+}
+
+.categories-bicycle-container{
+    display: flex; 
+    flex: 1 !important;
+}
+
+.categories-type-container{
+    padding-left: 15px;
+}
+
+.categories-img-container{
+    width: 75%; height: 425px;
+    background-image: url('../images/comanche-banner-2.png');
+
+
+    background-size: cover;
+}
+
+
+
+.mw-400{
+    max-width: 400px;
+}
+
+
+.no-border{
+    border: none !important;
+}
+
+.categories-bicycle{
+    max-height: 280px;
+    border-right: none !important;
+}
+
+.categories__brend{
+    display: flex;
+    flex: 1;
+
+    width: 100%; height: auto;
+
+    margin-top: 7%;
+    padding: 3%;
+
+    background-color: #f3f3f3;
+}
+
+.categories__brend div{
+    display: flex;
+    justify-content: center;
+
+    border: none !important;
+}
+
+.categories__brend img{
+    height: 44px; width: 70px;
+}
+
+.fork-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/fork.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.wheel-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/wheel.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.pedal-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/pedals.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.tire-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/tire.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain;
+}
+
+.streeting-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/steering.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.saddle-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/saddle.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.breaksys-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/break-sys.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.transmission-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/transmission.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.cable-icon{
+    display: block;
+    width: 24px; height: 24px;
+
+    background-image: url('../images/cable.svg');
+    background-repeat: no-repeat;
+
+    background-size: contain; 
+}
+
+.categories-sparepart h4{
+    display: flex;
+    align-items: start;
+    height: 100%;
+
+    margin-bottom: 7%;
+    padding-top: 1%;
+}
+
+.categories-sparepart > div div{
+    border-right: none !important;
+}
+
+.categories__container a, .categories__list-module a{
+    color: black; 
+    text-decoration: none;
+
+    cursor: pointer;
+
+    
+}

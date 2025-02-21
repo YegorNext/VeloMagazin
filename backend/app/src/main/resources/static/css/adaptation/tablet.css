@@ -1,0 +1,382 @@
+.header__menu-tablet{
+    display: none;
+}
+
+
+header, header div{
+    overflow: hidden;
+}
+
+section:not(#categories){
+    overflow: hidden;
+}
+
+
+
+@media (max-width: 1199px) {
+
+
+
+.header__menu-tablet{
+    
+    display: block;
+}
+    
+
+.header-content{
+    margin-top: 5px;
+}
+
+header{
+    height: 63px;
+    max-width: 1200px;
+}
+
+
+.header__burger-btn{
+    display: block;
+
+}
+
+.header__burger-btn  div{ 
+   display: block;
+
+}
+
+
+
+.header__menu-tablet{
+    display: flex;
+
+    
+    padding-left: 25px;
+    
+}
+
+.header__tablet-logo-container{
+    width: 100%;
+}
+
+
+.header__burger-btn  span{
+    display: block;
+    background: black;
+
+
+    width: 32px; height: 2px;
+    margin-top: 6px;
+}
+
+.header__tablet-logo-container img{
+    object-fit: contain;
+}
+
+.header__tablet-logo-container{
+    margin-left: 3%;
+}
+
+.header__menu-tablet input{
+    font-size: 1.5vw;
+    width: 8vw;
+
+
+}
+
+.header__menu-tablet .search-icon{
+    display: block;
+    margin: 0 !important;
+    
+
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 20px; height: 20px;
+    margin-left: 1vw;
+
+
+    margin-top: 2% !important;
+}
+
+.header__menu-tablet .logo{
+    display: block;
+    
+    background-image: url('../../images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    min-width: 105px; min-height: 40px;
+    width: 14vw; height: 5vw;
+}
+
+.header__tablet-logo-container a{
+    height: 100%;
+}
+
+.header-container{
+    align-self: center;
+}
+
+header{
+    display: flex;
+}
+
+.header__burger-btn span{
+    min-width: 20px;
+    width: 2.8vw;
+
+}
+
+.categories__search ::before,
+.categories__search ::after{
+    content: none;
+}
+
+.categories__search{
+    margin-right: 3%;
+
+}
+
+
+
+
+
+.header__menu-tablet-icontainer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    height: 100%;
+}
+
+.menu-burger-heart{
+    display: block;
+
+    height: 20px; width: 20px;
+
+    background-image: url('../../images/heart.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.menu-burger-cart{
+    display: block;
+
+    height: 20px; width: 20px;
+
+    background-image: url('../../images/cart.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/* banner */
+
+#banner{
+    padding-top: 63px;
+    max-width: 1200px;
+}
+
+.banner__text{
+    font-size: 6.3vw;
+}
+
+.banner-image, .carousel-inner{
+    height: 37.5vw;
+}
+
+/* Types */
+.types__img-container{
+    height: 46vw;
+}
+
+.types__img-txt{
+    font-size: 2vw;
+}
+
+.types__img-btn_txt{
+    font-size: 1.67vw;
+}
+
+.types__img-btn{
+    height: 4.2vw;
+}
+
+/* Bestseller */
+
+#bestseller{
+    max-width: 1200px;
+}
+
+.bestseller__header h4{
+    font-size: 2.05vw;
+}
+
+
+
+.bestseller__title{
+    font-size: 1.5vw;
+}
+
+.bestseller__cart-icon{
+    width: 3.9vw;
+    height: 3.9vw;
+}
+
+.bestseller__cart-icon img{
+    width: 2.1vw;
+    height: 2.1vw;
+}
+
+.bestseller__header li{
+    font-size: 1.5vw;
+}
+
+.bestseller__list-elem{
+    display: flex;
+    flex-direction: column;
+}
+
+.bestseller__elem-footer{
+    flex-grow: 1;
+    margin-top: 1vw;
+
+}
+
+.bestseller__elem-price{
+    display: flex;
+    flex-direction: column;
+
+    align-self: self-end;
+}
+
+.bestseller__cart-icon{
+    align-self: self-end;
+}
+
+.bestesller__elem-icart{
+    display: flex;
+    justify-content: start;
+}
+
+
+/* Brend */
+
+.brend__info span{
+    font-size: 1.4wv;
+}
+
+.brend__container img{
+    width: 100px; height: 62px;
+}
+
+
+/* Link */
+
+#link h4{
+    font-size: 2vw;
+}
+
+.link__container span.white{
+    font-size: 1.35vw;
+}
+
+.link__container form{
+    width: 240px; 
+    height: 30px;
+}
+
+
+.link__container form{
+    width: 100%;
+    height: 100%;
+}
+
+/* new-items */
+.newitems__header h4{
+    font-size: 2.05vw;
+}
+
+.newitems__title{
+    font-size: 1.5vw;
+}
+
+.newitems__cart-icon{
+    width: 3.9vw;
+    height: 3.9vw;
+}
+
+.newitems__cart-icon img{
+    width: 2.1vw;
+    height: 2.1vw;
+}
+
+.newitems__list-elem{
+    display: flex;
+    flex-direction: column;
+}
+
+.newitems__elem-footer{
+    flex-grow: 1;
+    margin-top: 1vw;
+
+}
+
+
+.newitems__elem-price{
+    display: flex;
+    flex-direction: column;
+
+    align-self: self-end;
+}
+
+.newitems__cart-icon{
+    align-self: self-end;
+}
+
+.newitems__elem-icart{
+    display: flex;
+    justify-content: start;
+}
+
+
+/* Service */
+.service__container img{
+ width: 9.5vw; height: 9.5vw;
+
+ min-width: 72px; min-height: 72px;
+
+}
+
+.service__img-text_visual{
+    font-size: 1.5vw;
+}
+
+
+/* About */
+.about__container h4{
+    font-size: 2vw;
+}
+
+.fs-5.about__truck_txt{
+    font-size: 2vw !important;
+}
+
+
+/* Footer */
+footer h6{
+    font-size: 1.5vw !important;
+}
+
+footer li{
+    font-size: 1.4vw;
+}
+
+.footer__info-text, .footer__info-text{
+  font-size: 2vw;   
+}
+
+}
+
+/* Test */
