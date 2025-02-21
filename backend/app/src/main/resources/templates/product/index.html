@@ -211,7 +211,7 @@
                                    <!-- first elem --> 
                                     <div th:each="element: ${row.GetRowList}" class = "products__elem">
                                         <div class = "products__elem-img">
-                                            <img src="images/products/comanche_backfire_29_s_pro_blackr.220x170.jpg" class = "products__img-container"> 
+                                            <img th:src="@{/product/{id}/image(id=${element.id})}" class = "products__img-container"> 
                                         </div>
                                         
                                         <div class = "products__elem-title">
