@@ -374,7 +374,8 @@ footer li{
 }
 
 .footer__info-text, .footer__info-text{
-  font-size: 2vw;   
+/*  font-size: 2vw;*/
+font-size: 12px !important;   
 }
 
 }

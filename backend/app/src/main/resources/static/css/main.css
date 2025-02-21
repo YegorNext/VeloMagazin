@@ -7,6 +7,10 @@
     color: white;
 }
 
+section, header, footer, div{
+    max-width: 100% !important;
+}
+
 .blue{
     color:rgb(0, 162, 255) !important;
 }

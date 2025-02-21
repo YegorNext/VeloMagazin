@@ -1,6 +1,7 @@
 package com.velomagaz.app.entity;
 
 import java.math.BigDecimal;
+import java.sql.Clob;
 import java.util.List;
 
 import jakarta.persistence.*;
@@ -25,6 +26,9 @@ public class Product {
 	@Column(name="model", length=30)
 	private String model;
 
+	@Column(name="description")
+	private Clob description;
+	
 	@ManyToOne
 	@JoinColumn(name="category_id", nullable = false)
 	private Category categoryId;
@@ -54,6 +58,9 @@ public class Product {
 	
 	public List<ProductComponent> GetProductComponents() { return productComponents; }
 	public void setProductComponents(List<ProductComponent> productComponents) { this.productComponents = productComponents; }
+	
+	public Clob getDescription() { return description; }
+	public void setDescription(Clob description) { this.description = description; }
 	
 
 }
