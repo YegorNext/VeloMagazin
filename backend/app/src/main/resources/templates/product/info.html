@@ -16,7 +16,7 @@
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/header.css}">
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/categories.css}">
 
-        <link rel = "stylesheet" type="text/css" th:href = "@{/css/product/products.css}">
+        <link rel = "stylesheet" type="text/css" th:href = "@{/css/product/prod-info.css}">
 
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/footer.css}">
 
@@ -48,10 +48,10 @@
                         <div class="header__menu-divider header__menu-divider_w-20">
                             <div class = "d-flex">
                                 <div>
-                                    <img src="images/cart.svg" class="menu-elem"> <span class="menu-elem-value blue">0</span>
+                                    <img th:src="@{/images/cart.svg}" class="menu-elem"> <span class="menu-elem-value blue">0</span>
                                 </div>
                                 <div class = "px-4">
-                                    <img src="images/heart.svg" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
+                                    <img th:src="@{/images/heart.svg}" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
                                 </div>
                             </div>
                             <div class = "blue menu-exit">Вхід</div>
@@ -107,7 +107,7 @@
                 <div class="row align-items-center">
                     <div class="col-2 categories__logo-container">
                       <a th:href="@{/home}"> 
-                        <img class = "logo" src="images/logo.png">
+                        <img class = "logo" th:src="@{/images/logo.png}">
                       </a>
 
                     </div>
@@ -142,120 +142,60 @@
             </div>
         </section>
 
-        <section id = "products">
-            <div class = "products__container">
-                <div class="row">
-                    <div class = "products__side col-5 col-md-3">
-                        <div class = "products__panel">
-                            <h4>Категорії</h4>
+        <section id = "prod-info">
+            <div class = "prod-info__container">
+                <div class="prod-info__navigation-title">
+                    <span>
+                        <span> <a th:href="@{/product}"> Усі товари </a> </span> / Велосипеди
+                    </span>
+                </div>
+                <div class="row prod-info__info-block">
+                    <h4>Велосипед <span th:text="${productName}"> </span></h4>
+                    
+                    <div class="prod-info__info-container"> 
+                        <div class = "col-7">
+                            <div class="prod-info__img-slot">
+                                <img th:src = "@{/product/{id}/image(id=${productId})}" class="prod-info__img">
+                            </div>
+                        </div>
+    
+                        <div class="col-5 prod-info__panel">
+                            <div> 
+                                <span>Код:</span> <span th:text=${productId}></span>  
+                            </div>
+
+                            <div class = "prod-info__subpanel">
+                                <span class="bold prod-info-title">Характеристики</span>
+                            </div>
+
                             <ul>
-                                <li>Біговели</li>
-                                <li>Велосипеди BMX</li>
-                                <li>Гірські велосипеди</li>
-                                <li>Міські велосипеди</li>
-                                <li>Двопідвіси</li>
-                                <li>Дитячі велосипеди</li>
-                                <li>Жіночі велосипеди</li>
-                                <li>Кросові велосипеди</li>
-                                <li>Підліткові велосипеди</li>
-                                <li>Складані велосипеди</li>
-                                <li>Фіксед</li>
-                                <li>Шосейні велосипеди</li>
-                                <li>Велосипеди Ranger</li>
-                                <li>Аксесуари
-                                    <ul>
-                                        <li>Багажники</li>
-                                        <li>Велотримачі</li>
-                                        <li>Велокомп'ютери</li>
-                                        <li>Замки</li>
-                                        <li>Захист пера</li>
-                                        <li>Дзвоники</li>
-                                        <li>Інструменти</li>
-                                        <li>Крила</li>
-                                        <li>Насоси</li>
-                                        <li>Підніжки</li>
-                                        <li>Ріжки</li>
-                                        <li>Сумки, чохли</li>
-                                        <li>Фари, блималки</li>
-                                        <li>Фляготримачі</li>
-                                        <li>Фляги</li>
-                                    </ul>
+                                <li th:each="row: ${productInfo}">
+                                    <table>
+                                        <tr>
+                                            <td class="w-60"><span class="color-gray" th:text="${row.key}"> </span></td>
+                                            <td><span class="blue-underlined" th:text="${row.value}"></span></td>
+                                        </tr>
+                                    </table>
                                 </li>
-                                
-                                
-                                <li>Запчастини Comanche
-                                    <ul>
-                                        <li>Виноси</li>
-                                        <li>Підсідельні штирі</li>
-                                        <li>Рулі</li>
-                                        <li>Крюки рами</li>
-                                        <li>Ручки керма</li>
-                                        <li>Сідла</li>
-                                        <li>Гальмівні колодки</li>
-                                    </ul>
-                                </li>                                
                             </ul>
                         </div>
                     </div>
 
-                    <div class="products__main col-7 col-md-9">
-                        <div class = "products__list">
-                            <div class="products__header">
-                                <h4>Усі товари</h4>
-                            </div>
-
-                            <div class = "products__list-content">
-
-                                <!-- ROW --> 
-                                <div th:each="row: ${productGrid}" class="products__list-row">
-                                   <!-- first elem --> 
-                                    <div th:each="element: ${row.GetRowList}" class = "products__elem">
-                                        <div class = "products__elem-img">
-                                            <img th:src="@{/product/{id}/image(id=${element.id})}" class = "products__img-container"> 
-                                        </div>
-                                        
-                                        <a th:href="@{/product/{id}(id=${element.id})}" class="decoration-none-pointer">
-                                            <div class = "products__elem-title">
-                                                <span th:text="${element.productName}"></span> 
-                                            </div>
-                                        </a>
-
-                                        <div>
-                                            <a th:href="@{/product/{id}(id=${element.id})}" class="decoration-none-pointer">
-                                                <div class = "products__elem-price">
-                                                    <div class="d-flex">
-                                                        <div class="pt-1">
-                                                            <span th:text="${element.price}"></span>
-                                                        </div>
-                                                        
-                                                        <div class="d-flex ps-1">
-                                                            <span class="align-self-start"> грн </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-
-                                            <div class = "products__elem-line"> </div>
-
-                                            <div class = "products__btn-container"> 
-                                                <button> 
-                                                    <div class = "products__btn-content"> 
-                                                        <div class = "cart-icon"></div>
-                                                        <div>
-                                                            <span>В кошик</span>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- FIRST ROW END --> 
-                                
-                            </div>
-
+                    <div class = "prod-info__description">
+                        <h5>Опис товару</h3>
+                        <div class="row prod-info__text-container"> 
+                            <p class="col-7">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                                Excepteur sint occaecat cupidatat non proident, 
+                                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -307,9 +247,9 @@
                         </div>
 
                         <div class = "footer__social">
-                            <img src="images/instagram.png">
-                            <img src="images/facebook.png">
-                            <img src="images/youtube.png"> 
+                            <img th:src="@{/images/instagram.png}">
+                            <img th:src="@{/images/facebook.png}">
+                            <img th:src="@{/images/youtube.png}"> 
                         </div>
 
                     </div>

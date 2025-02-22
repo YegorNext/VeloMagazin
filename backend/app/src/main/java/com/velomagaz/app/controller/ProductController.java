@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.velomagaz.app.service.*;
 import com.velomagaz.app.service.component.ProductRow;
+import com.velomagaz.app.entity.Component;
+import com.velomagaz.app.repository.*;
+
+import com.velomagaz.app.entity.*;
 
 @Controller
 @RequestMapping("/product")
@@ -24,6 +28,12 @@ public class ProductController {
 	
 	@Autowired 
 	ProductImageService imageService;
+	
+	@Autowired
+	ProductInfoBuilder productInfoService;
+	
+	@Autowired
+	IProductRepository productRepository;
 	
 	@GetMapping
 	public String Index(Model model) {
@@ -44,5 +54,15 @@ public class ProductController {
         return ResponseEntity.ok()
                 .contentType(MediaType.valueOf("image/webp"))
                 .body(image); 
+    }
+    
+    @GetMapping("/{id}")
+    public String Info(@PathVariable String id, Model model) {
+    	
+    	model.addAttribute("productInfo", productInfoService.BuildInfo(id));
+    	model.addAttribute("productId", id);
+    	model.addAttribute("productName", productRepository.findById(id).map(Product::getProductName).orElse(null));
+    	
+    	return "product/info";
     }
 }

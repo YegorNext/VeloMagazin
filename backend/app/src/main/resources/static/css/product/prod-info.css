@@ -1,0 +1,141 @@
+#prod-info{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
+
+.prod-info__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.prod-info__container div, 
+.prod-info__container, 
+.prod-info__container h4,
+.prod-info__container h5{
+    margin: 0; padding: 0;
+}
+
+.prod-info__container h4{
+    font-weight: 600;
+
+
+    margin-bottom: 30px !important;
+}
+
+
+
+.prod-info__panel{
+    background-color: #f9f9f9;
+    height: auto;
+}
+
+.prod-info__info-container{
+    display: flex;
+    height: auto;
+
+    border: 1px solid rgba(128, 128, 128, 0.322); 
+}
+
+.prod-info__img-slot{
+    padding: 15% !important;
+}
+
+.prod-info__img{
+    display: block;
+
+    width: 100%; height: 18vw;
+    
+
+    object-fit: contain;
+}
+
+.prod-info__info-block{
+    max-width: 100%;
+
+    margin-top: 15px !important;
+    margin-bottom: 30px !important;
+}
+
+.prod-info__navigation-title{
+    font-size: 13px;
+    color: grey;
+}
+
+.prod-info__panel{
+    padding-top: 3% !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+
+    font-size: 13px;
+}
+
+.prod-info__subpanel{
+    margin-top: 35px !important;
+}
+
+.prod-info-title{
+    font-size: 14px;
+    font-weight: 600;
+
+    
+}
+
+.prod-info__panel ul{
+    list-style: none;
+
+    margin-top: 10px !important;
+    padding-left: 0;
+}
+
+.prod-info__panel li{
+    border-bottom: 1px solid rgba(218, 218, 218, 0.322);
+}
+
+.color-gray{
+    color: gray;
+}
+
+table{
+    width: 100%;
+}
+
+table td{
+    padding-bottom: 5px;
+}
+
+.w-60{
+    width: 60%;
+}
+
+.blue-underlined{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    
+    color: rgb(0, 162, 255) !important;
+    
+}
+
+h5{
+    margin-top: 20px !important;
+}
+
+.prod-info__description p{
+    font-size: 14px;
+
+    padding: 0 !important; margin: 0;
+    margin-top: 10px;
+
+    text-align: justify;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.prod-info__navigation-title a{
+	text-decoration: none; 
+	color: gray;
+}
