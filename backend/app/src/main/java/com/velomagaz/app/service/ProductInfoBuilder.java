@@ -7,7 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.velomagaz.app.repository.*;
-
+import com.velomagaz.app.ViewModel.ProductInfoViewModel;
 import com.velomagaz.app.entity.*;
 
 @Service
@@ -22,12 +22,12 @@ public class ProductInfoBuilder {
 	@Autowired
 	private IComponentRepository componentRepository;
 	
-	public List<Map.Entry<String, String>> BuildInfo(String id) {
+	public ProductInfoViewModel BuildInfo(String id) {
 		Product element = productRepository.findById(id).orElse(null);
 
 		List<ProductComponent> productComponents = productComponentRepository.findByProductId(element);
 
-		return createList(productComponents);
+		return new ProductInfoViewModel(id, element.getProductName(), createList(productComponents), element.getDescription());
 	}
 	
 	private List<Map.Entry<String, String>> createList(List<ProductComponent> productComponents) {
@@ -45,5 +45,5 @@ public class ProductInfoBuilder {
 		return list;
 		
 	}
-	
+
 }

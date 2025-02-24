@@ -40,15 +40,13 @@
 }
 
 .prod-info__img-slot{
-    padding: 15% !important;
+    padding-top: 10% !important;
 }
 
 .prod-info__img{
     display: block;
 
-    width: 100%; height: 18vw;
-    
-
+    width: 100%; 
     object-fit: contain;
 }
 
@@ -88,6 +86,10 @@
 
     margin-top: 10px !important;
     padding-left: 0;
+}
+
+.prod-info__panel ul{
+	margin-
 }
 
 .prod-info__panel li{
@@ -139,3 +141,19 @@ li{
 	text-decoration: none; 
 	color: gray;
 }
+
+#collapseInfo + a.btn{
+	margin-bottom: 5% !important;	
+	margin-top: 3% !important;
+	
+}
+
+.prod-info__collapsed, ul{
+	margin-bottom: 0px !important;
+}
+
+.prod-info__collapsed-list > li:last-child,
+ul > li:last-child{
+	margin-bottom: 0px !important;
+}
+
