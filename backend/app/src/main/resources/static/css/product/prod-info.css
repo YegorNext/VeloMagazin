@@ -64,10 +64,11 @@
 
 .prod-info__panel{
     padding-top: 3% !important;
+    padding-bottom: 2% !important;
     padding-left: 2% !important;
     padding-right: 2% !important;
 
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .prod-info__subpanel{
@@ -86,10 +87,6 @@
 
     margin-top: 10px !important;
     padding-left: 0;
-}
-
-.prod-info__panel ul{
-	margin-
 }
 
 .prod-info__panel li{
@@ -138,14 +135,17 @@ li{
 }
 
 .prod-info__navigation-title a{
+	
+	
 	text-decoration: none; 
 	color: gray;
 }
 
-#collapseInfo + a.btn{
-	margin-bottom: 5% !important;	
-	margin-top: 3% !important;
+#collapseInfo + a{
+	display: block;
 	
+	margin-top: 3% !important;
+	text-decoration: none;
 }
 
 .prod-info__collapsed, ul{
@@ -156,4 +156,42 @@ li{
 ul > li:last-child{
 	margin-bottom: 0px !important;
 }
+
+.prod-info__buy div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.prod-info__price > h4{
+    margin-bottom: 0px !important;
+}
+
+.prod-info__price{
+    margin-right: 2% !important;
+}
+
+.prod-info__buy{
+	margin-top: 10px !important;
+}
+
+.prod-info__description{
+	margin-bottom: 20px !important;
+	margin-top: 50px !important;
+}
+
+.prod-info__description button{
+	width: 12%; height: 40%;
+    
+    border: 1px solid #80808029;
+    background-color: #ebebeb5d;
+    
+    outline: none !important;
+}
+
+.prod-info__description button span{
+    font-size: 14px;
+}
+
+
+
 

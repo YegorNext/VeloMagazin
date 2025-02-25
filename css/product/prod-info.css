@@ -131,3 +131,16 @@ h5{
 li{
     margin-bottom: 10px;
 }
+
+.prod-info__buy div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.prod-info__price > h4{
+    margin-bottom: 0px !important;
+}
+
+.prod-info__price{
+    margin-right: 2% !important;
+}

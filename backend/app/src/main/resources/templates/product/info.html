@@ -146,7 +146,7 @@
             <div class = "prod-info__container">
                 <div class="prod-info__navigation-title">
                     <span>
-                        <span> <a th:href="@{/product}"> Усі товари </a> </span> / Велосипеди
+                        <span> <a th:href="@{/product}"> Усі товари </a> </span> / Велосипеди / <span th:text="${productInfo.name}"> </span>
                     </span>
                 </div>
                 <div class="row prod-info__info-block">
@@ -166,6 +166,20 @@
 	                            <div> 
 	                                <span>Код:</span> <span th:text=${productInfo.id}></span>  
 	                            </div>
+	                            
+	                            <div class="prod-info__buy">
+	                                <div>
+	                                    <div class="prod-info__price">
+	                                        <h4> <span th:text="${productInfo.price}"> </span> ₴</h4>
+	                                    </div>
+	
+	                                    <div>
+	                                        <a class="btn btn-primary" role="button">
+	                                            Придбати
+	                                        </a>
+	                                    </div>
+	                                </div>
+                               </div>
 	
 	                            <div class = "prod-info__subpanel">
 	                                <span class="bold prod-info-title">Характеристики</span>
@@ -189,6 +203,22 @@
                            		<div> 
 	                                <span>Код:</span> <span th:text=${productInfo.id}></span>  
 	                            </div>
+	                            
+	                            
+	                            <div class="prod-info__buy">
+	                                <div>
+	                                    <div class="prod-info__price">
+	                                        <h4> <span th:text="${productInfo.price}"> </span> ₴</h4>
+	                                    </div>
+	
+	                                    <div>
+	                                        <a class="btn btn-primary" role="button">
+	                                            Придбати
+	                                        </a>
+	                                    </div>
+	                                </div>
+                               </div>
+	                            
 	
 	                            <div class = "prod-info__subpanel">
 	                                <span class="bold prod-info-title">Характеристики</span>
@@ -219,8 +249,8 @@
 			                            </ul>
                                     </div>
 
-                                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseInfo">
-                                      Показати ще
+                                    <a class="" data-bs-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseInfo">
+                                      Показати ще >
                                     </a>
                             	</div>
 	                            
@@ -230,7 +260,7 @@
                     </div>
 
                     <div class = "prod-info__description">
-                        <h5>Опис товару</h3>
+                    	<button> <span> Опис товару </span> </button>
                         <div class="row prod-info__text-container"> 
                             <p class="col-7" th:text="${productInfo.description}"></p>  
                         </div>
