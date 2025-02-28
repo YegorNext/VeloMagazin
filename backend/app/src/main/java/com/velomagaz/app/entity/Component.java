@@ -17,11 +17,7 @@ public class Component {
 	
 	@Column(name="description")
 	private Clob description;
-	
-	@ManyToOne
-	@JoinColumn(name="subcategory_id", nullable=false)
-	private SubCategory subcategory;
-	
+		
 	// -- Navigation --
 	@OneToMany(mappedBy="component")
 	private List<ProductComponent> productComponents; 
@@ -35,9 +31,6 @@ public class Component {
 	
 	public Clob getDescription() { return description; }
 	public void setDescription(Clob description) { this.description = description; }
-	
-	public SubCategory getSubcategory() { return subcategory; }
-	public void setSubcategory(SubCategory subcategory) { this.subcategory = subcategory; }
 	
 	public List<ProductComponent> getProductComponents() { return productComponents; }
 	public void setProductComponents(List<ProductComponent> productComponents) { this.productComponents = productComponents; }

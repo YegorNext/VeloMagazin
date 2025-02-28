@@ -46,7 +46,7 @@
 .prod-info__img{
     display: block;
 
-    width: 100%; 
+    width: 100%; max-height: 600px;
     object-fit: contain;
 }
 
@@ -180,7 +180,7 @@ ul > li:last-child{
 }
 
 .prod-info__description button{
-	width: 12%; height: 40%;
+	width: 12%; height: 45px;
     
     border: 1px solid #80808029;
     background-color: #ebebeb5d;

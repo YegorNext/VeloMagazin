@@ -10,6 +10,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
 public class DataBuilder implements IDataBuilder{
+	private final short ID_IND = 0;
+	
 	public List<List<String>> Build(Sheet sheet) {
 		return buildDataList(sheet.iterator());
 	}
@@ -36,7 +38,10 @@ public class DataBuilder implements IDataBuilder{
 	} 
 	
 	private void excludeValue(List<String> element, String value) {
-		element.removeIf(item -> item != null && item.contains(value));
+		element.removeIf(item -> item != null && item.contains(value)); // remove item with hyperlink 
+		
+		String str = element.get(ID_IND);
+		element.set(ID_IND, str.substring(0, str.indexOf("."))); // Remove id suffix 
 	}
 	
 	

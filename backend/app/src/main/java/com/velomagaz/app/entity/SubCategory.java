@@ -26,9 +26,6 @@ public class SubCategory {
 	@OneToMany(mappedBy="subcategory")
 	private List<Product> products;
 	
-	@OneToMany(mappedBy="subcategory")
-	private List<Component> components;
-	
 	// -- Setters and Getters --
 	public int getId() { return id; }
 	public void setId(int id) { this.id = id; }

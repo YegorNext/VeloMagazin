@@ -25,7 +25,7 @@ public class ProductInfoBuilder {
 	public ProductInfoViewModel BuildInfo(String id) {
 		Product element = productRepository.findById(id).orElse(null);
 
-		List<ProductComponent> productComponents = productComponentRepository.findByProductId(element);
+		List<ProductComponent> productComponents = productComponentRepository.findByProduct(element);
 
 		return new ProductInfoViewModel(id, element.getProductName(), createList(productComponents), element.getDescription(), element.getPrice());
 	}

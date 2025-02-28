@@ -12,6 +12,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -36,17 +40,52 @@ public class App
 
         DataBuilder builder = new DataBuilder();
         
-        for(List<String> row : builder.Build(sheet)) {
-        	for(String cell : row) {
-        		System.out.print(cell);
-        	}
-        }
+       // BrandImporter importer = new BrandImporter();
+       // importer.insertBrands(builder.Build(sheet));
         
-        //LinkParser parser = new LinkParser();
+      // ImportManager importer = new ImportManager();
+      // importer.Import(builder.Build(sheet));
+        
+      //  int count = 0;
+       // for(List<String> str : builder.Build(sheet)) {
+       // 	System.out.println(str.get(0) + ". Count: " + count++);
+       // }
+        
+        
+        //LinkParser parser = new LinkParser(); IMAGES 
         //ImageDownloader downloader = new ImageDownloader();
         
        // downloader.Download(parser.ParseData(builder.Build(sheet))); 
 
+        //RenameImages renamer = new RenameImages();
+       // renamer.Rename();
+        
+        //ImageUploader uploader = new ImageUploader();
+       // uploader.upload();
+        
+        
+        String insertSQL = "INSERT INTO product_component (desc_value, component_id, product_id) VALUES (?, ?, ?)";
+
+        try (Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/velomagazin", "root", "sys");
+             PreparedStatement stmt = conn.prepareStatement(insertSQL)) {
+
+            for (List<String> str : builder.Build(sheet)) {
+                String productId = str.get(0).trim();  // getRow(0)
+                String descValue = str.get(3).trim();  // getRow(3)
+                
+                stmt.setString(1, descValue);
+                stmt.setInt(2, 1); // component_id всегда 1
+                stmt.setString(3, productId);
+                
+                stmt.executeUpdate();
+                
+                System.out.println("Inserted: product_id=" + productId + ", desc_value=" + descValue);
+            }
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
         	
         workbook.close();
         file.close();
