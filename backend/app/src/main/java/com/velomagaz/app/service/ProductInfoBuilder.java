@@ -35,7 +35,7 @@ public class ProductInfoBuilder {
 		List<Map.Entry<String, String>> list = new LinkedList<>();
 		
 		for(ProductComponent productComponent : productComponents) {
-			String key = componentRepository.findById(productComponent.getComponentId().getId())
+			String key = componentRepository.findById(productComponent.getComponent().getId())
                     .map(Component::getComponentName)
                     .orElse(null);
 			

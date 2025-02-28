@@ -8,5 +8,5 @@ import com.velomagaz.app.entity.*;
 
 @Repository
 public interface IProductComponentRepository extends JpaRepository<ProductComponent, Integer>{
-	List<ProductComponent> findByProductId(Product product);
+	List<ProductComponent> findByProduct(Product product);
 }

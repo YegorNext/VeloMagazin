@@ -1,11 +1,12 @@
 package com.velomagaz.app.entity;
 
 import java.math.BigDecimal;
+
 import java.sql.Clob;
 import java.util.List;
 
 import jakarta.persistence.*;
-
+import com.velomagaz.app.entity.enumeration.*;
 
 @Entity
 @Table(name = "product")
@@ -22,19 +23,28 @@ public class Product {
 	
 	@Column(name = "image", columnDefinition = "LONGBLOB")
 	private byte[] image;
-	
-	@Column(name="model", length=30)
-	private String model;
 
+	@Enumerated(EnumType.STRING)
+	@Column(name="age_group")
+	private AgeGroup ageGroup;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="gender_group")
+	private Gender gender;
+	
 	@Column(name="description")
 	private Clob description;
 	
 	@ManyToOne
-	@JoinColumn(name="category_id", nullable = false)
-	private Category categoryId;
+	@JoinColumn(name="subcategory_id", nullable = false)
+	private SubCategory subcategory;
+	
+	@ManyToOne
+	@JoinColumn(name="brand_id", nullable=false)
+	private Brand brand;
 	
 	// -- Navigation --
-	@OneToMany(mappedBy="productId")
+	@OneToMany(mappedBy="product")
 	private List<ProductComponent> productComponents; 
 	
 	// -- Setters and Getters --
@@ -49,18 +59,19 @@ public class Product {
 	
 	public byte[] getImage() { return image; }
 	public void setImage(byte[] image) { this.image = image; }
+
+	public SubCategory getSubcategory() { return subcategory; }
+	public void setSubcategory(SubCategory subcategory) { this.subcategory = subcategory; }
 	
-	public String getModel() { return model; }
-	public void setModel(String model) { this.model = model; }
-	
-	public Category getCategoryId() { return categoryId; }
-	public void setCategoryId(Category categoryId) { this.categoryId = categoryId; }
-	
-	public List<ProductComponent> GetProductComponents() { return productComponents; }
+	public List<ProductComponent> getProductComponents() { return productComponents; }
 	public void setProductComponents(List<ProductComponent> productComponents) { this.productComponents = productComponents; }
 	
 	public Clob getDescription() { return description; }
 	public void setDescription(Clob description) { this.description = description; }
 	
+	public AgeGroup getAgeGroup() { return ageGroup; }
+	public void setAgeGroup(AgeGroup ageGroup) { this.ageGroup = ageGroup; }
 
+	public Gender getGender() { return gender; }
+	public void setGender(Gender gender) { this.gender = gender; } 
 }

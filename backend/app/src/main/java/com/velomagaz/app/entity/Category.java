@@ -2,6 +2,7 @@ package com.velomagaz.app.entity;
 
 import java.util.List;
 
+
 import jakarta.persistence.*;
 
 @Entity
@@ -15,11 +16,8 @@ public class Category {
 	private String categoryName;
 	
 	// -- Navigation --
-	@OneToMany(mappedBy="categoryId")
-	private List<Product> products;
-	
-	@OneToMany(mappedBy="categoryId")
-	private List<Component> components; 
+	@OneToMany(mappedBy="category")
+	private List<SubCategory> subcategories;
 
 	// -- Setters and Getters --
 	public int getId() { return id; }
@@ -28,10 +26,7 @@ public class Category {
 	public String getCategoryName() { return categoryName; }
 	public void setCategoryName(String categoryName) { this.categoryName = categoryName; }
 	
-	public List<Product> getProducts() { return products; }
-	public void setProducts(List<Product> products) { this.products = products; };
-	
-	public List<Component> getComponents() { return components; }
-	public void setComponents(List<Component> components) { this.components = components; } 
+	public List<SubCategory> getSubcategories() { return subcategories; }
+	public void setSubcategories(List<SubCategory> subcategories) { this.subcategories = subcategories; }
 	
 }

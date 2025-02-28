@@ -15,11 +15,11 @@ public class ProductComponent {
 	
 	@ManyToOne
 	@JoinColumn(name="product_id", nullable=false)
-	private Product productId;
+	private Product product;
 	
 	@ManyToOne
 	@JoinColumn(name="component_id", nullable=false)
-	private Component componentId;
+	private Component component;
 
 	// -- Setters and Getters --
 	public int getId() { return id; }
@@ -28,9 +28,9 @@ public class ProductComponent {
 	public String getDescValue() { return descValue; }
 	public void setDescValue(String descValue) { this.descValue = descValue; }
 	
-	public Product getProductId() { return productId; }
-	public void setProductId(Product productId) { this.productId = productId; }
+	public Product getProduct() { return product; }
+	public void setProductId(Product product) { this.product = product; }
 	
-	public Component getComponentId() { return componentId; }
-	public void setComponentId(Component componentId) { this.componentId = componentId; }
+	public Component getComponent() { return component; }
+	public void setComponent(Component component) { this.component = component; }
 }
