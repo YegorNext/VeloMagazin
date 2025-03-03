@@ -38,7 +38,7 @@ public class App
         Sheet sheet = workbook.getSheetAt(0);
         
 
-        DataBuilder builder = new DataBuilder();
+        //DataBuilder builder = new DataBuilder();
         
        // BrandImporter importer = new BrandImporter();
        // importer.insertBrands(builder.Build(sheet));
@@ -62,31 +62,7 @@ public class App
         
         //ImageUploader uploader = new ImageUploader();
        // uploader.upload();
-        
-        
-        String insertSQL = "INSERT INTO product_component (desc_value, component_id, product_id) VALUES (?, ?, ?)";
-
-        try (Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/velomagazin", "root", "sys");
-             PreparedStatement stmt = conn.prepareStatement(insertSQL)) {
-
-            for (List<String> str : builder.Build(sheet)) {
-                String productId = str.get(0).trim();  // getRow(0)
-                String descValue = str.get(3).trim();  // getRow(3)
-                
-                stmt.setString(1, descValue);
-                stmt.setInt(2, 1); // component_id всегда 1
-                stmt.setString(3, productId);
-                
-                stmt.executeUpdate();
-                
-                System.out.println("Inserted: product_id=" + productId + ", desc_value=" + descValue);
-            }
-            
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        
-        	
+              	
         workbook.close();
         file.close();
     }

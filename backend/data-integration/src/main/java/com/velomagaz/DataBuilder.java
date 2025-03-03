@@ -10,10 +10,16 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
 public class DataBuilder implements IDataBuilder{
-	private final short ID_IND = 0;
+	private List<List<String>> dataSet;
+	private final IDataFormatStrategy dataFormatStrategy;
 	
-	public List<List<String>> Build(Sheet sheet) {
-		return buildDataList(sheet.iterator());
+	public DataBuilder(IDataFormatStrategy dataFormatStrategy) {
+		dataSet = new ArrayList<List<String>>();
+		this.dataFormatStrategy = dataFormatStrategy;
+	}
+	
+	public List<List<String>> build(Sheet sheet) {
+		return (dataSet = buildDataList(sheet.iterator()));
 	}
 	
 	private List<List<String>> buildDataList(Iterator<Row> rowIterator){
@@ -32,17 +38,13 @@ public class DataBuilder implements IDataBuilder{
 			element.add(cell.toString());
 		}
 		
-		excludeValue(element, "HYPERLINK");
-		
+		if(dataFormatStrategy != null) 
+			dataFormatStrategy.formatData(element);
+
 		return element;
-	} 
-	
-	private void excludeValue(List<String> element, String value) {
-		element.removeIf(item -> item != null && item.contains(value)); // remove item with hyperlink 
-		
-		String str = element.get(ID_IND);
-		element.set(ID_IND, str.substring(0, str.indexOf("."))); // Remove id suffix 
 	}
 	
-	
+	public List<List<String>> getDataSet(){
+		return dataSet.isEmpty() ? null : dataSet; 
+	}
 }

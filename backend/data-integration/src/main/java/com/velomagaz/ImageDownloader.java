@@ -11,10 +11,10 @@ import java.io.IOException;
 
 
 
-public class ImageDownloader {
-	private final String path = "images";
+public class ImageDownloader implements IImageDownloader {
+	private final String path = "images/";
 	
-	public void Download(Map<String, String> productLinks) {
+	public void download(Map<String, String> productLinks) {
 		for(Map.Entry<String, String> entry : productLinks.entrySet()) {
 			saveImage(entry);
 		}
@@ -22,7 +22,7 @@ public class ImageDownloader {
 	
 	private void saveImage(Map.Entry<String, String> entry) {
 		try {
-            File destination = new File(path + "/image" + entry.getKey() + ".jpg");
+            File destination = new File(path + entry.getKey() + ".jpg");
 			FileUtils.copyURLToFile(new URL(entry.getValue()), destination);
 			
 			System.out.println("Success: " + destination.getAbsolutePath());
