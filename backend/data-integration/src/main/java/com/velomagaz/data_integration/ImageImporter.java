@@ -1,5 +1,8 @@
 package com.velomagaz.data_integration;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +18,16 @@ public class ImageImporter implements IImageImporter{
 	public void importData(Map<String, String> images) {
 		
 		for(Map.Entry<String, String> image : images.entrySet()) {
-			productRepository.updateImageById(image.getKey(), image.getValue().getBytes());
+			productRepository.updateImageById(image.getKey(), fileToBytes(image.getValue()));
+		}
+	}
+	
+	private byte[] fileToBytes(String path) {
+		try {
+			return Files.readAllBytes(Paths.get(path));
+		}catch(IOException e) {
+			System.err.println("Error while reading the file: " + e.getMessage());
+			return null;
 		}
 	}
 }

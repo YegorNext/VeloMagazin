@@ -6,5 +6,6 @@ import com.velomagaz.data_integration.entity.*;
 
 @Repository
 public interface IComponentRepository extends JpaRepository<Component, Integer>{
-	String findComponentNameById(int id);
+	public String findComponentNameById(int id);
+	public Component findByComponentName(String componentName);
 }

@@ -76,4 +76,7 @@ public class Product {
 
 	public Gender getGender() { return gender; }
 	public void setGender(Gender gender) { this.gender = gender; } 
+
+	public Brand getBrand() { return brand; }
+	public void setBrand(Brand brand) { this.brand = brand; }
 }

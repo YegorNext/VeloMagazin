@@ -16,4 +16,7 @@ public interface IProductRepository extends JpaRepository<Product, String>{
 	   @Transactional
 	   @Query("UPDATE Product p SET p.image = :image WHERE p.id = :id")
 	   int updateImageById(@Param("id") String id, @Param("image") byte[] image);
+	   
+	   @Query("SELECT p FROM Product p WHERE p.id = :id")
+	   Product findProductById(@Param("id") String id);
 }

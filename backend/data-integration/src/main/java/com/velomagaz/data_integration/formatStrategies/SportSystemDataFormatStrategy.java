@@ -1,10 +1,14 @@
 package com.velomagaz.data_integration.formatStrategies;
 
 import com.velomagaz.data_integration.*;
+import com.velomagaz.data_integration.constant.IndexConstants;
+
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SportSystemDataFormatStrategy implements IDataFormatStrategy {
-	private final short ID_IND = 0;
 	private final String excludeValue = "HYPERLINK"; // Element with this value to exclude
 	
 	public void formatData(List<String> dataRow) {
@@ -17,7 +21,11 @@ public class SportSystemDataFormatStrategy implements IDataFormatStrategy {
 	}
 	
 	private void excludeValue(List<String> element) {
-		String str = element.get(ID_IND);
-		element.set(ID_IND, str.substring(0, str.indexOf("."))); // Remove id suffix 
+		String str = element.get(IndexConstants.ID_IND);
+		
+		int dotIndex = str.indexOf(".");
+		if(dotIndex != -1) {
+			element.set(IndexConstants.ID_IND, str.substring(0, str.indexOf("."))); // Remove id suffix 
+		}
 	}
 }

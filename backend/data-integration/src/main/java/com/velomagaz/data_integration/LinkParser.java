@@ -4,13 +4,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class LinkParser implements ILinkParser{
 	private final int LINK_INDEX = 5, ID_INDEX = 0;
 	private final String baseURL; 
 	private final IParserStrategy parserStrategy;
 	
-	public LinkParser(String baseURL, IParserStrategy parserStrategy) {
-		this.baseURL = baseURL;
+	public LinkParser(IParserStrategy parserStrategy) {
+		this.baseURL = "https://sportsystems.com.ua/";
 		this.parserStrategy = parserStrategy;
 	}
 	

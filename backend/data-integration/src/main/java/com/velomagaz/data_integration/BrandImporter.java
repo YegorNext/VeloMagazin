@@ -9,7 +9,7 @@ import com.velomagaz.data_integration.entity.*;
 import com.velomagaz.data_integration.entity.repository.*;
 
 @Service
-public class BrandImporter {
+public class BrandImporter implements IBrandImporter{
 	
 	@Autowired
 	private IBrandRepository brandRepository;
@@ -29,6 +29,10 @@ public class BrandImporter {
 		Brand item = new Brand();
 		item.setBrandName(brandName);
 		
-		brandRepository.save(item);
+		try {
+			brandRepository.save(item);
+		}catch(Exception e) {
+			System.err.println("Cannot add brand to database: " + e.getMessage());
+		}
 	}
 }
