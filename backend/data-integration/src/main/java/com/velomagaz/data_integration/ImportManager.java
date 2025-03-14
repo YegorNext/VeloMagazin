@@ -4,6 +4,8 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.springframework.stereotype.Service;
 
+import com.velomagaz.data_integration.strategies.SportSystemParserStrategy;
+
 @Service
 public class ImportManager<T> {
 	
@@ -14,27 +16,35 @@ public class ImportManager<T> {
 	private final IProductComponentImporter productComponentImporter;
 	private final IProductImporter productImporter;
 	private final IBrandFactory brandFactory;
+	private final IImagePathParser imageParser;
 	
 	public ImportManager(IImageDownloader imageDownloader,IBrandImporter brandImporter,
 						 IProductComponentImporter productComponentImporter, IProductImporter productImporter,
-						 IBrandFactory brandFactory, IDataBuilder<T> dataBuilder, ILinkParser linkParser) {
+						 IBrandFactory brandFactory, IDataBuilder<T> dataBuilder) {
 		this.dataBuilder = dataBuilder;
-		this.linkParser = linkParser;
 		this.imageDownloader = imageDownloader;
 		this.brandImporter = brandImporter;
 		this.productComponentImporter = productComponentImporter;
 		this.productImporter = productImporter;
 		this.brandFactory = brandFactory;
+		
+		this.linkParser = new LinkParserVeloTrade();
+		this.imageParser = new ImagePathParser();
 	}
 	
 	public void importData(T data) throws EncryptedDocumentException, IOException {		
 		dataBuilder.build(data);
 		
+		
 		brandImporter.importBrandList(brandFactory.build(dataBuilder.getDataSet()));
-		productImporter.importData(dataBuilder.getDataSet(), imageDownloader.download(linkParser.parseData(dataBuilder.getDataSet())));
+		System.out.println("INFO: Brands was imported");
 		
+		productImporter.importData(dataBuilder.getDataSet(), imageParser.parseAll("images"));
+		System.out.println("INFO: Products was imported");
 		
-		productComponentImporter.importData(dataBuilder.getDataSet());
+
+		//productComponentImporter.importData(dataBuilder.getDataSet());
+		//System.out.println("INFO: Product Components was imported");
 		
 	}
 

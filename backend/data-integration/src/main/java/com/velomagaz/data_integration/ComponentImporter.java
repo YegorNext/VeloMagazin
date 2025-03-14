@@ -17,6 +17,7 @@ public class ComponentImporter implements IComponentImporter{
 	public void importComponentList(List<String> components) {
 		if(components == null || components.isEmpty()) {
 			System.out.println("WARN: Components list is empty");
+			return;
 		}
 		
 		for(String component : components) {

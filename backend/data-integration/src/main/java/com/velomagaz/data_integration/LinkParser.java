@@ -4,16 +4,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+import com.velomagaz.data_integration.constant.IndexConstants;
+
 public class LinkParser implements ILinkParser{
-	private final int LINK_INDEX = 5, ID_INDEX = 0;
 	private final String baseURL; 
 	private final IParserStrategy parserStrategy;
 	
-	public LinkParser(IParserStrategy parserStrategy) {
-		this.baseURL = "https://sportsystems.com.ua/";
+	public LinkParser(String baseURL, IParserStrategy parserStrategy) {
+		this.baseURL = baseURL;
 		this.parserStrategy = parserStrategy;
 	}
 	
@@ -26,7 +27,7 @@ public class LinkParser implements ILinkParser{
 		
 		
 		for(List<String> row : dataSet) {
-			imageLinks.put(row.get(ID_INDEX), getImageURL(row.get(LINK_INDEX)));
+			imageLinks.put(row.get(IndexConstants.ID_IND), getImageURL(row.get(IndexConstants.LINK_IND)));
 		}
 		
 		return imageLinks;

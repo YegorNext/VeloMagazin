@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -16,13 +17,17 @@ public class ImageDownloader implements IImageDownloader {
 	private final String path = "images/";
 	private Map<String, String> imagePath;
 	
+	@Autowired
+	private IImagePathSaver imagePathSaver;
+	
 	public Map<String, String> download(Map<String, String> productsURL) {
 		this.imagePath = new HashMap<String, String>();
 		
 		for(Map.Entry<String, String> entry : productsURL.entrySet()) {
 			saveImage(entry);
 		}
-	
+		
+		imagePathSaver.saveImagePathToJson(imagePath);
 		return imagePath.isEmpty() ? null : imagePath;
 	}
 	

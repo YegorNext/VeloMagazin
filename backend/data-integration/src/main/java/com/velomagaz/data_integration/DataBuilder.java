@@ -14,6 +14,8 @@ import org.apache.poi.ss.usermodel.Row;
 public class DataBuilder implements IDataBuilder<Sheet>{
 	private List<List<String>> dataSet;
 	private final IDataFormatStrategy dataFormatStrategy;
+	private final int row_size = 8;
+	
 	
 	public DataBuilder(IDataFormatStrategy dataFormatStrategy) {
 		dataSet = new ArrayList<List<String>>();
@@ -40,12 +42,13 @@ public class DataBuilder implements IDataBuilder<Sheet>{
 	
 	private List<String> createList(Row row) {
 		List<String> element = new LinkedList<String>();
-		for (Cell cell : row) {
-			String cellData = cell.toString();
-			if(!cellData.isEmpty()) {
-				element.add(cellData);
-			}
+		
+		for(int i = 0; i < row_size; i++) {
+			String cellData = row.getCell(i).toString();
+			if(cellData.isEmpty()) element.add(" ");
+			else element.add(cellData);
 		}
+		
 		
 		if(dataFormatStrategy != null && !element.isEmpty()) 
 			dataFormatStrategy.formatData(element);
