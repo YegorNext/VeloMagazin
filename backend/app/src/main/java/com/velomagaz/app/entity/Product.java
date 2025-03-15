@@ -15,7 +15,7 @@ public class Product {
 	@Column(name = "id")
 	private String id;
 	
-	@Column(name = "product_name", length = 100)
+	@Column(name = "product_name", length = 255)
 	private String productName;
 	
 	@Column(name = "price", precision = 10, scale = 2)
