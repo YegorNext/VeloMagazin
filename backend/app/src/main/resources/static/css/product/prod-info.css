@@ -192,6 +192,12 @@ ul > li:last-child{
     font-size: 14px;
 }
 
+nav li{
+	margin-bottom: 0px !important;
+}
 
+.categories__module-container > div:first-child div ul li{
+	margin-bottom: 18px !important;
+}
 
 

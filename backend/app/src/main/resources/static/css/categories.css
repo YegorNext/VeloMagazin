@@ -104,3 +104,8 @@ nav ul{
 .categories__logo-container{
     padding-bottom: 15px;
 }
+
+.categories__container div{
+	max-width: 100%;	
+}
+

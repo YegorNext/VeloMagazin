@@ -18,6 +18,8 @@
 
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/product/prod-info.css}">
 
+		<link rel = "stylesheet" type="text/css" th:href = "@{/css/module.css}">
+
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/footer.css}">
 
 
@@ -106,10 +108,7 @@
             <div class = "categories__container">
                 <div class="row align-items-center">
                     <div class="col-2 categories__logo-container">
-                      <a th:href="@{/home}"> 
-                        <img class = "logo" th:src="@{/images/logo.png}">
-                      </a>
-
+                        <a th:href="@{/home}"> <img class = "logo" th:src="@{/images/logo.svg}"> </a>
                     </div>
                     <div class = "col-7">
                         <nav>
@@ -124,10 +123,10 @@
                                     <span>Запчастини</span>
                                 </li>
                                 <li id = "electro">
-                                    <span>Електро</span>
+                                    <span><a href="">Електро</a></span>
                                 </li>
                                 <li id = "equipment">
-                                    <span>Спорядження</span>
+                                    <span><a href="">Спорядження</a></span>
                                 </li>
                             </ul>
                         </nav>
@@ -136,6 +135,298 @@
                         <div class = "categories__search"> 
                             <input placeholder="Знайти..">
                             <span class = "search-icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bicycle -->
+            <div class = "categories__list-module bicycle">
+                <div class="d-flex w-100 justify-content-around">
+                    <div class="categories__module-container">
+                        <div class="d-flex">
+                            <div class="no-border">
+                                <div class="d-flex categories-bicycle">
+                                    <div>
+                                        <h4>За типом</h4>
+                                        <div class="categories-bicycle-container">
+                                            <div>
+                                                <ul>
+                                                    <li><a th:href="@{/product}">Гревели</a></li>
+                                                    <li><a th:href="@{/product}">Гібріди</a></li>
+                                                    <li><a th:href="@{/product}">Гірські</a></li>
+                                                    <li><a th:href="@{/product}">Дитячі</a></li>
+                                                    <li><a th:href="@{/product}">Жіночі</a></li>
+                                                    <li><a th:href="@{/product}">Міські</a></li>
+                                                </ul>
+                                            </div>
+                                            <div >
+                                                <ul>
+                                                    <li><a th:href="@{/product}">Підліткові</a></li>
+                                                    <li><a th:href="@{/product}">Складані</a></li>
+                                                    <li><a th:href="@{/product}">Турінги</a></li>
+                                                    <li><a th:href="@{/product}">Фетбайки</a></li>
+                                                    <li><a th:href="@{/product}">Електровелосипеди</a></li>
+                                                    <li><a th:href="@{/product}">З уцінкою</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="categories-type-container">
+                                            <h4>За статтю</h4>
+                                            <ul>
+                                                <li><a th:href="@{/product}">Жіночі</a></li>
+                                                <li><a th:href="@{/product}">Чоловічі</a></li>
+                                                <li><a th:href="@{/product}">Універсальні</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="no-border">
+                                        <div class="categories-type-container ">
+                                            <h4>За віком</h4>
+                                            <ul>
+                                                <li><a th:href="@{/product}">Дорослі</a></li>
+                                                <li><a th:href="@{/product}">Підліткові</a></li>
+                                                <li><a th:href="@{/product}">Дитячі</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="categories__brend">
+                                    <div><img th:src="@{/images/Shimano-Logo-1965.png}"> </div>
+
+                                    <div><img th:src="@{/images/comanche-logo.png}"></div>
+
+                                    <div><img th:src="@{/images/Author-logo-0018427C30-seeklogo.com.png}"></div>
+
+                                    <div><img th:src="@{/images/dorozhnik.png}"></div>
+
+                                    <div><img th:src="@{/images/comanche-logo.png}"></div>
+                                </div>
+
+                            </div>
+                            <div class="mw-400">
+                                <div class="categories-img-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accessories -->
+            <div class = "categories__list-module accessories">
+                <div class="d-flex w-100 justify-content-around">
+                    <div class="categories__module-container">
+                        
+                        <div class="d-flex">
+                            <div> 
+                                <ul> 
+                                    <li><a th:href="@{/product}">Багажники</a></li>
+                                    <li><a th:href="@{/product}">Велокомп'ютери</a></li>
+                                    <li><a th:href="@{/product}">Велосумки</a></li>
+                                    <li><a th:href="@{/product}">Герметики та антипрокольна рідина</a></li>
+                                    <li><a th:href="@{/product}">Тримачі для смартфона</a></li>
+                                    <li><a th:href="@{/product}">Дитячі велокрісла</a></li>
+                                </ul>
+                            </div>
+                            <div> 
+                                <ul> 
+                                    <li><a th:href="@{/product}">Замки</a></li>
+                                    <li><a th:href="@{/product}">Захист</a></li>
+                                    <li><a th:href="@{/product}">Дзеркала</a></li>
+                                    <li><a th:href="@{/product}">Дзвінки</a></li>
+                                    <li><a th:href="@{/product}">Інструменти</a></li>
+                                    <li><a th:href="@{/product}">Колеса для дитячих велосипедів</a></li>
+                                </ul>
+                            </div>
+                            <div> 
+                                <ul> 
+                                    <li><a th:href="@{/product}">Корзини</a></li>
+                                    <li><a th:href="@{/product}">Крила</a></li>
+                                    <li><a th:href="@{/product}">Насоси</a></li>
+                                    <li><a th:href="@{/product}">Окуляри</a></li>
+                                    <li><a th:href="@{/product}">Перчатки</a></li>
+                                    <li><a th:href="@{/product}">Підніжки</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul> 
+                                    <li><a th:href="@{/product}">Різне</a></li>
+                                    <li><a th:href="@{/product}">Рюкзаки</a></li>
+                                    <li><a th:href="@{/product}">Світло</a>
+                                        <ul>
+                                            <li><a th:href="@{/product}">Габаритні ліхтарі</a></li>
+                                            <li><a th:href="@{/product}">Переднє світло</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a th:href="@{/product}">Мастила, рідини</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul> 
+                                    <li><a th:href="@{/product}">Фляги</a></li>
+                                    <li><a th:href="@{/product}">Флягоутримувачі</a></li>
+                                    <li><a th:href="@{/product}">Шоломи</a></li>
+                                    <li><a th:href="@{/product}">Тримачі та стійки під велосипед</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spare part -->
+            <div class = "categories__list-module sparepart">
+                <div class="d-flex w-100 justify-content-around">
+                    <div class="categories__module-container">
+                        
+                        <div class="d-flex categories-sparepart">
+                            <div> 
+                                <div>
+                                    <div class="d-flex">
+                                        <i class = "fork-icon me-1"> </i>
+                                        <div>
+                                            <h4>Вилки</h4>
+                                        </div>
+                                    </div>
+                                    <ul> 
+                                        <li><a th:href="@{/product}">Амортизаційні вилки</a></li>
+                                        <li><a th:href="@{/product}">Жорсткі вилки</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <div class="d-flex">
+                                        <i class = "wheel-icon me-1"> </i>
+                                        <div>
+                                            <h4>Колеса, колісні частини</h4>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li><a th:href="@{/product}">Втулки</a></li>
+                                        <li><a th:href="@{/product}">Колеса</a></li>
+                                        <li><a th:href="@{/product}">Обода</a></li>
+                                        <li><a th:href="@{/product}">Шприхи</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <div class="d-flex">
+                                        <i class = "pedal-icon me-1"> </i>
+                                        <div>
+                                            <h4>Педалі</h4>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li><a th:href="@{/product}">Контактні педалі</a></li>
+                                        <li><a th:href="@{/product}">Педалі платформи</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div> 
+                                <div>
+                                    <div class="d-flex ps-2">
+                                        <i class = "tire-icon me-1"> </i>
+                                        <div>
+                                            <h4>Покришки та камери</h4>
+                                        </div>
+                                    </div>
+                                    <ul> 
+                                        <li><a th:href="@{/product}">Камери</a></li>
+                                        <li><a th:href="@{/product}">Мотокамери</a></li>
+                                        <li><a th:href="@{/product}">Моторезина</a></li>
+                                        <li><a th:href="@{/product}">Покришки</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <div class="d-flex ps-2">
+                                        <i class = "streeting-icon me-1"> </i>
+                                        <div>
+                                            <h4>Рульове управління</h4>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li><a th:href="@{/product}">Виноси</a></li>
+                                        <li><a th:href="@{/product}">Ручки керма (гріпси)</a></li>
+                                        <li><a th:href="@{/product}">Рульові колонки</a></li>
+                                        <li><a th:href="@{/product}">Рулі</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div> 
+                                <div>
+                                    <div class="d-flex ps-2">
+                                        <i class = "saddle-icon me-1"> </i>
+                                        <div>
+                                            <h4>Сідла і підсідельні штирі</h4>
+                                        </div>
+                                    </div>
+                                    <ul> 
+                                        <li><a th:href="@{/product}">Підсідельні затискачі</a></li>
+                                        <li><a th:href="@{/product}">Підсідельні штирі</a></li>
+                                        <li><a th:href="@{/product}">Сідла</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <div class="d-flex ps-2">
+                                        <i class = "breaksys-icon me-1"> </i>
+                                        <div>
+                                            <h4>Гальмівна система</h4>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li><a th:href="@{/product}">Ротори</a></li>
+                                        <li><a th:href="@{/product}">Гальма V-brake</a></li>
+                                        <li><a th:href="@{/product}">Гальма дискові</a></li>
+                                        <li><a th:href="@{/product}">Гальмівні колодки</a></li>
+                                        <li><a th:href="@{/product}">Гальмівні ручки</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="d-flex ps-2">
+                                        <i class = "transmission-icon me-1"> </i>
+                                        <div>
+                                            <h4>Трансміссія</h4>
+                                        </div>
+                                    </div>
+                                    <ul> 
+                                        <li>
+                                            <span><a href="">Тримач перемикача (сережка, півень)</a></span>
+                                        </li>
+                                        <li><a th:href="@{/product}">Набір трансмісії</a></li>
+                                        <li><a th:href="@{/product}">Зірки</a></li>
+                                        <li><a th:href="@{/product}">Каретки</a></li>
+                                        <li><a th:href="@{/product}">Касети/Тріскачки</a></li>
+                                        <li><a th:href="@{/product}">Важелі перемикання (манетки)</a></li>
+                                        <li><a th:href="@{/product}">Перемикачі задні</a></li>
+                                        <li><a th:href="@{/product}">Перемикачі передні</a></li>
+                                        <li><a th:href="@{/product}">Ланцюги</a></li>
+                                        <li><a th:href="@{/product}">Шатуни</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="d-flex ps-2">
+                                        <i class = "cable-icon me-1"> </i>
+                                        <div>
+                                            <h4>Троса і сорочкі</h4>
+                                        </div>
+                                    </div>
+                                    <ul> 
+                                        <li><a th:href="@{/product}">Боудени (обплетення троса)</a></li>
+                                        <li><a th:href="@{/product}">Троса гальма і перемикання</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,7 +473,7 @@
                                </div>
 	
 	                            <div class = "prod-info__subpanel">
-	                                <span class="bold prod-info-title">Характеристики</span>
+	                                <span th:if="${#lists.size(productInfo.records) > 0}" class="bold prod-info-title">Характеристики</span>
 	                            </div>
 	
 	                            <ul>
@@ -337,5 +628,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
         <script th:src="@{/js/scrollTracking.js}"></script>
+        <script th:src="@{/js/menuShow_test.js}"></script> 
     </body>
 </html>
