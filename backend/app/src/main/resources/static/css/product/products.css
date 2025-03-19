@@ -222,3 +222,64 @@ footer{
     margin-right: 2%;
 }
 
+.products__switcher{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 33px;
+}
+
+.product__switcher-container{
+    display: flex;
+    justify-content: center;
+
+    width: 350px; height: 40px;
+    background-color:#F9F9F9;
+    border-radius: 5px;
+}
+
+.product__symbol{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 95%; 
+    
+    
+    font-size: 14px;
+    
+}
+
+.product__symbol > a{
+	position: relative;
+    display: flex;
+    
+    
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    height: 26px; width: 23px; 
+
+	color: #A6A6A6;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+.product__symbol > span > a{
+	color: #a69393;
+	text-decoration: none;
+}
+
+.product__symbol > a:first-child{
+	 color: white;
+	 
+	 border-radius: 3px;
+}
+
+
+.current{
+	background-color: #2F99A9;
+	color: white !important;
+}
+

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.velomagaz.app.repository.*;
@@ -14,21 +15,18 @@ import com.velomagaz.app.entity.*;
 @Service
 public class ProductGridBuilderService {
 	@Autowired
-	private IProductRepository productRepository; 
-	private final int ROW_SIZE = 4;
+	private ProductService productService; 
 	
-	private List<Product> getAllProducts() {
-		return productRepository.findAll();
-	}
+	private final int row_size = 4;
 	
-	public LinkedList<ProductRow> BuildGrid() {
+	private LinkedList<ProductRow> fillGrid(ListIterator<Product> productIterator){
 		LinkedList<ProductRow> productGrid = new LinkedList<>();
-		ListIterator<Product> productIterator = getAllProducts().listIterator();		
+		
 		
 		while(productIterator.hasNext()) {
 			productGrid.add(new ProductRow());
 		
-			for(int j = 0; j < ROW_SIZE && productIterator.hasNext(); j++) {
+			for(int j = 0; j < row_size && productIterator.hasNext(); j++) {
 				productGrid.getLast().AddElement(productIterator.next());
 			}
 		}
@@ -36,4 +34,16 @@ public class ProductGridBuilderService {
 		return productGrid;
 	}
 	
+	public LinkedList<ProductRow> buildGrid() {
+		ListIterator<Product> productIterator = productService.getAllProducts().listIterator();		
+		
+		return fillGrid(productIterator);
+	}
+	
+	public LinkedList<ProductRow> buildPagebaleGrid(int page, int size){
+		Page<Product> productPage = productService.getPagebaleProducts(page, size);
+		
+	
+		return fillGrid(productPage.getContent().listIterator());
+	}
 }
