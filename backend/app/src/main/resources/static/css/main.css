@@ -57,3 +57,8 @@ footer{
     background-color:  rgba(128, 128, 128, 0.164);
 }
 
+.logo{
+	outline: none;
+	border: none;
+}
+

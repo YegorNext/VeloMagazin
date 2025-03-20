@@ -37,13 +37,24 @@ public class ProductGridBuilderService {
 	public LinkedList<ProductRow> buildGrid() {
 		ListIterator<Product> productIterator = productService.getAllProducts().listIterator();		
 		
-		return fillGrid(productIterator);
+		return (productIterator == null) ? null : fillGrid(productIterator);
 	}
 	
-	public LinkedList<ProductRow> buildPagebaleGrid(int page, int size){
+	public LinkedList<ProductRow> buildPageableGrid(int page, int size){
 		Page<Product> productPage = productService.getPagebaleProducts(page, size);
 		
+		return (productPage == null || productPage.isEmpty()) ? null : fillGrid(productPage.getContent().listIterator());
+	}
 	
-		return fillGrid(productPage.getContent().listIterator());
+	public LinkedList<ProductRow> buildPageableGridByQuery(int page, int size, String query){
+		Page<Product> productPage = productService.getPagebaleProductsByQuery(query, page, size);
+		
+		return (productPage == null || productPage.isEmpty()) ? null : fillGrid(productPage.getContent().listIterator());
+	}
+	
+	public LinkedList<ProductRow> buildPageableGridByCategoryName(int page, int size, String categoryName){
+		Page<Product> productPage = productService.getPagebaleProductsByCategory(categoryName, page, size);
+		
+		return (productPage == null || productPage.isEmpty()) ? null : fillGrid(productPage.getContent().listIterator());
 	}
 }

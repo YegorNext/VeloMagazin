@@ -1,0 +1,41 @@
+#error{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.error__container{
+    max-width: 1240px;
+    width: 100%; height: auto;
+}
+
+.error__message-box{
+	height: 60vh;
+}
+
+.error__not-found{
+	width: 100%;
+	margin-top: 10%;
+}
+
+.error__not-found > h3:first-child{
+	width: 100%; text-align: center;
+	font-size: 96px;
+	
+	line-height: 1;
+}
+
+
+
+.error__not-found > h3{
+	color: #6f6f6f;
+}
+
+.error__not-found > h3:last-child{
+	width: 100%; text-align: center;
+	color: black !important;
+}
+
+.error__undertext{
+	display: block;
+	font-size: 28px;	
+}

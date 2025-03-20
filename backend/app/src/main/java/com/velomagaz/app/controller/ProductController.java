@@ -36,16 +36,16 @@ public class ProductController {
 	ProductInfoBuilder productInfoService;
 	
 	@Autowired
-	IProductRepository productRepository;
+	ISubCategoryRepository subCategoryRepository;
 	
 	@GetMapping
-	public String Index(Model model, @RequestParam(defaultValue = "0") int page) {
+	public String index(Model model, @RequestParam(defaultValue = "0") int page) {
 		
 		if(page < 0) page = 0;
 		int totalPages = productService.getTotalPages(page, productList_size);
 		int endPage = page + 10 > totalPages ? totalPages : page + 10;
 		
-		LinkedList<ProductRow> productGrid = builderService.buildPagebaleGrid(page, productList_size);
+		LinkedList<ProductRow> productGrid = builderService.buildPageableGrid(page, productList_size);
 		
 		model.addAttribute("productGrid", productGrid);
 		model.addAttribute("endPage", endPage);
@@ -55,7 +55,7 @@ public class ProductController {
 	}
 	
     @GetMapping("/{id}/image")
-    public ResponseEntity<byte[]> GetProductImage(@PathVariable String id) {
+    public ResponseEntity<byte[]> getProductImage(@PathVariable String id) {
         byte[] image = imageService.getImageById(id);
         
         if (image == null) {
@@ -68,10 +68,47 @@ public class ProductController {
     }
     
     @GetMapping("/{id}")
-    public String Info(@PathVariable String id, Model model) {
+    public String info(@PathVariable String id, Model model) {
     	
     	model.addAttribute("productInfo", productInfoService.BuildInfo(id));
 
     	return "product/info";
+    }
+    
+    @GetMapping("/category/{categoryName}")
+    public String category(@PathVariable String categoryName, Model model, @RequestParam(defaultValue = "0") int page) {
+    	if(categoryName == null || categoryName.isEmpty() || subCategoryRepository.findBySubcategoryName(categoryName) == null) {
+    		return "errorPage";
+    	}
+    	
+    	if(page < 0) page = 0;
+		int totalPages = (categoryName.isEmpty()) ? 0 : productService.getTotalPagesByCategoryName(page, productList_size, categoryName);
+		int endPage = page + 10 > totalPages ? totalPages : page + 10;
+		
+		LinkedList<ProductRow> productGrid = builderService.buildPageableGridByCategoryName(page, productList_size, categoryName);
+		
+		model.addAttribute("productGrid", ( productGrid == null || productGrid.isEmpty()) ? null : productGrid);
+		model.addAttribute("endPage", endPage);
+		model.addAttribute("currentPage", page);
+		model.addAttribute("categoryName", categoryName);
+    	
+    	return "product/category";
+    }
+    
+    @GetMapping("/search")
+    public String search(@RequestParam(defaultValue = "") String query, Model model, @RequestParam(defaultValue = "0") int page) {
+		
+    	if(page < 0) page = 0;
+		int totalPages = (query.isEmpty() || query.length() < 3) ? 0 : productService.getTotalPagesByQuery(page, productList_size, query);
+		int endPage = page + 10 > totalPages ? totalPages : page + 10;
+		
+		LinkedList<ProductRow> productGrid = (query.isEmpty() || query.length() < 3) ? null : builderService.buildPageableGridByQuery(page, productList_size, query);
+		
+		model.addAttribute("productGrid", ( productGrid == null || productGrid.isEmpty()) ? null : productGrid);
+		model.addAttribute("endPage", endPage);
+		model.addAttribute("currentPage", page);
+		model.addAttribute("query", query);
+    	
+    	return "product/search";
     }
 }

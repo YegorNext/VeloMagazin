@@ -48,10 +48,10 @@
                         <div class="header__menu-divider header__menu-divider_w-20">
                             <div class = "d-flex">
                                 <div>
-                                    <img src="images/cart.svg" class="menu-elem"> <span class="menu-elem-value blue">0</span>
+                                    <img th:src="@{/images/cart.svg}" class="menu-elem"> <span class="menu-elem-value blue">0</span>
                                 </div>
                                 <div class = "px-4">
-                                    <img src="images/heart.svg" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
+                                    <img th:src="@{/images/heart.svg}" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
                                 </div>
                             </div>
                             <div class = "blue menu-exit">Вхід</div>
@@ -199,7 +199,7 @@
                     <div class="products__main col-7 col-md-9">
                         <div class = "products__list">
                             <div class="products__header">
-                                <h4>Усі товари</h4>
+                                <h4>Результати за категорією «<span th:text="${categoryName}"></span>»</h4>
                             </div>
 
                             <div class = "products__list-content">
@@ -257,21 +257,23 @@
 
                         </div>
 
-                        <div class = "products__switcher">
+                        <div th:if="${productGrid != null}" class = "products__switcher">
                             <div class = "product__switcher-container">
                                 <div class = "product__symbol">
                                 	<span>
-                                		<a th:href="@{/product(page=${currentPage-1 < 0 ? 0 : currentPage-1})}"> << </a>
+                                		<a th:href="@{/product/{categoryName}(page=${currentPage-1 < 0 ? 0 : currentPage-1})}"> << </a>
 								    </span>
 								    
-								    <a th:each="i : ${#numbers.sequence(currentPage + 1, endPage)}"
-								       th:href="@{/product(page=${i})}" 
-								       th:text="${i}" 
-								       th:classappend="${currentPage+1 == i} ? 'current' : ''">
-								    </a>
+								    <div class = "d-flex">
+									    <a th:each="i : ${#numbers.sequence(currentPage, endPage-1)}"
+									       th:href="@{/product/{categoryName}(page=${i})}" 
+									       th:text="${i+1}" 
+									       th:classappend="${currentPage == i} ? 'current' : ''">
+									    </a>
+								    </div>
 								    
 								    <span>
-                                		<a th:href="@{/product(page=${currentPage+1 > endPage ? currentPage : currentPage+1})}"> >> </a>
+                                		<a th:href="@{/product/{categoryName}(page=${currentPage+1 > endPage ? currentPage : currentPage+1})}"> >> </a>
 								    </span>
                                 </div>
                             </div>
@@ -328,9 +330,9 @@
                         </div>
 
                         <div class = "footer__social">
-                            <img src="images/instagram.png">
-                            <img src="images/facebook.png">
-                            <img src="images/youtube.png"> 
+                            <img th:src="@{/images/instagram.png}">
+                            <img th:src="@{/images/facebook.png}">
+                            <img th:src="@{/images/youtube.png}"> 
                         </div>
 
                     </div>
@@ -349,5 +351,6 @@
 
         <script th:src="@{/js/scrollTracking.js}"></script>
         <script th:src="@{/js/search.js}"></script>
+        
     </body>
 </html>

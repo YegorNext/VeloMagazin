@@ -252,7 +252,7 @@ footer{
     
 }
 
-.product__symbol > a{
+.product__symbol > div > a{
 	position: relative;
     display: flex;
     
@@ -273,7 +273,7 @@ footer{
 	text-decoration: none;
 }
 
-.product__symbol > a:first-child{
+.product__symbol > div > a:first-child{
 	 color: white;
 	 
 	 border-radius: 3px;

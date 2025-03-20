@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="uk">
     <head>
+		
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta charset="UTF-8"/>
 
@@ -14,27 +15,24 @@
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/main.css}">
 
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/header.css}">
+        <link rel = "stylesheet" type="text/css" th:href = "@{/css/banner.css}">
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/categories.css}">
 
-        <link rel = "stylesheet" type="text/css" th:href = "@{/css/product/prod-info.css}">
-
-		<link rel = "stylesheet" type="text/css" th:href = "@{/css/module.css}">
-
+        <link rel = "stylesheet" type="text/css" th:href = "@{/css/error/error.css}">
+        
+        <link rel = "stylesheet" type="text/css" th:href = "@{/css/module.css}">
         <link rel = "stylesheet" type="text/css" th:href = "@{/css/footer.css}">
-
-
 
         <link rel = "stylesheet" type="text/css" th:href="@{/css/adaptation/tablet.css}">
         <link rel = "stylesheet" type="text/css" th:href="@{/css/adaptation/vtablet.css}">
         <link rel = "stylesheet" type="text/css" th:href="@{/css/adaptation/small.css}">
-        <link rel = "stylesheet" type="text/css" th:href="@{/css/adaptation/screen-products.css}">
-    
     </head>
 
     <body>
         <header>
             <div class = "header-container"> 
                 <div class = "header-content"> 
+
                     <!--  Widescreen  -->
                     <div class = "header__menu d-none d-xl-flex">
                         <div class = "header__menu-divider"> 
@@ -84,15 +82,13 @@
                                 
                                 <div class = "categories__search burger align-self-center"> 
                                     <input placeholder="Знайти..">
-
-                                    <span class = "search-icon"></span>
                                 </div>
 
-                                <div class = "ms-2 me-2 ms-md-3 me-md-3">
+                                <div class = "ms-md-3 me-md-3">
                                     <span class = "menu-burger-heart"> </span>
 
                                 </div>
-                                <div class="d-flex">
+                                <div class="d-flex ms-1 ms-md-0">
                                     <span class = "menu-burger-cart"> </span> 
                                     <span class="menu-elem-value blue">0</span>
                                 </div>
@@ -100,6 +96,7 @@
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </header>
@@ -132,7 +129,7 @@
                         </nav>
                     </div>
                     <div class="col-3 align-self-center">
-                        <div class = "categories__search"> 
+                         <div class = "categories__search"> 
                             <input placeholder="Пошук товарів...">
                             <button> <span class = "search-icon"></span> </button>
                         </div>
@@ -195,15 +192,15 @@
                                 </div>
 
                                 <div class="categories__brend">
-                                    <div><img th:src="@{/images/Shimano-Logo-1965.png}"> </div>
+                                    <div><img src="images/Shimano-Logo-1965.png"> </div>
 
-                                    <div><img th:src="@{/images/comanche-logo.png}"></div>
+                                    <div><img src="images/comanche-logo.png"></div>
 
-                                    <div><img th:src="@{/images/Author-logo-0018427C30-seeklogo.com.png}"></div>
+                                    <div><img src="images/Author-logo-0018427C30-seeklogo.com.png"></div>
 
-                                    <div><img th:src="@{/images/dorozhnik.png}"></div>
+                                    <div><img src="images/dorozhnik.png"></div>
 
-                                    <div><img th:src="@{/images/comanche-logo.png}"></div>
+                                    <div><img src="images/comanche-logo.png"></div>
                                 </div>
 
                             </div>
@@ -433,139 +430,26 @@
             </div>
         </section>
 
-        <section id = "prod-info">
-            <div class = "prod-info__container">
-                <div class="prod-info__navigation-title">
-                    <span>
-                        <span> <a th:href="@{/product}"> Усі товари </a> </span> / Велосипеди / <span th:text="${productInfo.name}"> </span>
-                    </span>
-                </div>
-                <div class="row prod-info__info-block">
-                    <h4><span th:text="${productInfo.name}"> </span></h4>
-                    
-                    <div class="prod-info__info-container"> 
-                        <div class = "col-7">
-                            <div class="prod-info__img-slot">
-                                <img th:src = "@{/product/{id}/image(id=${productInfo.id})}" class="prod-info__img">
-                            </div>
-                        </div>
-    
-                        <div class="col-5 prod-info__panel">
-                            
-                            <div th:if="${#lists.size(productInfo.records) <= 10}">
-                            
-	                            <div> 
-	                                <span>Код:</span> <span th:text=${productInfo.id}></span>  
-	                            </div>
-	                            
-	                            <div class="prod-info__buy">
-	                                <div>
-	                                    <div class="prod-info__price">
-	                                        <h4> <span th:text="${productInfo.price}"> </span> ₴</h4>
-	                                    </div>
-	
-	                                    <div>
-	                                        <a class="btn btn-primary" role="button">
-	                                            Придбати
-	                                        </a>
-	                                    </div>
-	                                </div>
-                               </div>
-	
-	                            <div class = "prod-info__subpanel">
-	                                <span th:if="${#lists.size(productInfo.records) > 0}" class="bold prod-info-title">Характеристики</span>
-	                            </div>
-	
-	                            <ul>
-	                                <li th:each="row: ${productInfo.records}">
-	                                    <table>
-	                                        <tr>
-	                                            <td class="w-60"><span class="color-gray" th:text="${row.key}"> </span></td>
-	                                            <td><span class="blue-underlined" th:text="${row.value}"></span></td>
-	                                        </tr>
-	                                    </table>
-	                                </li>
-	                            </ul>
-
-                            </div>
-                            
-                            <div th:if="${#lists.size(productInfo.records) > 10}">
-                           		
-                           		<div> 
-	                                <span>Код:</span> <span th:text=${productInfo.id}></span>  
-	                            </div>
-	                            
-	                            
-	                            <div class="prod-info__buy">
-	                                <div>
-	                                    <div class="prod-info__price">
-	                                        <h4> <span th:text="${productInfo.price}"> </span> ₴</h4>
-	                                    </div>
-	
-	                                    <div>
-	                                        <a class="btn btn-primary" role="button">
-	                                            Придбати
-	                                        </a>
-	                                    </div>
-	                                </div>
-                               </div>
-	                            
-	
-	                            <div class = "prod-info__subpanel">
-	                                <span class="bold prod-info-title">Характеристики</span>
-	                            </div>
-	
-	                            <ul class = "prod-info__collapsed-list">
-	                                <li th:each="row, stat: ${productInfo.records}" th:if="${stat.index < 10}">
-	                                    <table>
-	                                        <tr>
-	                                            <td class="w-60"><span class="color-gray" th:text="${row.key}"> </span></td>
-	                                            <td><span class="blue-underlined" th:text="${row.value}"></span></td>
-	                                        </tr>
-	                                    </table>
-	                                </li>
-	                            </ul>
-	                            
-	                            <div class="prod-info__detail">
-                                    <div class="collapse" id="collapseInfo">
-			                            <ul>
-			                                <li th:each="row, stat: ${productInfo.records}" th:if="${stat.index >= 10}">
-			                                    <table>
-			                                        <tr>
-			                                            <td class="w-60"><span class="color-gray" th:text="${row.key}"> </span></td>
-			                                            <td><span class="blue-underlined" th:text="${row.value}"></span></td>
-			                                        </tr>
-			                                    </table>
-			                                </li>
-			                            </ul>
-                                    </div>
-
-                                    <a class="" data-bs-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseInfo">
-                                      Показати ще >
-                                    </a>
-                            	</div>
-	                            
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class = "prod-info__description">
-                    	<button> <span> Опис товару </span> </button>
-                        <div class="row prod-info__text-container"> 
-                            <p class="col-7" th:text="${productInfo.description}"></p>  
-                        </div>
-
-
-                    </div>
-                </div>
+        <section id = "error">
+            <div class = "error__container"> 
+ 				<div class = "error__message-box"> 
+ 					<hr>
+ 					
+ 					<div class = "error__not-found">
+ 						<h3>404 <span class = "error__undertext">{NOT FOUND}</span></h3>
+ 						<h3>У-у-пс! Здається такого ресурсу не існує :(</h3>
+ 					</div>
+ 				</div>
             </div>
         </section>
+
+
+
 
         <footer>
             <div class = "footer__container">
                 <div class = "footer__content"> 
-                    <div>
+                    <div class="col-6 col-md">
                         <h6 >Каталог товарів</h6>
                         <ul class = "white">
                             <li>Самокати</li>
@@ -575,7 +459,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="col-6 col-md">
                         <h6>Покупцеві</h6>
                         <ul class = "white">
                             <li>Гарантія</li>
@@ -586,7 +470,7 @@
                         </ul>
                     </div>
 
-                    <div class = "pe-1 pe-md-0">
+                    <div class="col-6 col-md mt-3 mt-md-0">
                         <h6>Компанія</h6>
                         <ul class = "white">
                             <li>Вакансії</li>
@@ -596,7 +480,7 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="col-6 col-md mt-3 mt-md-0">
                         <div class = "footer__email-box d-flex">
                             <div class="footer__image-box"> <img src="images/email.png"> </div>
                             <span class="footer__info-text">velomagazininua@gmail.com</span>
@@ -617,7 +501,7 @@
                 </div>
 
                 <span class = "footer__line"></span>
-                <span class = "f-12 gray"> @ 2025 / Velomagazin велосипедний інтернет магазин, роздрібна та оптова торгівля</span>
+                <span class = "f-12 gray footer__vertical-adaptation-authors"> @ 2025 / Velomagazin велосипедний інтернет магазин, роздрібна та оптова торгівля</span>
             </div>
         </footer>
 
@@ -628,7 +512,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
         <script th:src="@{/js/scrollTracking.js}"></script>
+        
         <script th:src="@{/js/menuShow_test.js}"></script> 
-		<script th:src="@{/js/search.js}"></script>
+        <script th:src="@{/js/search.js}"></script>
     </body>
 </html>
