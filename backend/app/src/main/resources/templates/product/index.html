@@ -263,12 +263,13 @@
                                 	<span>
                                 		<a th:href="@{/product(page=${currentPage-1 < 0 ? 0 : currentPage-1})}"> << </a>
 								    </span>
-								    
-								    <a th:each="i : ${#numbers.sequence(currentPage + 1, endPage)}"
-								       th:href="@{/product(page=${i})}" 
-								       th:text="${i}" 
-								       th:classappend="${currentPage+1 == i} ? 'current' : ''">
-								    </a>
+								    <div class = "d-flex">
+									    <a th:each="i : ${#numbers.sequence(currentPage + 1, endPage)}"
+									       th:href="@{/product(page=${i})}" 
+									       th:text="${i}" 
+									       th:classappend="${currentPage+1 == i} ? 'current' : ''">
+									    </a>
+								    </div>
 								    
 								    <span>
                                 		<a th:href="@{/product(page=${currentPage+1 > endPage ? currentPage : currentPage+1})}"> >> </a>

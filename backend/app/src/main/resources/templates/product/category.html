@@ -261,19 +261,19 @@
                             <div class = "product__switcher-container">
                                 <div class = "product__symbol">
                                 	<span>
-                                		<a th:href="@{/product/{categoryName}(page=${currentPage-1 < 0 ? 0 : currentPage-1})}"> << </a>
+										<a th:href="@{/product/category/{categoryName}(categoryName=${categoryName}, page=${currentPage - 1 < 0 ? 0 : currentPage - 1})}"> << </a>
 								    </span>
 								    
 								    <div class = "d-flex">
 									    <a th:each="i : ${#numbers.sequence(currentPage, endPage-1)}"
-									       th:href="@{/product/{categoryName}(page=${i})}" 
+										   th:href="@{/product/category/{categoryName}(categoryName=${categoryName}, page=${i})}"
 									       th:text="${i+1}" 
 									       th:classappend="${currentPage == i} ? 'current' : ''">
 									    </a>
 								    </div>
 								    
 								    <span>
-                                		<a th:href="@{/product/{categoryName}(page=${currentPage+1 > endPage ? currentPage : currentPage+1})}"> >> </a>
+										<a th:href="@{/product/category/{categoryName}(categoryName=${categoryName}, page=${currentPage+1 > endPage ? currentPage : currentPage+1})}"> >> </a>
 								    </span>
                                 </div>
                             </div>

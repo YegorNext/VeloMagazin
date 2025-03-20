@@ -38,6 +38,9 @@ public class ProductController {
 	@Autowired
 	ISubCategoryRepository subCategoryRepository;
 	
+	@Autowired
+	IProductRepository productRepository;
+	
 	@GetMapping
 	public String index(Model model, @RequestParam(defaultValue = "0") int page) {
 		
@@ -69,7 +72,10 @@ public class ProductController {
     
     @GetMapping("/{id}")
     public String info(@PathVariable String id, Model model) {
-    	
+    	if(productRepository.findById(id).orElse(null) == null) {
+    		return "errorPage";
+    	}
+    	 	
     	model.addAttribute("productInfo", productInfoService.BuildInfo(id));
 
     	return "product/info";
