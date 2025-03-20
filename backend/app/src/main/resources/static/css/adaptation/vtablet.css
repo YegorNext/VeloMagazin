@@ -312,4 +312,17 @@ footer ul li{
     font-size: 14px !important;
 }
 
+/* Other */
+ .categories__search input{
+ 	font-size: 10px;
+ 	text-indent: 7px;
+ 	
+ 	width: 85%; max-width: none !important;
+ }
+ 
+  .header__menu-tablet-icontainer{
+ 	justify-content: right;
+ }
+ 
+
 }

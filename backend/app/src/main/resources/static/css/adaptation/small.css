@@ -27,4 +27,23 @@
     .types__img-btn_txt {
         font-size: 3.5vw;
     }
+    
+
+	 .categories__search input{
+	 	font-size: 8px;
+	 	text-indent: 7px;
+	 	
+	 	width: 80%; height: 25px;
+	 	
+	 	max-width: none !important;
+	 }
+	 
+	 .menu-burger-heart, .menu-burger-cart, .menu-elem-value{
+	 	height: 13px !important;
+	 	
+	 }
+	 
+	 .menu-elem-value{
+	 	font-size: 10px;
+	 }
 }

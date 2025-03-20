@@ -95,6 +95,8 @@ footer{
 
 
     width: 23%;
+    
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .decoration-none-pointer{
@@ -288,5 +290,12 @@ footer{
 	-moz-box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.2);
 	box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.2);
 
+}
+
+.products__elem-img a, .products__elem-img a:hover, .products__elem-img a:active{
+	text-decoration: none;
+	color: inherit;
+	
+	
 }
 

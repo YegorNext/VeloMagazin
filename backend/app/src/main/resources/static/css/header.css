@@ -76,3 +76,11 @@ header{
     padding-left: 30px;
 }
 
+.header__tablet-logo-container a{
+	width: fit-content;
+	display: flex;
+	
+	outline: none;
+	border: none;
+}
+
