@@ -1,7 +1,5 @@
 package com.velomagaz.app.controller;
 
-import java.util.LinkedList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -13,15 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.velomagaz.app.service.*;
-import com.velomagaz.app.service.component.ProductRow;
-import com.velomagaz.app.service.record.ProductPageable;
-import com.velomagaz.app.repository.*;
+import com.velomagaz.app.service.component.GridLayoutValidator;
 
 @Controller
 @RequestMapping("/product")
 public class ProductController {
 	
-	private final int productList_size = 48; 
+	private final int productListSize = 48; 
 	
 	@Autowired 
 	ProductImageService imageService;
@@ -33,17 +29,17 @@ public class ProductController {
 	ProductPageRecordBuilderService productPageRecordService;
 	
 	@Autowired
-	ISubCategoryRepository subCategoryRepository;
-	
+	GridLayoutValidator layoutValidator;
+
 	@Autowired
-	IProductRepository productRepository;
+	ProductPaginationService paginationService;
 	
 	@GetMapping
 	public String index(Model model, @RequestParam(defaultValue = "0") int page) {
 		
-		if(page < 0) page = 0;
+		page = paginationService.pageValidate(page);
 	
-		addPaginationAttributes(model, productPageRecordService.buildPageable(page, productList_size), page);
+		paginationService.addPaginationAttributes(model, productPageRecordService.buildPageable(page, productListSize), page);
 
 		return "product/index";
 	}
@@ -63,7 +59,7 @@ public class ProductController {
     
     @GetMapping("/{id}")
     public String info(@PathVariable String id, Model model) {
-    	if(productRepository.findById(id).orElse(null) == null) {
+    	if(!layoutValidator.isProductExists(id)) {
     		return "errorPage";
     	}
     	 	
@@ -75,13 +71,13 @@ public class ProductController {
     @GetMapping("/category/{categoryName}")
     public String category(@PathVariable String categoryName, Model model, @RequestParam(defaultValue = "0") int page) {
     	
-    	if(isCategoryNullOrEmpty(categoryName)) {
+    	if(layoutValidator.isCategoryNullOrEmpty(categoryName)) {
     		return "errorPage";
     	}
     	
-    	if(page < 0) page = 0;
+    	page = paginationService.pageValidate(page);
 		
-		addPaginationAttributes(model, productPageRecordService.buildPageableByCategory(categoryName, page, productList_size), page);
+    	paginationService.addPaginationAttributes(model, productPageRecordService.buildPageableByCategory(categoryName, page, productListSize), page);
 		model.addAttribute("categoryName", categoryName);
     	
     	return "product/category";
@@ -90,26 +86,13 @@ public class ProductController {
     @GetMapping("/search")
     public String search(@RequestParam(defaultValue = "") String query, Model model, @RequestParam(defaultValue = "0") int page) {
 		
-    	if(page < 0) page = 0;
+    	page = paginationService.pageValidate(page);
     	
-		addPaginationAttributes(model, productPageRecordService.buildPageableByQuery(query, page, productList_size), page);
+    	paginationService.addPaginationAttributes(model, productPageRecordService.buildPageableByQuery(query, page, productListSize), page);
 		model.addAttribute("query", query);
     	
     	return "product/search";
     }
     
-    private boolean isProductGridNullOrEmpty(LinkedList<ProductRow> productRow) {
-    	return productRow == null || productRow.isEmpty();
-    }
-    
-    private boolean isCategoryNullOrEmpty(String categoryName) {
-    	return categoryName == null || categoryName.isEmpty() || subCategoryRepository.findBySubcategoryName(categoryName) == null;
-    }
-    
-    private void addPaginationAttributes(Model model, ProductPageable productRecord, int page) {
-		model.addAttribute("productGrid", (isProductGridNullOrEmpty(productRecord.productGrid())) ? null : productRecord.productGrid());
-		model.addAttribute("endPage", productRecord.endPage());
-		model.addAttribute("currentPage", page);
-    }
     
 }
