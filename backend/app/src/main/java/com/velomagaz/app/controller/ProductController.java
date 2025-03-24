@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.velomagaz.app.service.*;
 import com.velomagaz.app.service.component.ProductRow;
-
+import com.velomagaz.app.service.record.ProductPageable;
 import com.velomagaz.app.repository.*;
 
 @Controller
@@ -23,17 +23,14 @@ public class ProductController {
 	
 	private final int productList_size = 48; 
 	
-	@Autowired
-	ProductGridBuilderService builderService;
-	
 	@Autowired 
 	ProductImageService imageService;
 	
 	@Autowired
-	ProductService productService;
+	ProductInfoBuilder productInfoService;
 	
 	@Autowired
-	ProductInfoBuilder productInfoService;
+	ProductPageRecordBuilderService productPageRecordService;
 	
 	@Autowired
 	ISubCategoryRepository subCategoryRepository;
@@ -45,15 +42,9 @@ public class ProductController {
 	public String index(Model model, @RequestParam(defaultValue = "0") int page) {
 		
 		if(page < 0) page = 0;
-		int totalPages = productService.getTotalPages(page, productList_size);
-		int endPage = page + 10 > totalPages ? totalPages : page + 10;
-		
-		LinkedList<ProductRow> productGrid = builderService.buildPageableGrid(page, productList_size);
-		
-		model.addAttribute("productGrid", productGrid);
-		model.addAttribute("endPage", endPage);
-		model.addAttribute("currentPage", page);
-		
+	
+		addPaginationAttributes(model, productPageRecordService.buildPageable(page, productList_size), page);
+
 		return "product/index";
 	}
 	
@@ -62,7 +53,7 @@ public class ProductController {
         byte[] image = imageService.getImageById(id);
         
         if (image == null) {
-            return null; 
+            return ResponseEntity.notFound().build(); 
         }
 
         return ResponseEntity.ok()
@@ -83,19 +74,14 @@ public class ProductController {
     
     @GetMapping("/category/{categoryName}")
     public String category(@PathVariable String categoryName, Model model, @RequestParam(defaultValue = "0") int page) {
-    	if(categoryName == null || categoryName.isEmpty() || subCategoryRepository.findBySubcategoryName(categoryName) == null) {
+    	
+    	if(isCategoryNullOrEmpty(categoryName)) {
     		return "errorPage";
     	}
     	
     	if(page < 0) page = 0;
-		int totalPages = (categoryName.isEmpty()) ? 0 : productService.getTotalPagesByCategoryName(page, productList_size, categoryName);
-		int endPage = page + 10 > totalPages ? totalPages : page + 10;
 		
-		LinkedList<ProductRow> productGrid = builderService.buildPageableGridByCategoryName(page, productList_size, categoryName);
-		
-		model.addAttribute("productGrid", ( productGrid == null || productGrid.isEmpty()) ? null : productGrid);
-		model.addAttribute("endPage", endPage);
-		model.addAttribute("currentPage", page);
+		addPaginationAttributes(model, productPageRecordService.buildPageableByCategory(categoryName, page, productList_size), page);
 		model.addAttribute("categoryName", categoryName);
     	
     	return "product/category";
@@ -105,16 +91,25 @@ public class ProductController {
     public String search(@RequestParam(defaultValue = "") String query, Model model, @RequestParam(defaultValue = "0") int page) {
 		
     	if(page < 0) page = 0;
-		int totalPages = (query.isEmpty() || query.length() < 3) ? 0 : productService.getTotalPagesByQuery(page, productList_size, query);
-		int endPage = page + 10 > totalPages ? totalPages : page + 10;
-		
-		LinkedList<ProductRow> productGrid = (query.isEmpty() || query.length() < 3) ? null : builderService.buildPageableGridByQuery(page, productList_size, query);
-		
-		model.addAttribute("productGrid", ( productGrid == null || productGrid.isEmpty()) ? null : productGrid);
-		model.addAttribute("endPage", endPage);
-		model.addAttribute("currentPage", page);
+    	
+		addPaginationAttributes(model, productPageRecordService.buildPageableByQuery(query, page, productList_size), page);
 		model.addAttribute("query", query);
     	
     	return "product/search";
     }
+    
+    private boolean isProductGridNullOrEmpty(LinkedList<ProductRow> productRow) {
+    	return productRow == null || productRow.isEmpty();
+    }
+    
+    private boolean isCategoryNullOrEmpty(String categoryName) {
+    	return categoryName == null || categoryName.isEmpty() || subCategoryRepository.findBySubcategoryName(categoryName) == null;
+    }
+    
+    private void addPaginationAttributes(Model model, ProductPageable productRecord, int page) {
+		model.addAttribute("productGrid", (isProductGridNullOrEmpty(productRecord.productGrid())) ? null : productRecord.productGrid());
+		model.addAttribute("endPage", productRecord.endPage());
+		model.addAttribute("currentPage", page);
+    }
+    
 }

@@ -20,21 +20,21 @@ public class ProductService {
 	
 	public Page<Product> getPagebaleProducts(int page, int size){
 
-		Pageable pageable = PageRequest.of(page, size, Sort.by("id").descending());		
+		Pageable pageable = getPageable(page, size);
 		Page<Product> productPage = productRepository.findAll(pageable);
 			
 		return (productPage == null || productPage.isEmpty()) ? null : productPage;
 	}
 	
-	public int getTotalPages(int page, int size) {
-		Pageable pageable = createPageRequestByIdDescending(page, size);	
+/*	public int getTotalPages(int page, int size) {
+		Pageable pageable = getPageRequestByIdDescending(page, size);	
 		Page<Product> productPage = productRepository.findAll(pageable);
 		
 		return productPage.getTotalPages();
 	}
 	
 	public int getTotalPagesByQuery(int page, int size, String query) {
-		Pageable pageable = createPageRequestByIdDescending(page, size);		
+		Pageable pageable = getPageRequestByIdDescending(page, size);		
 		
 		Page<Product> productPage = productRepository.findByNameContaining(query, pageable);			
 		if(productPage.isEmpty()) productPage = productRepository.findByIdContaining(query, pageable);
@@ -43,17 +43,17 @@ public class ProductService {
 	}
 	
 	public int getTotalPagesByCategoryName(int page, int size, String categoryName) {
-		Pageable pageable = createPageRequestByIdDescending(page, size);		
+		Pageable pageable = getPageRequestByIdDescending(page, size);		
 		
 		Page<Product> productPage = productRepository.findBySubcategory_SubcategoryName(categoryName, pageable);			
 		
 		return productPage.getTotalPages();
-	}
+	} */
 	
 	public Page<Product> getPagebaleProductsByQuery(String query, int page, int size){
 		if(query == null || query.isEmpty()) return null;
 		
-		Pageable pageable = createPageRequestByIdDescending(page, size);
+		Pageable pageable = getPageable(page, size);
 		Page<Product> productPage = productRepository.findByNameContaining(query, pageable);
 		
 		if(productPage == null || productPage.isEmpty()) productPage = productRepository.findByIdContaining(query, pageable);
@@ -64,13 +64,13 @@ public class ProductService {
 	public Page<Product> getPagebaleProductsByCategory(String categoryName, int page, int size){
 		if(categoryName == null || categoryName.isEmpty()) return null;
 		
-		Pageable pageable = createPageRequestByIdDescending(page, size);
+		Pageable pageable = getPageable(page, size);
 		Page<Product> productPage = productRepository.findBySubcategory_SubcategoryName(categoryName, pageable);
 		
 		return (productPage == null || productPage.isEmpty()) ? null : productPage;
 	}
 	
-	private Pageable createPageRequestByIdDescending(int page, int size) {
+	private Pageable getPageable(int page, int size) {
 		return PageRequest.of(page, size, Sort.by("id").descending());	
 	}
 }

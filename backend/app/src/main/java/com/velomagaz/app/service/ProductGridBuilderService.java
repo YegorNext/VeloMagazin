@@ -14,9 +14,7 @@ import com.velomagaz.app.entity.*;
 
 @Service
 public class ProductGridBuilderService {
-	@Autowired
-	private ProductService productService; 
-	
+
 	private final int row_size = 4;
 	
 	private LinkedList<ProductRow> fillGrid(ListIterator<Product> productIterator){
@@ -34,27 +32,14 @@ public class ProductGridBuilderService {
 		return productGrid;
 	}
 	
-	public LinkedList<ProductRow> buildGrid() {
-		ListIterator<Product> productIterator = productService.getAllProducts().listIterator();		
+	public LinkedList<ProductRow> buildGrid(List<Product> products) {
+		ListIterator<Product> productIterator = (products == null) ? null : products.listIterator();	
 		
 		return (productIterator == null) ? null : fillGrid(productIterator);
 	}
 	
-	public LinkedList<ProductRow> buildPageableGrid(int page, int size){
-		Page<Product> productPage = productService.getPagebaleProducts(page, size);
-		
+	public LinkedList<ProductRow> buildPageableGrid(Page<Product> productPage){
 		return (productPage == null || productPage.isEmpty()) ? null : fillGrid(productPage.getContent().listIterator());
 	}
 	
-	public LinkedList<ProductRow> buildPageableGridByQuery(int page, int size, String query){
-		Page<Product> productPage = productService.getPagebaleProductsByQuery(query, page, size);
-		
-		return (productPage == null || productPage.isEmpty()) ? null : fillGrid(productPage.getContent().listIterator());
-	}
-	
-	public LinkedList<ProductRow> buildPageableGridByCategoryName(int page, int size, String categoryName){
-		Page<Product> productPage = productService.getPagebaleProductsByCategory(categoryName, page, size);
-		
-		return (productPage == null || productPage.isEmpty()) ? null : fillGrid(productPage.getContent().listIterator());
-	}
 }
