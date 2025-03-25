@@ -51,7 +51,7 @@
 
 .cart__item-img-container > img{
 	width: 240px; height: 240px; 
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .cart__item-info{
@@ -64,7 +64,7 @@
 }
 
 .cart__item-title > div:first-child{
-	text-align: justify;
+	text-align: left;
 }
 
 .cart__control-close-container{
@@ -85,4 +85,140 @@
 	
 	display: flex;
 	height: auto; justify-content: center;
+}
+
+.cart__item-select{
+	margin-top: 20px;
+}
+
+.cart__item-select > select{
+	display: block;
+	width: 100px; height: 50px;
+	
+	font-weight: 600;
+	text-indent: 5px;
+	
+}
+
+.cart__order-btn{
+	position: relative;
+	
+	width: 350px; height: 50px;
+	background-color: black;
+
+	margin-top: 15px;
+
+	padding-left: 15px;
+	padding-right: 15px;
+
+	
+	color: white; 
+	text-align: left;
+	
+	font-size: 14px;
+	
+	border: none;
+	
+	margin-bottom: 15px;
+	
+	transition: color 0.1s ease-in-out;
+}
+
+.cart__order-btn::before{
+	position: absolute;
+	z-index: -1;
+	
+	top: 4px; left: 4px;
+	
+	content: "sf";
+	width: 100%; height: 100%;
+	border: 1px solid black;
+	
+	background-color: white;
+}
+
+.cart__order-btn:hover{
+	color: grey;
+}
+
+.arrow-color{
+	fill: white;
+	transition: fill 0.1s ease-in-out;
+}
+
+.cart__order-btn:hover .arrow-color{
+	fill: grey;
+}
+
+.cart__side-form{
+	padding-left: 20px;
+	margin-top: 60px;
+}
+
+.cart__side-form button{
+	width: 100%;
+}
+
+.cart__main-container{
+	padding-right: 7%;
+}
+
+.cart__side-message{
+	width: 100%; height: 177px;
+	padding-left: 10px;
+	
+	margin-top: 40px;
+}
+
+.cart__message-container{
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: 100%; height: 100%;
+	
+	padding: 15px;
+	padding-top: 20px;
+}
+
+.cart__message-container h5{
+	font-weight: 800;
+}
+
+.cart__message-details{
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.cart__message-pdv{
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.cart__main-container .cart__order-btn{
+	margin-bottom: 40px;
+}
+
+.cart__help{
+	margin-top: 30px;
+}
+
+.cart__help > span{
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.cart__help > a{
+	display: block;
+	text-decoration: underline !important;
+	
+	width: fit-content;
+	
+	margin-top: 10px;
+
+	transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.cart__help > a:hover{
+	background-color: black;
+	color: white !important;
+	cursor: pointer;
 }

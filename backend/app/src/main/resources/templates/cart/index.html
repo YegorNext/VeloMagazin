@@ -435,54 +435,128 @@
             	<hr>
  				<div class = "cart__main"> 
  					<div class = "col-8">
- 						<div class = "cart__header">
- 							<h2>КОШИК</h2>
- 							<span>УСЬОГО (1 товар) <b>10299,00 грн.</b></span>
- 						</div>
- 						
- 						<div class = "cart__info">
- 							<ul>
- 								<li>Безкоштовна доставка замовлень на суму від 2500 грн</li>
- 								<li>Доставка доступна по всій Україні службою "Нова Пошта"</li>
- 							</ul>
- 						</div>
- 						
- 						<div class = "cart__items-container"> 
- 							<div class = "cart__item">
- 								<div class="col-4">
- 									<div class = "cart__item-img-container">
- 										<img th:src="@{/images/bikes-8298829_1920.png}">
- 									</div>
- 								</div>
- 								<div class="col-8">
-	 								<div class = "d-flex">
-	 									<div class = "cart__item-info col-11">
-	 										<div class = "cart__item-title">
-	 											<div class = "col-9">
-	 												Кросівки для бігу Adizero Adios Pro 4 Cloud White / Core Black / Silver Metallic
-	 											</div>
-	 											
-	 											<div class = "col-3 d-flex justify-content-end">
-	 												10 299 грн.
-	 											</div>
-	 										</div>
-	 									</div>
-	 									<div class = "cart__item-controls col-1">
-	 										<div class = "cart__control-close-container">
-	 											<img th:src="@{/images/cart/close.png}"> 
-	 										</div>
-	 										<div class = "cart__control-heart-container">
-	 											<img th:src="@{/images/cart/heart_black.png}">
-	 										</div>
+ 						<div class = "cart__main-container">
+	 						<div class = "cart__header">
+	 							<h2>КОШИК</h2>
+	 							<span>УСЬОГО (1 товар) <b>10299,00 грн.</b></span>
+	 						</div>
+	 						
+	 						<div class = "cart__info">
+	 							<ul>
+	 								<li>Безкоштовна доставка замовлень на суму від 2500 грн</li>
+	 								<li>Доставка доступна по всій Україні службою "Нова Пошта"</li>
+	 							</ul>
+	 						</div>
+	 						
+	 						<div class = "cart__items-container"> 
+	 							<div class = "cart__item">
+	 								<div class="col-4">
+	 									<div class = "cart__item-img-container">
+	 										<img th:src="@{/images/products/6847.0x600.webp}">
 	 									</div>
 	 								</div>
- 								</div>
- 							</div>
+	 								<div class="col-8">
+		 								<div class = "d-flex">
+		 									<div class = "cart__item-info col-11">
+		 										<div class = "cart__item-title">
+		 											<div class = "col-9">
+		 												КРОСІВКИ ДЛЯ БІГУ ADIZERO ADIOS PRO 4 CLOUD WHITE / CORE BLACK / SILVER METALLIC
+		 											</div>
+		 											
+		 											<div class = "col-3 d-flex justify-content-end">
+		 												10 299 грн.
+		 											</div>
+		 										</div>
+		 										
+		 										<div class = "cart__item-select">
+		 											<label for="item-select"><b>Кількість</b></label> 
+		 											<select name="item" id = "item-select">
+		 												<option>1</option>
+		 												<option>2</option>
+		 												<option>3</option>
+		 												<option>4</option>
+		 												<option>5</option>
+		 											</select>
+	 	 										</div>
+		 									</div>
+		 									<div class = "cart__item-controls col-1">
+		 										<div class = "cart__control-close-container">
+		 											<img th:src="@{/images/cart/close.png}"> 
+		 										</div>
+		 										<div class = "cart__control-heart-container">
+		 											<img th:src="@{/images/cart/heart_black.png}">
+		 										</div>
+		 									</div>
+		 								</div>
+	 								</div>
+	 							</div>
+	 						</div>
+	 						
+	 						<button class = "cart__order-btn">
+	 							<div class = "d-flex">
+			 						<b>ОФОРМИТИ</b>
+			 						<div class = "d-flex col justify-content-end">
+				 						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										  <rect class="arrow-color" y="11" width="22" height="2" fill="inherit"></rect>
+										  <rect class="arrow-color" x="18.4143" y="6.5" width="7.64242" height="2" transform="rotate(45 18.4143 6.5)" fill="inherit"></rect>
+										  <rect class="arrow-color" x="23.8186" y="11.9142" width="7.64242" height="2" transform="rotate(135 23.8186 11.9142)" fill="inherit"></rect>
+										</svg>
+									</div>
+								</div>
+	 						</button>
  						</div>
  					</div>
  					
  					<div class = "col-4">
- 					
+ 						<div class = "cart__side-form">
+							<button class = "cart__order-btn">
+	 							<div class = "d-flex">
+			 						<b>ОФОРМИТИ</b>
+			 						<div class = "d-flex col justify-content-end">
+				 						<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										  <rect class="arrow-color" y="11" width="22" height="2" fill="inherit"></rect>
+										  <rect class="arrow-color" x="18.4143" y="6.5" width="7.64242" height="2" transform="rotate(45 18.4143 6.5)" fill="inherit"></rect>
+										  <rect class="arrow-color" x="23.8186" y="11.9142" width="7.64242" height="2" transform="rotate(135 23.8186 11.9142)" fill="inherit"></rect>
+										</svg>
+									</div>
+								</div>
+	 						</button>
+	 						
+	 						
+	 						<div class = "cart__side-message">
+	 							<div class = "cart__message-container">
+	 								<h5>ТВОЄ ЗАМОВЛЕННЯ</h5>
+	 								<div class = "d-flex cart__message-details">
+	 									<div class = "col-8">
+	 										<span>1</span> ТОВАР
+	 									</div>
+	 									<div class = "col-4 d-flex justify-content-end">
+	 										<span>4 998,00 грн.</span>
+	 									</div>
+	 								</div>
+	 								<div class="d-flex cart__message-pdv">
+	 									<div class="col-8">
+	 										<span><b>УСЬОГО</b></span>
+	 										<div>(включно з ПДВ)</div>
+	 									</div>
+	 									<div class="col-4 d-flex justify-content-end">
+	 										<span><b>4 998,00 грн.</b></span>
+	 									</div>
+	 								</div>
+	 							</div>
+	 							
+	 							<div class = "cart__help">
+	 								<span>ПОТРІБНА ДОПОМОГА?</span>
+	 								<a>Доставка</a>
+	 								<a>Повернення</a>
+	 								<a>Контакти</a>
+	 							</div>
+	 							
+	 							<div class = "cart__payment">
+	 								<span>МЕТОДИ ОПЛАТИ</span>
+	 							</div>
+	 						</div>
+ 						</div>
  					</div>
  				</div>
             </div>

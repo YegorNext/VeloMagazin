@@ -43,14 +43,14 @@
 }
 
 .carousel-inner div:first-child .banner-image{
-    background-image: url('../images/bikes-7681871_1920.png') !important;
+    background-image: url('../images/bike1920.jpg') !important;
 }
 .carousel-inner div:nth-child(2) .banner-image{
-    background-image: url('../images/bikes-8298829_1920.png');
+    background-image: url('../images/bikes-8298829_1920.jpg');
 }
 
 .carousel-inner div:nth-child(3) .banner-image{
-    background-image: url('../images/hybrid-1833921_1920.png');
+    background-image: url('../images/hybrid-1833921_1920.jpg');
 }
 
 
