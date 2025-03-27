@@ -469,14 +469,8 @@
 		 										</div>
 		 										
 		 										<div class = "cart__item-select">
-		 											<label for="item-select"><b>Кількість</b></label> 
-		 											<select name="item" id = "item-select">
-		 												<option>1</option>
-		 												<option>2</option>
-		 												<option>3</option>
-		 												<option>4</option>
-		 												<option>5</option>
-		 											</select>
+		 											<label for="item-select"><b>Кількість:</b> <span>1</span></label> 
+		 											<button>+</button> <button>-</button>
 	 	 										</div>
 		 									</div>
 		 									<div class = "cart__item-controls col-1">
@@ -554,6 +548,13 @@
 	 							
 	 							<div class = "cart__payment">
 	 								<span>МЕТОДИ ОПЛАТИ</span>
+	 								<div class = "cart__methods">
+	 									<div class = "cart__methods-container d-flex">
+	 										<div> <img th:src="@{/images/cart/visa.png}"> </div>
+	 										<div> <img th:src="@{/images/cart/ma_symbol.svg}"> </div>
+	 										<div> <img th:src="@{/images/cart/cash.png}"> </div>
+	 									</div>
+	 								</div>
 	 							</div>
 	 						</div>
  						</div>

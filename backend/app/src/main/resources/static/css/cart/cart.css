@@ -91,6 +91,24 @@
 	margin-top: 20px;
 }
 
+.cart__item-select button{
+	border: none;
+	margin-left: 7px;
+	
+	height: 26px; width: 23px;
+	
+	color: white; background-color: black;
+	text-align: center;
+	
+	border-radius: 3px;
+
+	transition: color 0.2s ease-in-out;
+}
+
+.cart__item-select button:hover{
+	color: grey;
+}
+
 .cart__item-select > select{
 	display: block;
 	width: 100px; height: 50px;
@@ -221,4 +239,27 @@
 	background-color: black;
 	color: white !important;
 	cursor: pointer;
+}
+
+.cart__payment{
+	margin-top: 30px;
+}
+
+.cart__payment > span {
+	font-size: 14px; 
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.cart__methods{
+	margin-top: 10px;
+}
+
+.cart__methods img{
+	width: 52px; height: 52px;
+}
+
+.cart__methods-container{
+	width: 180px; 
+	justify-content: space-between;
 }

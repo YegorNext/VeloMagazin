@@ -1,0 +1,17 @@
+package com.velomagaz.app.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CartSessionItemManager {
+	public List<String> add(List<String> items, String id) {
+		if(items == null) {
+			items = new ArrayList<String>();
+		}
+		items.add(id);
+		return items;
+	}
+}

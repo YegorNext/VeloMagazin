@@ -26,30 +26,6 @@ public class ProductService {
 		return (productPage == null || productPage.isEmpty()) ? null : productPage;
 	}
 	
-/*	public int getTotalPages(int page, int size) {
-		Pageable pageable = getPageRequestByIdDescending(page, size);	
-		Page<Product> productPage = productRepository.findAll(pageable);
-		
-		return productPage.getTotalPages();
-	}
-	
-	public int getTotalPagesByQuery(int page, int size, String query) {
-		Pageable pageable = getPageRequestByIdDescending(page, size);		
-		
-		Page<Product> productPage = productRepository.findByNameContaining(query, pageable);			
-		if(productPage.isEmpty()) productPage = productRepository.findByIdContaining(query, pageable);
-		
-		return productPage.getTotalPages();
-	}
-	
-	public int getTotalPagesByCategoryName(int page, int size, String categoryName) {
-		Pageable pageable = getPageRequestByIdDescending(page, size);		
-		
-		Page<Product> productPage = productRepository.findBySubcategory_SubcategoryName(categoryName, pageable);			
-		
-		return productPage.getTotalPages();
-	} */
-	
 	public Page<Product> getPagebaleProductsByQuery(String query, int page, int size){
 		if(query == null || query.isEmpty()) return null;
 		
