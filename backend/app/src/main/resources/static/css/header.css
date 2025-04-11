@@ -84,3 +84,17 @@ header{
 	border: none;
 }
 
+
+#cart-icon{
+	position: relative;
+}
+
+.cart-icon::after{
+	position: absolute;
+	top: 5%; left: 60%;
+	content: '';
+	
+	width: 10px; height: 10px; 
+	border-radius: 50%;
+	background-color: #79cfff;
+}

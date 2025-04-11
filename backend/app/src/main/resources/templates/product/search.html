@@ -30,115 +30,10 @@
     </head>
 
     <body>
-        <header>
-            <div class = "header-container"> 
-                <div class = "header-content"> 
-                    <!--  Widescreen  -->
-                    <div class = "header__menu d-none d-xl-flex">
-                        <div class = "header__menu-divider"> 
-                            <div><span class = "blue">UA</span></div>
-                            <div>Оплата</div>
-                            <div>Майстерня</div>
-                            <div>Контакти</div>
-                            <div>Про нас</div>
-                        </div>
-
-                        <div class = "blue f-14"><span class="medium f-18">+38 (067) 563 7858</span> (Зворотний зв'язок)</div>
-                    
-                        <div class="header__menu-divider header__menu-divider_w-20">
-                            <div class = "d-flex">
-                                <div>
-                                    <img th:src="@{/images/cart.svg}" class="menu-elem"> <span class="menu-elem-value blue">0</span>
-                                </div>
-                                <div class = "px-4">
-                                    <img th:src="@{/images/heart.svg}" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
-                                </div>
-                            </div>
-                            <div class = "blue menu-exit">Вхід</div>
-                        </div>
-                    </div>
-
-                    <!-- Tablet screen 1200 -->
-                    <div class = "header__menu-tablet">
-                        <div class = "col-7 col-sm-8 col-md-4">
-                            <div class="d-flex">
-                                <div class="header__burger-btn d-flex">
-                                    <div class="align-self-center">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                                <div class = "header__tablet-logo-container align-self-end">
-                                    <a th:href="@{/home}">
-                                        <span class = "logo"> </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col">
-                            <div class = "header__menu-tablet-icontainer">
-                                
-                                <div class = "categories__search burger align-self-center"> 
-                                    <input placeholder="Знайти..">
-                                </div>
-
-                                <div class = "ms-md-3 me-md-3">
-                                    <span class = "menu-burger-heart"> </span>
-
-                                </div>
-                                <div class="d-flex ms-1 ms-md-0">
-                                    <span class = "menu-burger-cart"> </span> 
-                                    <span class="menu-elem-value blue">0</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section id = "categories" class="d-none d-xl-flex"> 
-            <div class = "categories__container">
-                <div class="row align-items-center">
-                    <div class="col-2 categories__logo-container">
-                      <a th:href="@{/home}"> 
-                        <img class = "logo" th:src="@{/images/logo.svg}">
-                      </a>
-
-                    </div>
-                    <div class = "col-7">
-                        <nav>
-                            <ul>
-                                <li id = "bicycle">
-                                    <span>Велосипеди</span>
-                                </li>
-                                <li id = "accessories">
-                                    <span>Аксесуари</span>
-                                </li>
-                                <li id = "sparepart">
-                                    <span>Запчастини</span>
-                                </li>
-                                <li id = "electro">
-                                    <span>Електро</span>
-                                </li>
-                                <li id = "equipment">
-                                    <span>Спорядження</span>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-3 align-self-center">
-                        <div class = "categories__search"> 
-                            <input placeholder="Пошук товарів...">
-                            <button> <span class = "search-icon"></span> </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
+		<div th:replace="~{share/header :: header}"></div>
+	
+		<div th:replace="~{share/categories :: shortCategories}"></div>
 
         <section id = "products">
             <div class = "products__container">
@@ -284,64 +179,7 @@
             </div>
         </section>
 
-        <footer>
-            <div class = "footer__container">
-                <div class = "footer__content"> 
-                    <div>
-                        <h6 >Каталог товарів</h6>
-                        <ul class = "white">
-                            <li>Самокати</li>
-                            <li>Електрокомплектуючі</li>
-                            <li>Аксесуари</li>
-                            <li>Запчастини</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h6>Покупцеві</h6>
-                        <ul class = "white">
-                            <li>Гарантія</li>
-                            <li>Доставка</li>
-                            <li>Оплата</li>
-                            <li>Новини</li>
-                            <li>Акції</li>
-                        </ul>
-                    </div>
-
-                    <div class = "pe-1 pe-md-0">
-                        <h6>Компанія</h6>
-                        <ul class = "white">
-                            <li>Вакансії</li>
-                            <li>Магазини</li>
-                            <li>Про нас</li>
-                            <li>Гуртовим покупцям</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <div class = "footer__email-box d-flex">
-                            <div class="footer__image-box"> <img src="images/email.png"> </div>
-                            <span class="footer__info-text">velomagazininua@gmail.com</span>
-                        </div>
-                        
-                        <div class = "footer__location-box d-flex">
-                            <div class="footer__image-box"> <img src="images/location.png"> </div>
-                            <span class="footer__info-text">Вулиця Виконкомівська, 79А, Дніпро, Дніпропетровська область, 49000</span>
-                        </div>
-
-                        <div class = "footer__social">
-                            <img th:src="@{/images/instagram.png}">
-                            <img th:src="@{/images/facebook.png}">
-                            <img th:src="@{/images/youtube.png}"> 
-                        </div>
-
-                    </div>
-                </div>
-
-                <span class = "footer__line"></span>
-                <span class = "f-12 gray"> @ 2025 / Velomagazin велосипедний інтернет магазин, роздрібна та оптова торгівля</span>
-            </div>
-        </footer>
+		<div th:replace="~{share/footer :: footer}"></div>
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

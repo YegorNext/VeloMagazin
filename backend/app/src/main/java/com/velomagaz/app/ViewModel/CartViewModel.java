@@ -11,6 +11,8 @@ public class CartViewModel {
 		this.itemCount = itemCount;
 	}
 	
+	public CartViewModel() {}
+	
 	public List<CartItemViewModel> getCartItems() {
 		return cartItems;
 	}

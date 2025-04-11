@@ -27,6 +27,6 @@ public class CartItemViewModelBuilder {
 	}
 	
 	private CartItemViewModel makeViewModel(Product product, String id, List<String> items) {
-		return (product == null) ? null : new CartItemViewModel(product.getProductName(), product.getPrice(), product.getImage(), Collections.frequency(items, id));
+		return (product == null) ? null : new CartItemViewModel(id, product.getProductName(), product.getPrice(), product.getImage(), Collections.frequency(items, id));
 	}
 }

@@ -1,0 +1,69 @@
+<header th:fragment="header">
+    <div class = "header-container"> 
+        <div class = "header-content"> 
+            <!--  Widescreen  -->
+            <div class = "header__menu d-none d-xl-flex">
+                <div class = "header__menu-divider"> 
+                    <div><span class = "blue">UA</span></div>
+                    <div>Оплата</div>
+                    <div>Майстерня</div>
+                    <div>Контакти</div>
+                    <div>Про нас</div>
+                </div>
+
+                <div class = "blue f-14"><span class="medium f-18">+38 (067) 563 7858</span> (Зворотний зв'язок)</div>
+            
+                <div class="header__menu-divider header__menu-divider_w-20">
+                    <div class = "d-flex">
+                        <div id="cart-icon">
+                            <img src="images/cart.svg" class="menu-elem"> <span class="menu-elem-value blue">0</span>
+                        </div>
+                        <div class = "px-4">
+                            <img src="images/heart.svg" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
+                        </div>
+                    </div>
+                    <div class = "blue menu-exit">Вхід</div>
+                </div>
+            </div>
+
+            <!-- Tablet screen 1200 -->
+            <div class = "header__menu-tablet">
+                <div class = "col-7 col-sm-8 col-md-4">
+                    <div class="d-flex">
+                        <div class="header__burger-btn d-flex">
+                            <div class="align-self-center">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class = "header__tablet-logo-container align-self-end">
+                            <a th:href="@{/home}">
+                                <span class = "logo"> </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class = "header__menu-tablet-icontainer">
+                        
+                        <div class = "categories__search burger align-self-center"> 
+                            <input placeholder="Знайти..">
+                        </div>
+
+                        <div class = "ms-md-3 me-md-3">
+                            <span class = "menu-burger-heart"> </span>
+
+                        </div>
+                        <div class="d-flex ms-1 ms-md-0">
+                            <span class = "menu-burger-cart"> </span> 
+                            <span class="menu-elem-value blue">0</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>

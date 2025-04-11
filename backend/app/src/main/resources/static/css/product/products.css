@@ -195,7 +195,13 @@ footer{
 
     background-color: #2f99a9;
     border-radius: 3px;
+    
+     transition: background-color 0.3s ease-in-out;
 
+}
+
+.products__btn-container > button:hover{
+	background-color: #40b5c7;
 }
 
 .products__btn-content{

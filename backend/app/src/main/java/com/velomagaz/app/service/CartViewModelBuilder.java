@@ -1,6 +1,7 @@
 package com.velomagaz.app.service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 
@@ -17,9 +18,12 @@ public class CartViewModelBuilder {
 	private CartItemViewModelBuilder itemViewModelBuilder;
 	
 	public CartViewModel build(List<String> id) {
+		if(id == null || id.isEmpty()) return new CartViewModel();
+		
 		List<CartItemViewModel> items = makeViewModel(id);
 		
-		return items == null ? null : new CartViewModel(items, items.size());
+		
+		return items == null ? new CartViewModel() : new CartViewModel(items, items.size());
 	}
 	
 	private List<CartItemViewModel> makeViewModel(List<String> id) {
