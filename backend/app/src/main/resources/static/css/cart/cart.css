@@ -72,13 +72,19 @@
 	display: flex;
 	justify-content: center;
 	
-	padding-top: 20px;
+	padding-top: 15px;
 	height: auto;
 }
 
-.cart__control-close-container > img,
-.cart__control-heart-container > img{
+.cart__control-close-container img,
+.cart__control-heart-container img{
 	height: 15px; width: 15px;
+}
+
+.cart__control-close-container button{
+	border: none; 
+	outline: none;
+	background-color: transparent;
 }
 
 .cart__control-heart-container{

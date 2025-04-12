@@ -200,4 +200,6 @@ nav li{
 	margin-bottom: 18px !important;
 }
 
-
+a.btn.btn-primary{
+	border: none !important;
+}

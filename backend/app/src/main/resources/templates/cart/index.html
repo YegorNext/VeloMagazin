@@ -41,7 +41,7 @@
  						<div class = "cart__main-container">
 	 						<div class = "cart__header">
 	 							<h2>КОШИК</h2>
-	 							<span>УСЬОГО (1 товар) <b>10299,00 грн.</b></span>
+	 							<span>УСЬОГО (<span th:text="${cart.itemCount}"></span> товар) <b><span th:text="${totalPrice}"></span> грн.</b></span>
 	 						</div>
 	 						
 	 						<div class = "cart__info">
@@ -67,18 +67,20 @@
 		 											</div>
 		 											
 		 											<div class = "col-3 d-flex justify-content-end">
-		 												<span th:text = "${item.price}"></span> грн.
+		 												<span th:text = "${item.price * item.count}" class = "add-item-btn"> </span> грн.
 		 											</div>
 		 										</div>
 		 										
 		 										<div class = "cart__item-select">
 		 											<label for="item-select"><b>Кількість:</b> <span th:text="${item.count}"></span></label> 
-		 											<button>+</button> <button>-</button>
+		 											<button th:id="${item.id}" class = "add-item-btn">+</button> 
+		 											<button th:id="${item.id}" class="delete-item-btn">-</button>
 	 	 										</div>
 		 									</div>
 		 									<div class = "cart__item-controls col-1">
+		 										
 		 										<div class = "cart__control-close-container">
-		 											<img th:src="@{/images/cart/close.png}"> 
+		 										   <button class="delete-all-btn" th:id="${item.id}"><img th:src="@{/images/cart/close.png}"></button> 
 		 										</div>
 		 										<div class = "cart__control-heart-container">
 		 											<img th:src="@{/images/cart/heart_black.png}">
@@ -125,10 +127,10 @@
 	 								<h5>ТВОЄ ЗАМОВЛЕННЯ</h5>
 	 								<div class = "d-flex cart__message-details">
 	 									<div class = "col-8">
-	 										<span>1</span> ТОВАР
+	 										<span th:text="${cart.itemCount}"></span> ТОВАР
 	 									</div>
 	 									<div class = "col-4 d-flex justify-content-end">
-	 										<span>4 998,00 грн.</span>
+	 										<span> <span th:text="${totalCount}"> </span></span>
 	 									</div>
 	 								</div>
 	 								<div class="d-flex cart__message-pdv">
@@ -137,7 +139,7 @@
 	 										<div>(включно з ПДВ)</div>
 	 									</div>
 	 									<div class="col-4 d-flex justify-content-end">
-	 										<span><b>4 998,00 грн.</b></span>
+	 										<span><b> <span th:text="${totalPrice}"> </span> грн.</b></span>
 	 									</div>
 	 								</div>
 	 							</div>
@@ -168,6 +170,37 @@
 
 		<div th:replace="~{share/footer :: footer}"></div>
 
+		<!-- Modal -->
+		<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content rounded-3">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="orderModalLabel">Заявка на замовлення</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+		      </div>
+		      <div class="modal-body">
+		        <form id="orderForm">
+		          <div class="mb-3">
+		            <label for="firstName" class="form-label">Ім’я</label>
+		            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Андрій" required>
+		          </div>
+		          <div class="mb-3">
+		            <label for="lastName" class="form-label">Прізвище</label>
+		            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Андрецов" required>
+		          </div>
+		          <div class="mb-3">
+		            <label for="phone" class="form-label">Номер телефону</label>
+		            <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9+()-\s]+" placeholder="09812462356">
+		          </div>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="submit" form="orderForm" class="btn btn-primary">Оформити заявку</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
@@ -178,5 +211,10 @@
         
         <script th:src="@{/js/menuShow_test.js}"></script> 
         <script th:src="@{/js/search.js}"></script>
+        <script th:src="@{/js/removeBtnHandler.js}"></script>
+        <script th:src="@{/js/cartBtnAdd.js}"></script>
+        <script th:src="@{/js/cartBtnDelete.js}"></script>
+        <script th:src="@{/js/showModal.js}"></script>
+        
     </body>
 </html>

@@ -87,9 +87,10 @@ header{
 
 #cart-icon{
 	position: relative;
+	width: 28px; height: 25px;
 }
 
-.cart-icon::after{
+header .cart-icon::after{
 	position: absolute;
 	top: 5%; left: 60%;
 	content: '';

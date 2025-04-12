@@ -15,11 +15,13 @@
             
                 <div class="header__menu-divider header__menu-divider_w-20">
                     <div class = "d-flex">
-                        <div id="cart-icon">
-                            <img src="images/cart.svg" class="menu-elem"> <span class="menu-elem-value blue">0</span>
-                        </div>
+                        <a th:href="@{/cart}">
+                        	<div id="cart-icon" th:class="${hasCartItems} ? 'cart-icon' : ''">
+                            	<img th:src="@{/images/cart.svg}" class="menu-elem"> 
+                        	</div>
+                        </a>
                         <div class = "px-4">
-                            <img src="images/heart.svg" class="menu-elem"> <span class = "menu-elem-value blue">0</span>
+                            <img th:src="@{/images/heart.svg}" class="menu-elem"> 
                         </div>
                     </div>
                     <div class = "blue menu-exit">Вхід</div>
@@ -58,7 +60,6 @@
                         </div>
                         <div class="d-flex ms-1 ms-md-0">
                             <span class = "menu-burger-cart"> </span> 
-                            <span class="menu-elem-value blue">0</span>
                         </div>
                     </div>
                 </div>
