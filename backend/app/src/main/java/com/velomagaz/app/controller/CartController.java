@@ -1,6 +1,7 @@
 package com.velomagaz.app.controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import com.velomagaz.app.ViewModel.CartViewModel;
 import com.velomagaz.app.service.CartSessionItemManager;
 import com.velomagaz.app.service.CartTotalCalculator;
 import com.velomagaz.app.service.CartViewModelBuilder;
+import com.velomagaz.app.service.EmailService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -34,6 +36,9 @@ public class CartController {
 	
 	@Autowired
 	private CartTotalCalculator cartTotalCalculator;
+	
+	@Autowired 
+	private EmailService emailService;
 	
 	@GetMapping
 	public String index(HttpSession session, Model model) {
@@ -75,9 +80,25 @@ public class CartController {
 	}
 
 	
-	@GetMapping("/logout")
-	@ResponseBody
-	public void logout(HttpServletRequest request) {
-	    request.getSession().invalidate(); 
+	  @GetMapping("/logout")
+	    public String logout(HttpSession session) {
+	        session.invalidate();
+	        
+	 
+	        return "redirect:/"; 
+	    }
+	
+	@GetMapping("/apply")
+	public ResponseEntity<String> test(@RequestParam String name, @RequestParam String lastname, @RequestParam String phone, HttpSession session) {
+		List<String> items = (List<String>)session.getAttribute("items");
+		
+		if((items == null || items.size() == 0) || (name.isEmpty() || lastname.isEmpty() || phone.isEmpty())) return ResponseEntity.badRequest().build();
+		
+		CartViewModel cartViewModel = cartViewModelBuilder.build(items);
+		
+		emailService.sendCartHtml("andrej.andretsov@gmail.com", "Ваше замовлення в Velomagaz", cartViewModel, name, lastname, phone);
+		session.setAttribute("items", null);
+		
+		return ResponseEntity.ok().build();
 	}
 }

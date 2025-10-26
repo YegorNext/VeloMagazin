@@ -182,11 +182,11 @@
 		        <form id="orderForm">
 		          <div class="mb-3">
 		            <label for="firstName" class="form-label">Ім’я</label>
-		            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Андрій" required>
+		            <input type="text" class="form-control" id="name" name="name" placeholder="Андрій" required>
 		          </div>
 		          <div class="mb-3">
 		            <label for="lastName" class="form-label">Прізвище</label>
-		            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Андрецов" required>
+		            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Андрецов" required>
 		          </div>
 		          <div class="mb-3">
 		            <label for="phone" class="form-label">Номер телефону</label>
@@ -195,7 +195,7 @@
 		        </form>
 		      </div>
 		      <div class="modal-footer">
-		        <button type="submit" form="orderForm" class="btn btn-primary">Оформити заявку</button>
+		        <button type="submit" form="orderForm" class="btn btn-primary"  id="submit-order">Оформити заявку</button>
 		      </div>
 		    </div>
 		  </div>
@@ -215,6 +215,6 @@
         <script th:src="@{/js/cartBtnAdd.js}"></script>
         <script th:src="@{/js/cartBtnDelete.js}"></script>
         <script th:src="@{/js/showModal.js}"></script>
-        
+        <script th:src="@{/js/mailSender.js}"></script>
     </body>
 </html>
